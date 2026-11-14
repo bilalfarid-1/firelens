@@ -32,3 +32,7 @@ Factual chronology: original MVP ZIP member times range 14 Nov 2026 12:50:54-13:
 Deadline: current official submission guide says Sunday 15 November 2026 at 23:59 Local Event time. For confirmed Multan this is 23:59 PKT (UTC+5). Authenticated portal and any earlier Multan judging cutoff NOT VERIFIED. Do not substitute Islamabad's deadline. Save Progress is not Submit for Judging.
 
 Owner decisions only: license and prototype/material rights; actual work/idea chronology; verified team name, three accepted members and same-event eligibility; controlling portal/local cutoff; final demo content and truthful legal declarations/NASA submission. Website deployment requires separate permission.
+
+## Post-push verification
+
+Correction implementation commit: 0275fe021ff20442173cd96d2adba2a4d7a13b12. Anonymous PDF GET returned HTTP 200; 369668 bytes match the locally inspected six-page PDF exactly. URL: https://raw.githubusercontent.com/bilalfarid-1/firelens/main/docs/demo/FireLens_Demo_6_Slides.pdf. Receipt: evidence/corrections/public_pdf_check.json. Subsequent receipt/source-package commit does not change application or demo bytes.
