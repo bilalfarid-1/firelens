@@ -6,7 +6,7 @@ High-Level Summary: FireLens compares historical NASA FIRMS MODIS and VIIRS S-NP
 
 Final Project Link: https://github.com/bilalfarid-1/firelens (public source). Website: NOT DEPLOYED; do not substitute the expected Pages URL until verified.
 
-Project Demo Link: candidate after this push: https://github.com/bilalfarid-1/firelens/blob/main/docs/demo/FireLens_Demo_6_Slides.pdf — six-slide PDF rendered from real application screenshots, visually inspected. Anonymous post-push access still must be verified. A 28-second recording storyboard is also available in demo_script.md.
+Project Demo Link: public demo: https://github.com/bilalfarid-1/firelens/blob/main/docs/demo/FireLens_Demo_6_Slides.pdf — six-slide PDF rendered from real application screenshots, visually inspected. Anonymous raw PDF access verified HTTP 200 after push; see audit/PUBLIC_SOURCE_CHECK.md. A 28-second recording storyboard is also available in demo_script.md.
 
 Use of SI: ChatGPT/Codex assisted code, design translation, testing and documentation; the supplied prototype used Figma Make. Original NASA observations were not AI-generated. The team must add a truthful account of idea origin and actual independent review. Do not assert that SI originated no ideas without confirming the team's history.
 

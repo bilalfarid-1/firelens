@@ -13,3 +13,5 @@ Cleanup: CLEANUP_MANIFEST.md. Legacy web generation retained because harmonize.p
 Final browser outcome and release integrity: see evidence/final/browser_summary.json and release/release_manifest.json, generated after browser completion. This is a software verification report, not NASA certification or a guarantee of judging eligibility.
 
 Browser results: Windows Edge 39 checks hosted + 39 offline; Chrome quick smoke 4/4. All six deck slides rendered and visually inspected. Generated bundle is JSON-semantically identical to baseline; adapter changed whitespace only. No scientific/model code changes made. Dependency inventory recorded in evidence/final/npm_dependency_inventory.json; full dependency rights review is not claimed.
+
+Release implementation commit: 8cba8dfadf126a13ea7ebbe202cb47080a871300. Public source/demo verification: PUBLIC_SOURCE_CHECK.md. Follow-up documentation and source-package regeneration do not alter tested app bytes.

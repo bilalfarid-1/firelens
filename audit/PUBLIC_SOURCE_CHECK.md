@@ -1,0 +1,3 @@
+# Public source and demo check
+
+Release implementation commit: 8cba8dfadf126a13ea7ebbe202cb47080a871300. Verified origin/main matched this SHA after push. Unauthenticated requests on 2026-11-14T16:14:14.686324+00:00 returned HTTP 200 for repository API and https://raw.githubusercontent.com/bilalfarid-1/firelens/main/docs/demo/FireLens_Demo_6_Slides.pdf (367731 bytes). No credentials or private access headers were used. PDF has six rendered slides, each visually inspected before publication. The static website was not deployed. This follow-up report commit records verification of the preceding release commit.
