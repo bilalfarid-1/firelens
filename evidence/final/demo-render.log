@@ -1,0 +1,6 @@
+### Result
+{"slides":6}
+### Ran Playwright code
+```js
+await (async page => {await page.setViewportSize({width:1280,height:720});const n=await page.locator('section').count();if(n!==6)throw Error('slide count');for(let i=0;i<n;i++)await page.locator('section').nth(i).screenshot({path:'audit/final-release/slide-'+(i+1)+'.png'});await page.pdf({path:'firelens-github/docs/demo/FireLens_Demo_6_Slides.pdf',printBackground:true,preferCSSPageSize:true});return {slides:n};})(page);
+```

@@ -33,8 +33,12 @@ County source rows7211/16526 MODIS/VIIRS; type0 rows7105/16450.302months,7543gri
 
 Crosswalk MAE20.334 against VIIRS in2024–2025, versus unadjusted MODIS32.000. Training median/calendar-month median baselines achieve19.625/18.958; the crosswalk is not the best MAE method. VIIRS is not wildfire ground truth. Early estimates are unvalidated backward transfers; residual bands are heuristic. July2024 overlaps documented S-NPP outages. MODIS raw version strings6.03/61.03 remain unresolved provenance; avoid claiming a uniformly confirmed C6.1 archive.
 
-NASA data attribution, third-party licenses and AI disclosure are included in app Method/Sources and docs/submission.md. No publishing or submission has been performed. See docs/HOSTING.md for the deployment handoff.
+NASA data attribution, third-party licenses and AI disclosure are included in app Method/Sources and docs/submission.md. Source is publicly published on GitHub. Website deployment and NASA submission have not been performed. See docs/HOSTING.md for the deployment handoff.
 
 ## GitHub source and free hosting
 
-Project repository: https://github.com/bilalfarid-1/firelens . The tested offline app is `release/FireLens_Butte_Offline.html`; complete static and source ZIPs are in `release/`. See [GitHub Pages setup](docs/GITHUB_HOSTING.md) for the prepared manual-only workflow. The live website has not been deployed. Local app checks do not guarantee NASA acceptance; see [requirement coverage](docs/REQUIREMENTS_MATRIX.md) and [verified official rules](docs/OFFICIAL_REQUIREMENTS.md).
+Project repository: https://github.com/bilalfarid-1/firelens . The tested offline app is `release/FireLens_Butte_Offline.html`; regenerated static and source ZIPs are in `release/`. See [GitHub Pages setup](docs/GITHUB_HOSTING.md) for the prepared manual-only workflow. The live website has not been deployed. Local app checks do not guarantee NASA acceptance; see [requirement coverage](docs/REQUIREMENTS_MATRIX.md) and [verified official rules](docs/OFFICIAL_REQUIREMENTS.md).
+
+## Credits and licensing
+
+See [credits and AI assistance](docs/CREDITS_AND_AI_ASSISTANCE.md) and [final compliance](docs/FINAL_NASA_COMPLIANCE.md). An explicit license for team-owned original code awaits owner approval; third-party notices remain in frontend/public/licenses.

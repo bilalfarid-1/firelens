@@ -1,0 +1,6 @@
+### Result
+{"checks":4,"errors":[]}
+### Ran Playwright code
+```js
+await (async page => { const errors=[];page.on('pageerror',e=>errors.push(String(e)));await page.reload();await page.waitForSelector('[data-detection]');if(!(await page.locator('.main-value').innerText()).includes('1,220'))throw Error('November count');await page.getByLabel('Year',{exact:true}).selectOption('2024');await page.getByLabel('Month',{exact:true}).selectOption('6');if(!(await page.locator('.main-value').innerText()).includes('58'))throw Error('July count');if(await page.locator('.warning-context').count()!==1)throw Error('warning');await page.screenshot({path:'audit/final-release/chrome-july.png'});if(errors.length)throw Error(errors.join());return {checks:4,errors}; })(page);
+```

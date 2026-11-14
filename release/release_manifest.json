@@ -4,12 +4,12 @@
     "sha256": "8e1aae61716ed381f18f85caf9113945b827b8a68b3935650f65ebbcf15c2008"
   },
   "FireLens_Butte_Source_2026-11-14.zip": {
-    "bytes": 5806153,
-    "sha256": "7bb354fee84daacf127730f9f31ced40af6cc02207e57848b9f3de817da88a4e"
+    "bytes": 10882345,
+    "sha256": "efb7970762f5cc64b8767d4dd8159c0d58faad34b7104e42dd2ccf2bc0270346"
   },
   "FireLens_Butte_Static_Site.zip": {
     "bytes": 496821,
-    "sha256": "7cc189838829c8e5e22039e6075f1918af7f28ec595c48e5d20c8cda512afc20"
+    "sha256": "0abb92665066e26d4542ea86437f257b25f183af8a392187424f9cf6af0bbe49"
   },
   "site/.gitattributes": {
     "bytes": 125,
