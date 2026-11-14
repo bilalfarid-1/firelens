@@ -1,8 +1,8 @@
 # FireLens Butte — Product Design Specification
 
-Status: proposed design brief for prototype generation, not an implemented interface.
+Status: historical design rationale. The interface is implemented in frontend/ and packaged in release/. Original design intentions below are retained as provenance, not a claim that every proposed detail was implemented.
 Prepared: 14 November 2026.
-Audience: the team, prototype generator, designer and subsequent implementation agent.
+Audience: maintainers and reviewers of the implemented interface.
 Scope: redesign the existing FireLens interface. Keep the scientific model, fixed geography and verified data intact.
 
 ## 1. Design objective
@@ -19,7 +19,7 @@ Design for first-time hackathon judges, students and technically curious researc
 
 ## 2. Reference and interpretation
 
-Reference inspected: local AQI Predictor project at `C:/Users/bilal/Documents/GitHub/aqi-predictor/aqi-predictor-main`, particularly `standalone.html` and `app/static/index.html`. Its standalone desktop interface was opened in Windows Edge during the design review.
+Reference inspected: the user-supplied local AQI Predictor project, particularly `standalone.html` and `app/static/index.html`. Its standalone desktop interface was opened in Windows Edge during the design review.
 
 Borrow these principles:
 

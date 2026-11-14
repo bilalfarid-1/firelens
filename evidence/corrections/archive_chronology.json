@@ -1,0 +1,21 @@
+{
+  "archive": "NASA_Butte_County_FireLens_MVP_2026-11-14.zip",
+  "sha256": "84bc43b012e41ecfcea0693cf8618219b6f1d8bb8007b709c10a0680852c1c15",
+  "zip_member_time_min": [
+    2026,
+    11,
+    14,
+    12,
+    50,
+    54
+  ],
+  "zip_member_time_max": [
+    2026,
+    11,
+    14,
+    13,
+    4,
+    30
+  ],
+  "caution": "ZIP member times have no timezone and may reflect packaging; not authorship/start proof."
+}

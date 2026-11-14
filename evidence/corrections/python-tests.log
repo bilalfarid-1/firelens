@@ -1,0 +1,18 @@
+{"argv": ["<workspace>\\audit\\.venv\\Scripts\\python.exe", "-m", "unittest", "discover", "-s", "tests", "-v"], "cwd": "<workspace>\\firelens-github", "utc": "2026-11-14T16:26:11.922495+00:00"}
+test_corrected_flags_survive_frontend_adapter (test_audit_regressions.SourceRegressions.test_corrected_flags_survive_frontend_adapter) ... ok
+test_quiet_month_returns_zero_records_not_missing_calendar (test_audit_regressions.SourceRegressions.test_quiet_month_returns_zero_records_not_missing_calendar) ... ok
+test_source_utc_timestamps_and_actual_leap_day (test_audit_regressions.SourceRegressions.test_source_utc_timestamps_and_actual_leap_day) ... ok
+test_independent_spatial_day_aggregation_july_2024 (test_pipeline.ScientificIntegrity.test_independent_spatial_day_aggregation_july_2024) ... ok
+test_model_year_separation_and_errors (test_pipeline.ScientificIntegrity.test_model_year_separation_and_errors) ... ok
+test_month_sequence_and_null_viirs (test_pipeline.ScientificIntegrity.test_month_sequence_and_null_viirs) ... ok
+test_no_external_runtime_scripts (test_pipeline.ScientificIntegrity.test_no_external_runtime_scripts) ... ok
+test_original_county_csv_rows (test_pipeline.ScientificIntegrity.test_original_county_csv_rows) ... ok
+test_original_zip_checksums_and_crc (test_pipeline.ScientificIntegrity.test_original_zip_checksums_and_crc) ... ok
+test_type0_decision_and_cell_day_bounds (test_pipeline.ScientificIntegrity.test_type0_decision_and_cell_day_bounds) ... ok
+test_web_product_consistency (test_pipeline.ScientificIntegrity.test_web_product_consistency) ... ok
+test_yearly_aggregation_exact (test_pipeline.ScientificIntegrity.test_yearly_aggregation_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.430s
+
+OK

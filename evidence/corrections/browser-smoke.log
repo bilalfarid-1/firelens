@@ -1,0 +1,9 @@
+### Result
+{"checks":["hosted November","hosted July","hosted warning","offline November","offline July","offline warning","no page exceptions"],"errors":[]}
+### Ran Playwright code
+```js
+await (async page => {const checks=[];const errors=[];page.on('pageerror',e=>errors.push(String(e)));for(const [mode,url] of [['hosted','http://127.0.0.1:8003/site/'],['offline','file:///C:/Users/bilal/Desktop/NASA-Space-Apps-2026/firelens-github/release/FireLens_Butte_Offline.html']]){await page.goto(url);await page.waitForSelector('[data-detection]');if(!(await page.locator('.main-value').innerText()).includes('1,220'))throw Error(mode+' November');checks.push(mode+' November');await page.getByLabel('Year',{exact:true}).selectOption('2024');await page.getByLabel('Month',{exact:true}).selectOption('6');if(!(await page.locator('.main-value').innerText()).includes('58'))throw Error(mode+' July');checks.push(mode+' July');if(await page.locator('.warning-context').count()!==1)throw Error(mode+' warning');checks.push(mode+' warning');}if(errors.length)throw Error(errors.join());checks.push('no page exceptions');return {checks,errors};})(page);
+```
+### Page
+- Page URL: file:///C:/Users/bilal/Desktop/NASA-Space-Apps-2026/firelens-github/release/FireLens_Butte_Offline.html
+- Page Title: FireLens Butte — Historical hotspot explorer

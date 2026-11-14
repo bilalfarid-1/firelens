@@ -5,3 +5,5 @@ ChatGPT/Codex assisted source inspection, processing/application code, translati
 React: MIT; Lucide: ISC; Inter: SIL Open Font License. Bundled notices: frontend/public/licenses, copied to release/site/licenses. NASA FIRMS and California geometry sources: references.md. Existing third-party permissions remain applicable. No NASA logo or endorsement is claimed.
 
 Team-owned original-code license is pending explicit owner selection. No new root license has been imposed, and third-party/data material has not been relicensed. Prototype asset ownership and the team's originality declaration require owner confirmation. Code assistance is disclosed in package metadata, generated provenance, the interface and exported SVGs. No synthetic voice or video was produced in this cleanup.
+
+Current rights inventory: [RIGHTS_INVENTORY.md](RIGHTS_INVENTORY.md). Original-code MIT license is recommended, not applied. Human attestations are consolidated in [OWNER_ACTIONS.md](OWNER_ACTIONS.md). Demo layout/text is AI-assisted; images are actual application screenshots.

@@ -42,3 +42,5 @@ Project repository: https://github.com/bilalfarid-1/firelens . The tested offlin
 ## Credits and licensing
 
 See [credits and AI assistance](docs/CREDITS_AND_AI_ASSISTANCE.md) and [final compliance](docs/FINAL_NASA_COMPLIANCE.md). An explicit license for team-owned original code awaits owner approval; third-party notices remain in frontend/public/licenses.
+
+Current submission draft: [SUBMISSION_READY.md](docs/SUBMISSION_READY.md). Demo: [six-slide PDF](docs/demo/FireLens_Demo_6_Slides.pdf), CONTENT PENDING OWNER. See [owner actions](docs/OWNER_ACTIONS.md) and [corrections report](audit/FINAL_CORRECTIONS_REPORT.md).

@@ -1,0 +1,6 @@
+### Result
+{"sections":6}
+### Ran Playwright code
+```js
+await (async page => {await page.pdf({path:'firelens-github/docs/demo/FireLens_Demo_6_Slides.pdf',printBackground:true,preferCSSPageSize:true});return {sections:await page.locator('section').count()};})(page);
+```

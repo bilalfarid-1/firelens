@@ -1,0 +1,20 @@
+{"argv": ["<workspace>\\audit\\.venv\\Scripts\\python.exe", "-m", "pip", "install", "-r", "requirements.txt", "-r", "requirements_harmonization.txt"], "cwd": "<workspace>\\firelens-github", "utc": "2026-11-14T16:25:18.771618+00:00"}
+Requirement already satisfied: shapely<3.0,>=2.0 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from -r requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: pyproj<4.0,>=3.6 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from -r requirements.txt (line 2)) (3.8.0)
+Requirement already satisfied: numpy<3,>=1.26 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from -r requirements_harmonization.txt (line 1)) (2.5.4)
+Requirement already satisfied: pandas<4,>=2.1 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from -r requirements_harmonization.txt (line 2)) (3.1.1)
+Requirement already satisfied: scipy<2,>=1.11 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from -r requirements_harmonization.txt (line 3)) (1.18.1)
+Requirement already satisfied: matplotlib<5,>=3.8 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from -r requirements_harmonization.txt (line 5)) (3.11.2)
+Requirement already satisfied: certifi in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from pyproj<4.0,>=3.6->-r requirements.txt (line 2)) (2026.10.23)
+Requirement already satisfied: python-dateutil>=2.9.0 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from pandas<4,>=2.1->-r requirements_harmonization.txt (line 2)) (4.0.0)
+Requirement already satisfied: tzdata in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from pandas<4,>=2.1->-r requirements_harmonization.txt (line 2)) (2026.6)
+Requirement already satisfied: contourpy>=1.0.1 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from matplotlib<5,>=3.8->-r requirements_harmonization.txt (line 5)) (1.4.0)
+Requirement already satisfied: cycler>=0.10 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from matplotlib<5,>=3.8->-r requirements_harmonization.txt (line 5)) (0.12.1)
+Requirement already satisfied: fonttools>=4.28.2 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from matplotlib<5,>=3.8->-r requirements_harmonization.txt (line 5)) (4.68.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from matplotlib<5,>=3.8->-r requirements_harmonization.txt (line 5)) (1.5.1)
+Requirement already satisfied: packaging>=20.0 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from matplotlib<5,>=3.8->-r requirements_harmonization.txt (line 5)) (26.3)
+Requirement already satisfied: pillow>=9 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from matplotlib<5,>=3.8->-r requirements_harmonization.txt (line 5)) (13.0.0)
+Requirement already satisfied: pyparsing>=3 in c:\users\bilal\desktop\nasa-space-apps-2026\audit\.venv\lib\site-packages (from matplotlib<5,>=3.8->-r requirements_harmonization.txt (line 5)) (3.3.3)
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: <workspace>\audit\.venv\Scripts\python.exe -m pip install --upgrade pip

@@ -1,0 +1,25 @@
+{
+  "git_history": "0547bf6b05f1f550fc786c0cdab0efb183aacac0 2026-11-14T20:14:09+05:00 Add audited FireLens Butte application and tested release\n8cba8dfadf126a13ea7ebbe202cb47080a871300 2026-11-14T21:13:28+05:00 Clean obsolete scaffolding and document verified release readiness\n71d5a8f9081afbfcd1d7f3179ab404550d72d88c 2026-11-14T21:14:19+05:00 Record anonymous public demo verification and final release provenance\n",
+  "records": [
+    {
+      "record": "baseline_manifest.json",
+      "mtime_utc": "2026-11-14T13:25:45.827878+00:00",
+      "sha256": "91d508c56fc4e8d52120b444d8c326967511c718a56a56ea250a404b52dc6c81"
+    },
+    {
+      "record": "final_demo.py",
+      "mtime_utc": "2026-11-14T16:11:15.998494+00:00",
+      "sha256": "da5e1f681d5e96856eacefdcc20befa890b968fae2e5a07f118f268a9851abf5"
+    },
+    {
+      "record": "DL_FIRE_M-C61_848030.zip",
+      "mtime_utc": "2026-11-14T15:13:24.585144+00:00",
+      "sha256": "dcd09d67c0b9a2d95b1be7c8fbd97e2dbd1cd28a5240857c6ecc60d89fbc55f9"
+    },
+    {
+      "record": "Review Attached Content.zip",
+      "mtime_utc": "2026-11-14T14:25:18.937253+00:00",
+      "sha256": "fb771eb010ed967fdc45e01b893ed942070538a24b84ce92758bcf4f9a16ad4a"
+    }
+  ]
+}
