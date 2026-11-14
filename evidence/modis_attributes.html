@@ -1,0 +1,126 @@
+<h4>
+        Aqua Temporal Coverage: <span>3 July 2002 - present</span><br/>
+        Terra Temporal Coverage: <span>1 November 2000 - present</span>
+</h4>
+<p>
+    Latency - defined as time since satellite observation and the data being available in FIRMS:<br/>
+    within 3 hours for global data and <br/>
+    within 1-30 minutes for ultra and real-time in the US and Canada (see 'version' in attribute table below).<br/>
+    <br/>
+    The MODIS Fire and Thermal Anomalies layer shows active fire detections and thermal anomalies, such as 
+    volcanoes, and gas flares. Fires can be set naturally, such as by lightning, or by humans, whether 
+    intentionally or accidentally. The fire layer is useful for studying the spatial and temporal distribution of fire, 
+    to locate persistent hot spots such as volcanoes and gas flares, to locate the source of air pollution from 
+    smoke that may have adverse human health impacts.<br/>
+    <br/>
+    The MODIS Fire and Thermal Anomalies product is available from the Terra (MOD14) and Aqua (MYD14) 
+    satellites as well as a combined Terra and Aqua (MCD14) satellite product. The sensor resolution is 1 km, 
+    and the temporal resolution is daily. The thermal anomalies are represented as red points 
+    (approximate center of a 1 km pixel). Terra's orbit around the Earth is timed so that it passes from 
+    north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon.<br/>
+    <br/>
+</p>
+<p>
+    <b>Attributes:</b><br/>
+    <table class="attributes" >
+        <thead>
+            <tr>
+                <th>Attribute</th>
+                <th>Short Description</th>
+                <th>Long Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Latitude</td>
+                <td>Latitude</td>
+                <td>Center of 1 km fire pixel, but not necessarily the actual location of the fire as one or more fires can be detected within the 1 km pixel.</td>
+            </tr>
+            <tr>
+                <td>Longitude</td>
+                <td>Longitude</td>
+                <td>Center of 1 km fire pixel, but not necessarily the actual location of the fire as one or more fires can be detected within the 1 km pixel.</td>
+            </tr>
+            <tr>
+                <td>Brightness</td>
+                <td>Brightness temperature 21 (Kelvin)</td>
+                <td>Channel 21/22 brightness temperature of the fire pixel measured in Kelvin.</td>
+            </tr>
+            <tr>
+                <td>Scan</td>
+                <td>Along Scan pixel size</td>
+                <td>The algorithm produces 1 km fire pixels, but MODIS pixels get bigger toward the edge of scan. Scan and track reflect actual pixel size.</td>
+            </tr>
+            <tr>
+                <td>Track</td>
+                <td>Along Track pixel size</td>
+                <td>The algorithm produces 1 km fire pixels, but MODIS pixels get bigger toward the edge of scan. Scan and track reflect actual pixel size.</td>
+            </tr>
+            <tr>
+                <td>Acq_Date</td>
+                <td>Acquisition Date</td>
+                <td>Data of MODIS acquisition.</td>
+            </tr>
+            <tr>
+                <td>Acq_Time</td>
+                <td>Acquisition Time</td>
+                <td>Time of acquisition/overpass of the satellite (in UTC).</td>
+            </tr>
+            <tr>
+                <td>Satellite</td>
+                <td>Satellite</td>
+                <td>A = Aqua and T = Terra.</td>
+            </tr>
+            <tr>
+                <td>Confidence</td>
+                <td>Confidence (0-100%)</td>
+                <td>This value is based on a collection of intermediate algorithm quantities used in the detection process. It is intended to help users gauge the quality of individual hotspot/fire pixels. Confidence estimates range between 0 and 100% and are assigned one of the three fire classes (low-confidence fire, nominal-confidence fire, or high-confidence fire).</td>
+            </tr>
+            <tr>
+                <td>Version</td>
+                <td>Version (Collection and source)</td>
+                <td>
+                <p>Version identifies the collection (e.g., MODIS Collection 6.1) and source of data processing (Ultra Real-Time (URT suffix added to collection), Real-Time (RT suffix), Near Real-Time (NRT suffix) or Standard Processing (collection only). For example:</p>
+    
+                <p>"6.1URT" - Collection 6.1 Ultra Real-Time processing.<br>
+                "6.1RT" -&nbsp; Collection 6.1 Real-Time processing.<br>
+                "6.1NRT" - Collection 61 Near Real-Time processing.<br>
+                "6.1" - Collection 61 Standard processing.<br>
+                Find out more on <a target="_blank" rel="noopener noreferrer" href="https://www.earthdata.nasa.gov/data/tools/firms/faq">collections <i class="fa fa-external-link-alt" aria-hidden="true"></i></a> 
+                and on the <a target="_blank" rel="noopener noreferrer" href="https://www.earthdata.nasa.gov/data/tools/firms/faq">differences between FIRMS data sourced from LANCE FIRMS and the University of Maryland <i class="fa fa-external-link-alt" aria-hidden="true"></i></a>.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Bright_T31</td>
+                <td>Brightness temperature 31 (Kelvin)</td>
+                <td>Channel 31 brightness temperature of the fire pixel measured in Kelvin.</td>
+            </tr>
+            <tr>
+                <td>FRP</td>
+                <td >Fire Radiative Power (MW - megawatts)</td>
+                <td>Depicts the pixel-integrated fire radiative power in MW (megawatts).</td>
+            </tr>
+            <tr>
+                <td>Type*</td>
+                <td>Inferred hot spot type</td>
+                <td>0 = presumed vegetation fire<br>
+                1 = active volcano<br>
+                2 = other static land source<br>
+                3 = offshore</td>
+            </tr>
+            <tr>
+                <td>DayNight</td>
+                <td>Day or Night</td>
+                <td>D= Daytime fire, N= Nighttime fire</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- References: MOD14; MYD14; FIRMS Near Real-Time MODIS Active Fire Data; MODIS Collection 6 Active Fire Product User’s Guide					  -->
+</p>
+<p>
+        Type* = This attribute is only available for MCD14DL (standard quality) data
+</p>
+<p style="text-align:center;"><a target="_blank" rel="noopener noreferrer"
+        href="https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/c6-mcd14dl">
+        more details <i class="fa fa-external-link-alt" aria-hidden="true"></i></a>
+</p>

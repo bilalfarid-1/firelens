@@ -1,0 +1,258 @@
+{
+  "boundary": {
+    "features": 1,
+    "valid": true,
+    "validity": "Valid Geometry",
+    "vertices": 2911,
+    "area_sqmi": 1677.8160470684302,
+    "raw_response_sha256": "829e195430abb6c1555e59f5d595038db78c7205fc39181d72025028356d7948"
+  },
+  "sensors": {
+    "MODIS": {
+      "bbox_rows": 19993,
+      "county_rows": 7211,
+      "type_counts": {
+        "0": 7105,
+        "2": 106
+      },
+      "invalid_rows": [],
+      "exact_duplicate_source_rows": 0,
+      "ordered_rows_equal_supplied": true,
+      "multiset_equal_supplied": true,
+      "inherited_exact_replay_equal": true,
+      "retained_type0_rows": 7105,
+      "cell_days": 5835,
+      "cell_days_multiple_overpasses": 885,
+      "deduplicated_type0_rows": 1270,
+      "first_bbox_date": "2000-11-02",
+      "last_bbox_date": "2025-12-11",
+      "first_Aqua_bbox": null,
+      "first_Aqua_county": null,
+      "versions": {
+        "6.03": 6093,
+        "61.03": 1118
+      },
+      "daynight": {
+        "D": 4699,
+        "N": 2406
+      },
+      "scan_min_max": [
+        1.0,
+        4.8
+      ],
+      "track_min_max": [
+        1.0,
+        2.0
+      ],
+      "leap_date_counts": {}
+    },
+    "VIIRS_SNPP": {
+      "bbox_rows": 51944,
+      "county_rows": 16526,
+      "type_counts": {
+        "0": 16450,
+        "3": 76
+      },
+      "invalid_rows": [],
+      "exact_duplicate_source_rows": 0,
+      "ordered_rows_equal_supplied": true,
+      "multiset_equal_supplied": true,
+      "inherited_exact_replay_equal": true,
+      "retained_type0_rows": 16450,
+      "cell_days": 6824,
+      "cell_days_multiple_overpasses": 1497,
+      "deduplicated_type0_rows": 9626,
+      "first_bbox_date": "2012-01-23",
+      "last_bbox_date": "2025-12-30",
+      "first_Aqua_bbox": null,
+      "first_Aqua_county": null,
+      "versions": {
+        "2": 16526
+      },
+      "daynight": {
+        "D": 8315,
+        "N": 8135
+      },
+      "scan_min_max": [
+        0.32,
+        0.8
+      ],
+      "track_min_max": [
+        0.36,
+        0.78
+      ],
+      "leap_date_counts": {
+        "2016-02-29": 1
+      }
+    }
+  },
+  "membership_changed_rows": 0,
+  "simplified_changed_rows": 3,
+  "near_boundary_rows": 117,
+  "original_vs_exact_summary_csvs": {
+    "Butte_County_Monthly_Raw_Detections.csv": true,
+    "Butte_County_Yearly_Raw_Detections.csv": true
+  },
+  "aggregation": {
+    "monthly_checks": 604,
+    "monthly_mismatches": 0,
+    "grid_rows": 7543,
+    "independent_grid_rows": 7543,
+    "grid_mismatches": 0,
+    "sample_months": {
+      "2018-11": {
+        "MODIS": 735,
+        "VIIRS_SNPP": 1220
+      },
+      "2024-07": {
+        "MODIS": 322,
+        "VIIRS_SNPP": 58
+      },
+      "2025-04": {
+        "MODIS": 42,
+        "VIIRS_SNPP": 91
+      },
+      "2012-01": {
+        "MODIS": 2,
+        "VIIRS_SNPP": 0
+      },
+      "2012-02": {
+        "MODIS": 6,
+        "VIIRS_SNPP": 8
+      },
+      "2008-11": {
+        "MODIS": 4,
+        "VIIRS_SNPP": 0
+      }
+    }
+  },
+  "model": {
+    "train_months": 132,
+    "test_months": 24,
+    "cv": {
+      "False": {
+        "n": 132,
+        "MAE": 14.100180504879761,
+        "median_AE": 4.944866898005653,
+        "mean_absolute_log1p_error": 0.34217567592942366,
+        "bias": -8.05750686410549,
+        "spearman": 0.9075391808671416
+      },
+      "True": {
+        "n": 132,
+        "MAE": 13.882264317527627,
+        "median_AE": 5.069489005916893,
+        "mean_absolute_log1p_error": 0.34550591240725004,
+        "bias": -7.863963193880185,
+        "spearman": 0.9097258714695386
+      }
+    },
+    "selected_seasonal": false,
+    "coefficients": [
+      1.3591419587673643,
+      0.7745607458501367
+    ],
+    "train_ratio": 1.812206572769953,
+    "scores": {
+      "independent_model": {
+        "n": 24,
+        "MAE": 20.333503811390568,
+        "median_AE": 6.542565244768808,
+        "mean_absolute_log1p_error": 0.34083979932875313,
+        "bias": 5.65428806461937,
+        "spearman": 0.818859202815131
+      },
+      "uncorrected_MODIS": {
+        "n": 24,
+        "MAE": 32.0,
+        "median_AE": 21.5,
+        "mean_absolute_log1p_error": 0.9557374916709035,
+        "bias": -10.0,
+        "spearman": 0.818859202815131
+      },
+      "trained_ratio": {
+        "n": 24,
+        "MAE": 32.850352112676056,
+        "median_AE": 9.504694835680754,
+        "mean_absolute_log1p_error": 0.47824870354562893,
+        "bias": 11.489632237871675,
+        "spearman": 0.818859202815131
+      },
+      "training_median": {
+        "n": 24,
+        "MAE": 19.625,
+        "median_AE": 15.5,
+        "mean_absolute_log1p_error": 0.6354906997958208,
+        "bias": -15.458333333333334,
+        "spearman": null
+      },
+      "zero_detections": {
+        "n": 24,
+        "MAE": 36.458333333333336,
+        "median_AE": 35.5,
+        "mean_absolute_log1p_error": 3.4502598678403076,
+        "bias": -36.458333333333336,
+        "spearman": null
+      },
+      "training_calendar_month_median": {
+        "n": 24,
+        "MAE": 18.958333333333332,
+        "median_AE": 12.0,
+        "mean_absolute_log1p_error": 0.6704932571950112,
+        "bias": -15.708333333333334,
+        "spearman": 0.1579065201338215
+      }
+    },
+    "export_metrics": {
+      "n": 24,
+      "MAE": 20.333375,
+      "median_AE": 6.5425,
+      "mean_absolute_log1p_error": 0.34083378461337355,
+      "bias": 5.6542916666666665,
+      "spearman": 0.818859202815131
+    },
+    "max_prediction_difference_export": 0.00048134748813311035,
+    "per_year": {
+      "2024": {
+        "n": 12,
+        "MAE": 29.206954251915665,
+        "median_AE": 4.844775309881561,
+        "mean_absolute_log1p_error": 0.3567627886231084,
+        "bias": 20.49746460131252,
+        "spearman": 0.9422080999150758
+      },
+      "2025": {
+        "n": 12,
+        "MAE": 11.460053370865475,
+        "median_AE": 7.0,
+        "mean_absolute_log1p_error": 0.324916810034398,
+        "bias": -9.18888847207378,
+        "spearman": 0.6713542881242746
+      }
+    },
+    "diagnostic_only_excluding_July2024": {
+      "n": 23,
+      "MAE": 8.921041974574802,
+      "median_AE": 6.512061217262627,
+      "mean_absolute_log1p_error": 0.2792786076647964,
+      "bias": -6.396400543795147,
+      "spearman": 0.798514706277749
+    },
+    "zero_MODIS_prediction": 2.8928516411382903,
+    "july2024_absolute_error_share": 0.5795445796453621,
+    "maximum_train_MODIS": 735
+  },
+  "flags_missing_Terra_only": [
+    "2002-01",
+    "2002-02",
+    "2002-03",
+    "2002-04",
+    "2002-05",
+    "2002-06"
+  ],
+  "web_csv_byte_identity": {
+    "monthly.csv": true,
+    "yearly.csv": true,
+    "heldout_validation.csv": true
+  }
+}

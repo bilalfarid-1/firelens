@@ -1,0 +1,23 @@
+{
+  "full_resolution_polygon_source": "https://services3.arcgis.com/uknczv4rpevve42E/arcgis/rest/services/California_County_Boundaries_and_Identifiers_Blue_Version_view/FeatureServer/1/query?where=CENSUS_GEOID+%3D+%2706007%27&outFields=%2A&returnGeometry=true&outSR=4326&f=geojson",
+  "date_verified": "2026-11-14",
+  "candidate_points_checked_within_25m": 117,
+  "disagreements": 3,
+  "overrides": [
+    {
+      "sensor": "VIIRS_SNPP",
+      "source_row_one_based": 8976,
+      "is_inside_exact_county": false
+    },
+    {
+      "sensor": "VIIRS_SNPP",
+      "source_row_one_based": 12015,
+      "is_inside_exact_county": true
+    },
+    {
+      "sensor": "VIIRS_SNPP",
+      "source_row_one_based": 19187,
+      "is_inside_exact_county": false
+    }
+  ]
+}

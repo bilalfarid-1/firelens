@@ -1,0 +1,10 @@
+### Browser `release` opened with pid 19048.
+### Ran Playwright code
+```js
+await page.goto('file:///C:/Users/bilal/Desktop/NASA-Space-Apps-2026/firelens-working/release/FireLens_Butte_Offline.html');
+```
+### Page
+- Page URL: file:///C:/Users/bilal/Desktop/NASA-Space-Apps-2026/firelens-working/release/FireLens_Butte_Offline.html
+- Page Title: FireLens Butte — Historical hotspot explorer
+### Snapshot
+- [Snapshot](.playwright-cli\page-2026-11-14T15-02-10-143Z.yml)

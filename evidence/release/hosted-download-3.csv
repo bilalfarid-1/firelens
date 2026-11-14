@@ -1,0 +1,6 @@
+﻿method,MAE_cell_days_per_month
+MODIS-to-VIIRS crosswalk,20.333
+Unadjusted MODIS,32.000
+Training-derived ratio,32.850
+Training median,19.625
+Training calendar-month median,18.958

@@ -1,0 +1,15 @@
+# Verified official submission requirements — 14 November 2026
+
+The current November13 guide was read in real Windows Edge at https://www.spaceappschallenge.org/resources/project-submission-guide/ . Evidence: evidence/Project_Submission_Guide_snapshot.yml. Earlier web-tool retrieval failures are superseded by this browser verification.
+
+The full challenge is https://www.spaceappschallenge.org/2026/challenges/modis-and-viirs-hot-spots/ . The longer harmonization-of-modis...URL returns Page Not Found. The Details and Resources tabs were read; logs are in evidence/. FIRMS is explicitly listed under NASA Data & Resources, matching our source archives. Drawing or entering an arbitrary area of interest is optional. Our one-county scope is deliberate. The challenge seeks a consistent historical burning calendar; our statistical bridge is exploratory and does not prove sensor-origin independence or unbiased trends. That scientific objective remains PARTIAL.
+
+Public guide fields: Project Name; High-Level Project Summary; Link to Project Demo; Link to Final Project; Detailed Project Description; Use of Super Intelligence(SI); NASA Data; Space Agency Partner Data and Other References. All required account form fields still need team completion. Final project and demo links must open without login, password or permission. S3 is not mandated. The portal permits image uploads but not direct video/document uploads.
+
+Demo: video30seconds or less OR up to7slides including title/introduction. English project and linked materials; another spoken video language requires English subtitles. Judging criteria: Impact,Creativity,Validity,Relevance,Presentation. Team must confirm every member is registered/accepted at the same Local Event. The project/demo must not include likenesses of people under18. All supplied screenshots contain interface/data, not people.
+
+SI/AI rules: explicitly identify use. Generated images/videos require a visible watermark; generated audio requires descriptive-text/metadata acknowledgment; assisted code/data requires descriptive-text and metadata acknowledgment. Do not generate or modify NASA branding elements. Original NASA observations are not AI-generated. App source/provenance and HTML metadata disclose assisted code/processing; SVG exports include a visible AI-assisted visualization caption and metadata. Team must add visible AI-generation disclosure to any SI-generated media used in the final video/slides, and disclose any generated audio. Use the actual tool names from this chat/prototype and team records; never claim independent human verification not performed. Originality declaration requires actual team review.
+
+Submission: save progress is not submission. Team owner must agree to terms and original-work declaration, click Submit for Judging before15November2026 23:59 at the Local Event timezone, then confirm success banner. For Multan this isPKT; separate local judging timing remains unverified. No submission or external contact was performed.
+
+Optional website filter classification is recommended by guide but not required. No third-party classification request was sent.

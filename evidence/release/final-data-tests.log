@@ -1,0 +1,17 @@
+{"argv": ["npm.cmd", "test"], "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026\\firelens-working\\frontend", "started_utc": "2026-11-14T14:50:15.431748+00:00"}
+
+> firelens-butte@1.0.0 test
+> node --experimental-strip-types --test tests/production-data.test.ts
+
+✔ complete 302-month calendar has correct unavailable/estimated transition (5.4087ms)
+✔ all map totals match independently audited monthly cell-days (33.5423ms)
+✔ all six original CSV downloads match the product files byte-for-byte after newline normalization (3.966ms)
+✔ stress months retain observed references and exploratory estimates (0.5434ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 357.7702

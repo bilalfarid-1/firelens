@@ -1,0 +1,5 @@
+{"argv": ["npm.cmd", "run", "typecheck"], "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026\\firelens-working\\frontend", "started_utc": "2026-11-14T14:53:41.122427+00:00"}
+
+> firelens-butte@1.0.0 typecheck
+> tsc --noEmit
+

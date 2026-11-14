@@ -1,0 +1,357 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e8]:
+          - button "The NASA Space Apps Challenge is happening now! 🎉" [ref=e10]
+          - paragraph [ref=e14]:
+            - text: Have a question? Join us on
+            - link "Space Apps Connect" [ref=e15] [cursor=pointer]:
+              - /url: https://github.com/nasa/spaceapps
+            - text: .
+        - generic [ref=e20]:
+          - link [ref=e23] [cursor=pointer]:
+            - /url: /
+            - img "Space Apps Logo 2026 color" [ref=e24]
+          - navigation [ref=e26]:
+            - list [ref=e27]:
+              - listitem [ref=e28]:
+                - link "About Us" [ref=e29] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e32]:
+                - link "Awards" [ref=e33] [cursor=pointer]:
+                  - /url: /awards/
+              - listitem [ref=e36]:
+                - button "Explore the Hackathon" [ref=e37] [cursor=pointer]
+              - listitem [ref=e40]:
+                - list [ref=e41]:
+                  - listitem [ref=e42]:
+                    - button "Login" [ref=e43] [cursor=pointer]
+                  - generic [ref=e44]: or
+                  - listitem [ref=e45]:
+                    - button "Sign Up" [ref=e46] [cursor=pointer]
+      - generic [ref=e49]:
+        - list [ref=e52]:
+          - listitem [ref=e53]
+          - listitem [ref=e56]:
+            - link "Home" [ref=e57] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e58]:
+            - link "Resources" [ref=e59] [cursor=pointer]:
+              - /url: /resources/
+          - listitem [ref=e60]:
+            - generic [ref=e61]: Project Submission Guide
+        - generic [ref=e66]:
+          - paragraph [ref=e67]: November 13, 2026
+          - heading "Project Submission Guide" [level=1] [ref=e68]
+          - button "Download as PDF" [ref=e69] [cursor=pointer]
+        - button [ref=e74] [cursor=pointer]
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - generic [ref=e81]: More From
+              - text: Project Submission Guide
+            - list [ref=e82]:
+              - listitem [ref=e83]:
+                - 'link "Navigating the Hackathon: Project Submission" [ref=e84] [cursor=pointer]':
+                  - /url: "#navigating-the-hackathon-project-submission"
+              - listitem [ref=e87]:
+                - link "Project Submission Start & End Times" [ref=e88] [cursor=pointer]:
+                  - /url: "#project-submission-start-end-times"
+              - listitem [ref=e89]:
+                - link "Editing Your Project Submission Page" [ref=e90] [cursor=pointer]:
+                  - /url: "#editing-your-project-submission-page"
+              - listitem [ref=e91]:
+                - link "Project Page Form Field Instructions" [ref=e92] [cursor=pointer]:
+                  - /url: "#project-page-form-field-instructions"
+              - listitem [ref=e93]:
+                - link "Tips for Creating a Project Demo" [ref=e94] [cursor=pointer]:
+                  - /url: "#tips-for-creating-a-project-demo"
+              - listitem [ref=e95]:
+                - link "Submitting Your Project" [ref=e96] [cursor=pointer]:
+                  - /url: "#submitting-your-project"
+              - listitem [ref=e97]:
+                - link "Accessing Your Participant Certificate" [ref=e98] [cursor=pointer]:
+                  - /url: "#accessing-your-participant-certificate"
+          - link "Back to all Resources" [ref=e99] [cursor=pointer]:
+            - /url: /resources/
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - 'heading "Navigating the Hackathon: Project Submission" [level=2] [ref=e103]'
+            - iframe [ref=e111]:
+              - generic [ref=f3e1]:
+                - generic "YouTube Video Player" [ref=f3e3]
+                - generic [ref=f3e5]:
+                  - generic:
+                    - generic:
+                      - generic [ref=f3e6] [cursor=pointer]
+                      - button "Play video" [ref=f3e10] [cursor=pointer]
+                      - button "Hide player controls" [ref=f3e12] [cursor=pointer]
+                      - generic [ref=f3e14]:
+                        - generic [ref=f3e21]:
+                          - generic [ref=f3e22]:
+                            - link "Project Submission and Judging & Awards | 2026 NASA Space Apps Challenge" [ref=f3e23] [cursor=pointer]:
+                              - /url: https://www.youtube.com/watch?v=CV7AYfMRyMM
+                            - link "NASA Space Apps Challenge" [ref=f3e24] [cursor=pointer]:
+                              - /url: /channel/UCJAwE_T5mZ6rwMi6zInuKeg
+                          - generic [ref=f3e26]:
+                            - button [ref=f3e27] [cursor=pointer]
+                            - generic [ref=f3e29]:
+                              - generic: NASA Space Apps Challenge
+                              - generic: 19.3K subscribers
+                        - generic [ref=f3e30]:
+                          - button "Share" [ref=f3e33] [cursor=pointer]
+                          - link "Watch on YouTube" [ref=f3e44] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=CV7AYfMRyMM
+                            - generic [ref=f3e45]: Watch on
+          - generic [ref=e112]:
+            - heading "Project Submission Start & End Times" [level=2] [ref=e114]
+            - generic [ref=e120]:
+              - paragraph [ref=e121]: Project submission opens on Saturday, November 14 at 9:00 a.m. in accordance with the time zone of your team’s Local Event. At that time, your team will be able to edit your team’s Project page and submit your project. Project submission closes on Sunday, November 15 at 11:59 p.m. in accordance with the time zone of your team’s Local Event.
+              - paragraph [ref=e122]: "Exceptions: If your team is registered for the Universal Event, Project Submission opens Saturday, November 14 at 9:00 a.m. and closes Sunday, November 15 at 11:59 p.m. in accordance with the local time of your Team Owner's area of residence."
+              - paragraph [ref=e123]: Check with your Local Lead about times for your Local Event’s local judging and awards which may differ from the global submission times.
+          - generic [ref=e124]:
+            - heading "Editing Your Project Submission Page" [level=2] [ref=e126]
+            - generic [ref=e128]:
+              - generic [ref=e132]:
+                - paragraph [ref=e133]: Once you create or join a team, you will be able to edit your team’s Project Submission page. The Project Submission page is where your team will provide all of the details about your project. This is the page that the judges will review. The more information you provide on this page, the better the judges can rate your submission!
+                - paragraph [ref=e134]: How to Access Your Team’s Project Page
+                - list [ref=e135]:
+                  - listitem [ref=e136]: Click on your profile icon on the top right-hand side of the NASA Space Apps website menu.
+                  - listitem [ref=e137]: Click on “My Team.”
+                  - listitem [ref=e138]: "On your team page, select the “Project” tab. Note: The “Project” tab will appear only when the hackathon begins on November 14, 2026 at 9:00 a.m. local time."
+              - generic [ref=e143]:
+                - generic:
+                  - generic:
+                    - img "PS Guide_Project Page"
+              - generic [ref=e147]:
+                - paragraph [ref=e148]: How to Edit Your Project Page
+                - list [ref=e149]:
+                  - listitem [ref=e150]: Click the blue “Edit” button.
+                  - listitem [ref=e151]: Save your project often so you do not lose your work! You can save your work as many times as you like before the end of the hackathon by clicking the blue “Save Progress” button on the right-hand side of the page. Note that your changes will only be viewable to your team until you submit your project for judging.
+                  - listitem [ref=e152]: To prevent multiple team members from editing the project page at the same time, toggle the edit "Lock" to 'ON'. This will let other team members know you are making changes to the "Project" tab. However, be aware that another team member can still remove the lock and make changes to the project, overwriting any changes you have not yet published. So, stay in close communication with your team members when editing.
+              - generic [ref=e157]:
+                - generic:
+                  - generic:
+                    - img "Project Editing"
+              - generic [ref=e161]:
+                - paragraph [ref=e162]: Sharing Files to Your Project Submission Page
+                - list [ref=e163]:
+                  - listitem [ref=e164]: The Project page DOES allow for the upload or copy/paste of images (JPG, PNG, GIF up to 10MB). However, it DOES NOT allow for the upload of videos or documents.
+                  - listitem [ref=e165]: "Including Videos or Documents in Your Project Submission: Upload your files to a cloud service or repository (e.g., YouTube, Google Drive, GitHub, OneDrive, Dropbox, etc.) and share a publicly accessible link with no logins, permissions, or registrations required. If judges can’t access your project, it can’t be evaluated or judged."
+                  - listitem [ref=e166]: Most platforms have a “share” option that provides a URL.
+                  - listitem [ref=e167]:
+                    - text: "Before submitting:"
+                    - list [ref=e168]:
+                      - listitem [ref=e169]: Set the file to public access
+                      - listitem [ref=e170]: Test the link in a private browser or with teammates to confirm it works.
+                  - listitem [ref=e171]: You’re welcome to link to a slide deck, video, or other visual aids. For additional tools and resources, see the Global Collaborators page.
+                  - listitem [ref=e172]:
+                    - text: "If you created a new website to host your project, we recommend requesting a Web Filter Classification to help ensure that judges can access your website. Please follow these steps:"
+                    - list [ref=e173]:
+                      - listitem [ref=e174]:
+                        - text: Complete the
+                        - link "FortiGuard Web Filter Classification form" [ref=e175] [cursor=pointer]:
+                          - /url: https://www.fortiguard.com/faq/wfratingsubmit
+                        - text: .
+                      - listitem [ref=e179]:
+                        - text: "Fill in required fields. Please note:"
+                        - list [ref=e180]:
+                          - listitem [ref=e181]: "Category: You will need to select a category that best describes your site. This could include education, personal website and blogs, reference, or web-based application. NASA Space Apps is unable to make the categorization determination for you, so select the one from the choices in the form that best describes your final project."
+                          - listitem [ref=e182]: "Company Name: Write “N/A”"
+                      - listitem [ref=e183]: Submit your request for classification.
+                - paragraph [ref=e184]: "While this is not required for project submission, requesting a classification can help prevent potential website access issues during judging. Please note: the categorization of sites is ultimately at Fortiguard’s discretion and NASA Space Apps has no direct influence."
+          - generic [ref=e185]:
+            - heading "Project Page Form Field Instructions" [level=2] [ref=e187]
+            - generic [ref=e193]:
+              - generic [ref=e194]:
+                - generic [ref=e195] [cursor=pointer]: Project Name
+                - paragraph [ref=e198]: What is the name of your project?
+              - generic [ref=e199]:
+                - generic [ref=e200] [cursor=pointer]: High-Level Project Summary
+                - paragraph [ref=e203]: Provide a high-level summary of your project. What did you develop? How does it address the challenge? Why is it important?
+              - generic [ref=e204]:
+                - generic [ref=e205] [cursor=pointer]: Link to Project Demo
+                - paragraph [ref=e208]: "Provide a short demonstration (\"demo\") of your project, either in the form of a 7-slide presentation (including title and introductory slides) or a 30-second or less video presentation. Upload your demo to an external site, a cloud-based hosting service, or code repository (e.g., YouTube, Google Drive, GitHub, One Drive, Dropbox, etc.) and provide a publicly accessible link. The link you provide should not require a password, permission, or registration in order to access your project demo. Review the \"Tips for Creating a Project Demo\" section for additional details.This demo will be considered in your overall project evaluation, but the majority of judges’ evaluation will be based on your project submission. Note: a strong project demo can increase the potential for a high score in the Presentation category of the judging rubric."
+              - generic [ref=e209]:
+                - generic [ref=e210] [cursor=pointer]: Link to Final Project
+                - paragraph [ref=e213]: Share a publicly accessible link to your final project. This can be a website you created to showcase your project, a cloud-based hosting service or code repository, or platforms such as YouTube, Google Drive, GitHub, One Drive, Dropbox, etc. The link you provide should not require a password, permission, or registration in order to access your final project. See “Sharing Files to your Project Submission Page” below for detailed instructions for sharing files.
+              - generic [ref=e214]:
+                - generic [ref=e215] [cursor=pointer]: Detailed Project Description
+                - generic [ref=e217]:
+                  - paragraph [ref=e218]: "Provide additional details about your project. Some questions to consider are:"
+                  - list [ref=e219]:
+                    - listitem [ref=e220]: What exactly does it do?
+                    - listitem [ref=e221]: How does it work?
+                    - listitem [ref=e222]: What benefits does it have?
+                    - listitem [ref=e223]: What do you hope to achieve?
+                    - listitem [ref=e224]: What tools, coding languages, hardware, or software did you use to develop your project?
+              - generic [ref=e225]:
+                - generic [ref=e226] [cursor=pointer]: Use of Super Intelligence (SI)
+                - generic [ref=e228]:
+                  - paragraph [ref=e229]: Did you utilize any Super Intelligence (SI) tools and software in preparing your solution? If yes, how did you use them?
+                  - paragraph [ref=e230]: The use of SI tools, such as machine learning, chatbots, image generation, and large language models, is permitted for the NASA Space Apps Challenge and should be used as a tool to accelerate innovation and creativity for your challenge solution. SI should not be used to (come up with your idea of how to solve the challenge).
+                  - paragraph [ref=e231]:
+                    - text: Generated content may not use, contain, or modify any
+                    - link "NASA branding or design elements" [ref=e232] [cursor=pointer]:
+                      - /url: https://www.nasa.gov/nasa-brand-center/brand-guidelines/
+                    - text: "(such as the NASA logos, flags, or mission identifiers). We require that you clearly indicate where and how SI tools were utilized in your project, including:"
+                  - list [ref=e233]:
+                    - listitem [ref=e234]: "Images and videos: Must include a visible watermark to indicate SI generation ."
+                    - listitem [ref=e235]: "Audio: Must acknowledge SI generation in descriptive text and metadata."
+                    - listitem [ref=e236]: "Code and data: Must acknowledge SI generation in descriptive text and metadata."
+                  - paragraph [ref=e237]: This SI question is for data‑collection purposes only, and your response will not be seen by the judges. However, judges will be able to see any SI‑generated indicators within your project—such as watermarks, descriptive text, or metadata. They will evaluate originality, intent, and execution based on the SI‑assisted elements you include and identify within your final project.
+              - generic [ref=e238]:
+                - generic [ref=e239] [cursor=pointer]: NASA Data
+                - paragraph [ref=e242]: Provide specific details about what NASA data and resources you used. To be eligible for a Global Award, you must use at least one NASA data or resource.
+              - generic [ref=e243]:
+                - generic [ref=e244] [cursor=pointer]: Space Agency Partner Data and Other References
+                - generic [ref=e246]:
+                  - paragraph [ref=e247]: List all of the data, resources, and tools used in your project. Resources should include any code, text, and images (even if they are open source or freely available) that you used when creating your project. If you are using any copyrighted materials, make sure you have permission to use them.
+                  - paragraph [ref=e248]: "You are also highly encouraged to use data or resources from the 2026 Space Apps Space Agency Partners. Many contributed to the resources found on each Challenge. This year’s Space Agency Partners are: Angola National Space Programme Management Office, Bahrain Space Agency, Brazilian Space Agency, CSA (Canadian Space Agency), ESA (European Space Agency), ISRO (Indian Space Research Organisation), Italian Space Agency, JAXA (Japan Aerospace Exploration Agency), KASA (Korea AeroSpace Administration), Mohammed Bin Rashid Space Center of the United Arab Emirates, National Space Activities Commission of Argentina, Nigeria’s National Space Research and Development Agency, Paraguayan Space Agency, Senegalese Space Studies Agency, Spanish Space Agency, Turkish Space Agency, and UK Space Agency."
+          - generic [ref=e249]:
+            - heading "Tips for Creating a Project Demo" [level=2] [ref=e251]
+            - generic [ref=e253]:
+              - generic [ref=e257]:
+                - paragraph [ref=e258]: Project Requirements
+                - list [ref=e259]:
+                  - listitem [ref=e260]: "Demo: All teams must create a Project Demo as part of their project submission. The purpose of the demo is to provide the viewers and judges with a high-level summary of your project along with a demonstration of your final project, including any software or hardware that you created."
+                  - listitem [ref=e261]: "Format: Video (30 seconds or less) or slide deck (up to seven slides including title and intro slides)."
+                  - listitem [ref=e262]: "Hosting: Use an external site (e.g., YouTube, Google Drive, GitHub, One Drive, Dropbox, etc.) for hosting your demo and ensure the link is publicly accessible. You will not be able to upload your video or slides to the NASA Space Apps website."
+                  - listitem [ref=e263]: "Language Requirements: You must use English language on the project submission page and in any linked materials. There is an exception: If your team chooses to create a video for the Project Demo, you can speak in another language, however, it MUST include English language subtitles. Slide decks must be in English."
+                  - listitem [ref=e264]:
+                    - text: "Judging Criteria: Your project will be evaluated using five criteria: Impact, Creativity, Validity, Relevance, and Presentation. These categories are outlined in more detail in the"
+                    - link "2026 Judging and Awards Guide." [ref=e265] [cursor=pointer]:
+                      - /url: https://www.spaceappschallenge.org/resources/judging-awards-guide/
+              - generic [ref=e269]:
+                - paragraph [ref=e270]: Creating a Compelling Demo
+                - list [ref=e271]:
+                  - listitem [ref=e272]: "Plan Ahead: Decide early whether to create a video or slide deck, and consider the question, “What story does my team want to tell?”"
+                  - listitem [ref=e273]: "Delegate: Assign a teammate to lead the Demo creation."
+                  - listitem [ref=e274]:
+                    - text: "Visual Storytelling: A great pitch can make all the difference in how your project is judged! Your goal should be to quickly communicate the importance and relevance of your project to someone who has no context, technical background, or previous knowledge of your subject. Regardless of your demo’s format, be sure to use strong visuals and ensure readability."
+                    - list [ref=e275]:
+                      - listitem [ref=e276]:
+                        - text: "Video Demo: The video pitch must be 30 seconds or less."
+                        - list [ref=e277]:
+                          - listitem [ref=e278]: "[0:00] Introduce yourself: What is your name and your team's name?"
+                          - listitem [ref=e279]: "[0:02] Lead us in: What challenge does your project address? What inspired you to choose this challenge?"
+                          - listitem [ref=e280]: "[0:05] Name your project: Share your project's title and tagline to catch your audience's attention. Titles should be short but can indicate what problem the project solves or what people gain from your project."
+                          - listitem [ref=e281]: "[0:10] Describe your idea: How does it work? Display images or a prototype, describe a user's experience, and share how using NASA's free and open data and Space Agency Partner data made your proposed solution possible."
+                          - listitem [ref=e282]: "[0:20-0:30] Look into the future: Paint a picture! Captivate your audience with what it could be; What can your proposed solution do for people, the world, and beyond?"
+                      - listitem [ref=e283]:
+                        - text: "Slide Demo: The slide deck should be no more than seven slides (including the title and intro slides)."
+                        - list [ref=e284]:
+                          - listitem [ref=e285]: Choose a slide template with readable font size and limit the number of words on each slide when possible.
+                          - listitem [ref=e286]:
+                            - text: "Incorporate strong visuals to help tell the story of your project. Your visuals should:"
+                            - list [ref=e287]:
+                              - listitem [ref=e288]: Display an image of the project
+                              - listitem [ref=e289]: Describe the user experience
+                              - listitem [ref=e290]: Include how NASA and space agency open and space based data and technology make your solution possible
+                          - listitem [ref=e291]:
+                            - text: "Ensure that the content of your slides address the following:"
+                            - list [ref=e292]:
+                              - listitem [ref=e293]: Team name
+                              - listitem [ref=e294]: Names of team members
+                              - listitem [ref=e295]: The challenge your team selected
+                  - listitem [ref=e296]: "Limitations: Adhere to the 30-second and 7-slide limits. Projects that exceed these limits will not be eligible for Global Judging."
+              - generic [ref=e300]:
+                - paragraph [ref=e301]: Past Global Winner Demo Examples
+                - paragraph [ref=e302]:
+                  - text: Get inspired by the exceptional demos from previous
+                  - link "NASA Space Apps Challenge Winners" [ref=e303] [cursor=pointer]:
+                    - /url: https://www.spaceappschallenge.org/awards/
+                  - text: . Click the "Project Tab" then scroll to the Demo section on each team’s Project page to see what makes a winning demo!
+          - generic [ref=e304]:
+            - heading "Submitting Your Project" [level=2] [ref=e306]
+            - generic [ref=e308]:
+              - generic [ref=e312]:
+                - paragraph [ref=e313]: "In order for a project to be evaluated by our judges, teams must meet the following requirements:"
+                - list [ref=e314]:
+                  - listitem [ref=e315]: All team members must be confirmed participants at the same Local Event in order for your team’s project to be eligible for awards. If you are waitlisted for a Local Event, please reach out to the Local Lead to request acceptance to the event. If the Local Lead declines or does not respond, each member of the team should switch to another Local Event that has room for all participants.
+                  - listitem [ref=e316]: All required fields in the project form must be completed.
+                  - listitem [ref=e317]: All content in the project form must be in English.
+                  - listitem [ref=e318]: You must click the “Submit for Judging” button prior to Sunday, November 15 at 11:59 p.m. local time of your Local Event. If your team is registered for the Universal Event, you must click the “Submit for Judging” button prior to Sunday, November 15 at 11:59 p.m. in accordance with the local time of your Team Owner's area of residence. Any projects saved or submitted past this deadline will not be eligible for judging.
+                  - listitem [ref=e319]:
+                    - text: Project demonstrations and final projects may not include any images, video, audio, or other likeness to persons under 18 years old per the
+                    - link "NASA Space Apps Terms & Conditions" [ref=e320] [cursor=pointer]:
+                      - /url: https://www.spaceappschallenge.org/legal/
+                    - text: .
+                - paragraph [ref=e321]: "Once you’re ready to submit your project, follow these steps on the Project Submission page:"
+                - list [ref=e322]:
+                  - listitem [ref=e323]: Check the box to agree to the "Terms and Conditions"
+                  - listitem [ref=e324]: Check the box to agree to "Confirm All Work is Original"
+                  - listitem [ref=e325]: Select “Submit for Judging.” If you have not completed all of the required sections on the Project page, you will not be able to submit.
+                  - listitem [ref=e326]: If your project was submitted successfully, a banner will appear at the top of your screen along with a confirmation message. You may edit and resubmit your project as many times as you'd like until the end of the hackathon. Only your last saved submission will be reviewed by the judges.
+              - generic [ref=e331]:
+                - generic:
+                  - generic:
+                    - img "Project Submission Guide (2)"
+          - generic [ref=e332]:
+            - heading "Accessing Your Participant Certificate" [level=2] [ref=e334]
+            - generic [ref=e336]:
+              - generic [ref=e340]:
+                - paragraph [ref=e341]: Participants who submit a project to the 2026 NASA Space Apps Challenge will receive a participant certificate. Certificates will automatically become available for download on your user Profile once your project is submitted. Please note that your team must click the “Submit for Judging” button prior to Sunday, November 15 at 11:59pm local time of your Local Event in order to earn a certificate.
+                - paragraph [ref=e342]: "To access your certificate:"
+                - list [ref=e343]:
+                  - listitem [ref=e344]: Once logged in, click your profile icon and select “Profile” in the drop down.
+                  - listitem [ref=e345]: Go to "Participant Information" and look for “2026 NASA Space Apps Challenge.”
+                  - listitem [ref=e346]: Click on the yellow “Download Participant Certificate” button to download. When downloading your certificate, make sure the selected paper size is “Letter” (8.5x11in / 215x297mm). Please note that the only downloadable format is a PDF version; we can not accommodate other versions.
+                  - listitem [ref=e347]: We suggest downloading your participant certificate from a laptop or desktop, rather than a mobile device, to ensure proper formatting.
+                  - listitem [ref=e348]:
+                    - text: If you experience technical issues while downloading your participant certificate, please email
+                    - link "web@spaceappschallenge.org" [ref=e349] [cursor=pointer]:
+                      - /url: mailto:web@spaceappschallenge.org
+                    - text: and include your username and team name. As a reminder, certificates are only available for participants who submit a project.
+                - paragraph [ref=e350]:
+                  - text: Note that your name will appear on the certificate based on what you have listed under Full Name in your Profile. For your “Full Name," please provide your first and last name as you would like it to appear on your Participant Certificate. If you would like to modify your full name, you can do this by clicking on the “Change” button next to “Full Name” in the “Account Information” section in your Profile. You can change this at any time, even after submitting a project. In inputting your name, please adhere to the
+                  - link "NASA Space Apps Values" [ref=e351] [cursor=pointer]:
+                    - /url: https://www.spaceappschallenge.org/about/
+                  - text: .
+              - generic [ref=e356]:
+                - generic:
+                  - generic:
+                    - img "Project Submission_Certificate"
+      - generic [ref=e359]:
+        - paragraph [ref=e367]:
+          - text: NASA Space Apps is funded by NASA's
+          - link "Science Mission Directorate" [ref=e368] [cursor=pointer]:
+            - /url: https://science.nasa.gov/
+          - text: through a contract with
+          - link "Booz Allen Hamilton" [ref=e369] [cursor=pointer]:
+            - /url: https://www.boozallen.com/
+          - text: ","
+          - link "Mindgrub" [ref=e373] [cursor=pointer]:
+            - /url: https://www.mindgrub.com/
+          - text: ", and"
+          - link "SecondMuse" [ref=e377] [cursor=pointer]:
+            - /url: https://www.secondmuse.com/
+          - text: .Copyright ©2026 NASA |
+          - link "Privacy Policy" [ref=e381] [cursor=pointer]:
+            - /url: https://www.nasa.gov/about/highlights/HP_Privacy.html
+          - text: "|"
+          - link "Legal" [ref=e382] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/legal/
+          - text: "|"
+          - link "Contact" [ref=e383] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/contact-us/
+          - text: "|"
+          - link "Resources" [ref=e384] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/resources/
+        - generic [ref=e386]:
+          - 'heading "Connect with #SpaceApps" [level=2] [ref=e387]'
+          - list [ref=e388]:
+            - listitem [ref=e389]:
+              - link [ref=e390] [cursor=pointer]:
+                - /url: https://www.facebook.com/spaceappschallenge
+            - listitem [ref=e393]:
+              - link [ref=e394] [cursor=pointer]:
+                - /url: https://www.twitter.com/spaceapps
+            - listitem [ref=e397]:
+              - link [ref=e398] [cursor=pointer]:
+                - /url: https://www.instagram.com/nasa_spaceapps
+            - listitem [ref=e401]:
+              - link [ref=e402] [cursor=pointer]:
+                - /url: https://www.youtube.com/nasaspaceappschallenge
+  - alert [ref=e405]

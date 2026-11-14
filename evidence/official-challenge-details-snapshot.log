@@ -1,0 +1,192 @@
+{"argv": ["npx.cmd", "--yes", "--package", "@playwright/cli", "playwright-cli", "-s=requirements", "snapshot"], "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026", "started_utc": "2026-11-14T14:58:01.465565+00:00"}
+### Page
+- Page URL: https://www.spaceappschallenge.org/2026/challenges/modis-and-viirs-hot-spots/
+- Page Title: NASA Space Apps Challenge
+- Console: 0 errors, 2 warnings
+### Snapshot
+```yaml
+- generic [active] [ref=f6e1]:
+  - main [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - generic [ref=f6e5]:
+        - generic [ref=f6e8]:
+          - button "The NASA Space Apps Challenge is happening now! 🎉" [ref=f6e10]
+          - paragraph [ref=f6e14]:
+            - text: Have a question? Join us on
+            - link "Space Apps Connect" [ref=f6e15] [cursor=pointer]:
+              - /url: https://github.com/nasa/spaceapps
+            - text: .
+        - generic [ref=f6e20]:
+          - link [ref=f6e23] [cursor=pointer]:
+            - /url: /
+            - img "Space Apps Logo 2026 color" [ref=f6e24]
+          - navigation [ref=f6e26]:
+            - list [ref=f6e27]:
+              - listitem [ref=f6e28]:
+                - link "About Us" [ref=f6e29] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=f6e40]:
+                - link "Awards" [ref=f6e41] [cursor=pointer]:
+                  - /url: /awards/
+              - listitem [ref=f6e44]:
+                - button "Explore the Hackathon" [ref=f6e45] [cursor=pointer]
+              - listitem [ref=f6e54]:
+                - list [ref=f6e55]:
+                  - listitem [ref=f6e56]:
+                    - button "Login" [ref=f6e57] [cursor=pointer]
+                  - generic [ref=f6e58]: or
+                  - listitem [ref=f6e59]:
+                    - button "Sign Up" [ref=f6e60] [cursor=pointer]
+      - generic [ref=f6e63]:
+        - list [ref=f6e122]:
+          - listitem [ref=f6e123]
+          - listitem [ref=f6e126]:
+            - link "Home" [ref=f6e127] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f6e128]:
+            - link "2026 NASA Space Apps Challenge" [ref=f6e129] [cursor=pointer]:
+              - /url: /2026/
+          - listitem [ref=f6e130]:
+            - link "2026 Challenges" [ref=f6e131] [cursor=pointer]:
+              - /url: /2026/challenges/
+          - listitem [ref=f6e132]:
+            - generic [ref=f6e133]: MODIS-and-VIIRS-hot-spots
+        - generic [ref=f6e67]:
+          - img "15 - Harmonization of MODIS and VIIRS Hot Spots_4.3" [ref=f6e70]
+          - generic [ref=f6e74]:
+            - heading "Harmonization of MODIS and VIIRS Hot Spots" [level=1] [ref=f6e75]
+            - link "Join the Challenge" [ref=f6e135] [cursor=pointer]:
+              - /url: /2026/challenges/modis-and-viirs-hot-spots//?tab=teams
+        - generic [ref=f6e139]:
+          - tablist [ref=f6e140]:
+            - tab "Details" [selected] [ref=f6e141] [cursor=pointer]
+            - tab "Resources" [ref=f6e142] [cursor=pointer]
+            - tab "Teams" [ref=f6e143] [cursor=pointer]
+          - tabpanel "Details" [ref=f6e144]:
+            - generic [ref=f6e147]:
+              - generic [ref=f6e148]:
+                - generic [ref=f6e149]:
+                  - heading "Event" [level=3] [ref=f6e150]
+                  - text: 2026 NASA Space Apps Challenge
+                - generic [ref=f6e151]:
+                  - heading "Difficulty" [level=3] [ref=f6e152]
+                  - generic [ref=f6e153]:
+                    - generic [ref=f6e154]: Advanced
+                    - generic [ref=f6e155]: Intermediate
+                - generic [ref=f6e156]:
+                  - heading "Subjects" [level=3] [ref=f6e157]
+                  - generic [ref=f6e158]:
+                    - generic [ref=f6e159]: Earth Science
+                    - generic [ref=f6e160]: Software
+              - generic [ref=f6e161]:
+                - paragraph [ref=f6e162]: Understanding how burning activity is distributed across our planet over time, including wildfires and agricultural burns intense enough to be detected by satellite sensors, enables us to anticipate critical periods, guide monitoring efforts, and improve fire response. Satellites have tracked active fire hotspots for more than two decades, but the record is split across sensors whose data cannot be compared directly, leaving fire managers without a consistent picture of when and where burning has occurred. Your challenge is to build a web application that harmonizes these records into a burning activity calendar based on active fire hotspots, enabling early warning and emergency responders, scientists, and land managers to examine historical fire patterns, unusual conditions, and critical periods within a selected area of interest.
+                - paragraph
+                - iframe [ref=f6e164]:
+                  - generic [ref=f7e1]:
+                    - generic "YouTube Video Player" [ref=f7e3]
+                    - generic [ref=f7e5]:
+                      - generic:
+                        - generic:
+                          - generic [ref=f7e6] [cursor=pointer]
+                          - button "Play video" [ref=f7e10] [cursor=pointer]
+                          - button "Hide player controls" [ref=f7e12] [cursor=pointer]
+                          - generic [ref=f7e14]:
+                            - generic [ref=f7e21]:
+                              - generic [ref=f7e22]:
+                                - link "2026 Challenge | Harmonization of MODIS and VIIRS Hot Spots" [ref=f7e23] [cursor=pointer]:
+                                  - /url: https://www.youtube.com/watch?v=tEPHsiZtuvk
+                                - link "NASA Space Apps Challenge" [ref=f7e24] [cursor=pointer]:
+                                  - /url: /channel/UCJAwE_T5mZ6rwMi6zInuKeg
+                              - generic [ref=f7e26]:
+                                - button [ref=f7e27] [cursor=pointer]
+                                - generic [ref=f7e29]:
+                                  - generic: NASA Space Apps Challenge
+                                  - generic: 19.3K subscribers
+                            - generic [ref=f7e30]:
+                              - button "Share" [ref=f7e33] [cursor=pointer]
+                              - link "Watch on YouTube" [ref=f7e44] [cursor=pointer]:
+                                - /url: https://www.youtube.com/watch?v=tEPHsiZtuvk
+                                - generic [ref=f7e45]: Watch on
+                - paragraph
+                - heading "Background" [level=2] [ref=f6e165]
+                - paragraph [ref=f6e166]: Fire regimes
+                - paragraph [ref=f6e167]: Some ecosystems need periodic fires to maintain their function and their structure. However, changes in fire intensity, extent, and frequency can have negative impacts on climate, society, and biodiversity, along with the ecosystem services they provide. Fires can also cause loss of life and properties, degradation of health, and acute risk to fire managers.
+                - paragraph [ref=f6e168]: Because humans have modified global patterns of vegetation, ignition, and climate over millennia, fires on both local and global scales are increasingly human-related.
+                - paragraph [ref=f6e169]: Burning activity involves wildfires in natural vegetation and forested areas, as well as anthropogenic fires associated with agriculture, land-clearing, waste disposal, and industrial activities. It is one of the many dynamic phenomena that can be detected with remote sensing.
+                - paragraph [ref=f6e170]: Satellite fire detection and monitoring
+                - paragraph [ref=f6e171]: Climate models project that fire weather will become more common and more intense. Earth Observation (EO) satellites provide technological solutions for early detection, rapid response, and postfire assessment, measuring thermal radiation and smoke across regional to global scales.
+                - paragraph [ref=f6e172]: Detecting hotspots on Earth's surface
+                - paragraph [ref=f6e173]: EO satellites provide information on fire location, intensity, and temporal evolution. Satellite sensors operating in the thermal infrared (TIR) range can detect hotspots on the Earth's surface generated by urban and wildfires, volcanic eruptions, and industrial processes such as gas flares in oil and gas operations.
+                - paragraph [ref=f6e174]: For active fires, detection and monitoring rely mainly on mid-infrared (MIR) and TIR measurements, where active combustion produces its stronger signal. Sensors such as MODIS and VIIRS provide real-time thermal anomaly detection, enabling early hotspot identification and the assessment of burned areas.
+                - paragraph [ref=f6e175]: Burn activity calendars
+                - paragraph [ref=f6e176]: Using satellite-detected hotspots, fire activity calendars can be developed by integrating historical information with recent data, allowing for the rapid visual identification of seasonal patterns, anomalies, and trends in each region.
+                - paragraph [ref=f6e177]: MODIS sensors on board Terra and Aqua satellites provide more than two decades of observations, but they are approaching the end of their operational life and are being replaced by VIIRS sensors. Their records cannot be directly compared without harmonization, since MODIS and VIIRS have different spatial resolutions, sensitivities, and observation schedules.
+                - paragraph [ref=f6e178]: Therein lies the root of the challenge. As fire frequency and intensity increase, emergency managers benefit from an updated and consistent hotspot calendar that enables them to rapidly visualize, for example, which month and years had the highest fire activity, and compare the burning activity of the current month against the historical median for a selected area.
+                - paragraph [ref=f6e179]: You may consider harmonizing NASA Earthdata FIRMS hotspots, combining the extensive historical series of MODIS with the continuity and greater detail of VIIRS.
+                - paragraph [ref=f6e180]: Emergency managers could then use the web application to monitor sensitive regions, recognize changes relative to historical patterns, and strengthen fire forecasting and response.
+                - heading "Objectives" [level=2] [ref=f6e181]
+                - paragraph [ref=f6e182]: Your challenge is to develop a harmonized burning activity calendar based on active fire hotspots in a web application, combining the extensive historical series of MODIS with the continuity and greater detail of VIIRS to provide a consistent time series of hotspot activity.
+                - paragraph [ref=f6e183]: This challenge could be approached in two parts. The first is MODIS and VIIRS hotspot harmonization, so that by the end of that phase the sensor of origin no longer matters and the patterns, trends, and anomalies become the focus.
+                - paragraph [ref=f6e184]: The second involves developing a web application that takes harmonized hotspot data as input. Through this visual tool, a user could select a region and a specific date range, then download analytics and visualizations of fire activity.
+                - paragraph [ref=f6e185]: "A calendar of burning activity showing the number of hotspots detected from the early 2000s to the present, built on the harmonized hotspots dataset and integrated into the web application, would give emergency managers a view of the fire history of an area: which periods of the year see more fires, which years had more burning activity, and how a current fire compares with previous ones."
+                - paragraph [ref=f6e186]: In addition to numerical information, you could consider how color ramps might represent similarities and differences in the number of detected hotspots across months, providing an accessible and intuitive way to visualize fire activity. A downloadable CSV File of hot spots detected during a search would be another useful output.
+                - heading "Potential Considerations" [level=2] [ref=f6e187]
+                - paragraph [ref=f6e188]: "You may (but are not required to) consider the following:"
+                - list [ref=f6e189]:
+                  - listitem [ref=f6e190]: Your target audience can include early warning and emergency responders, scientists, land managers, and firefighters.
+                  - listitem [ref=f6e191]: Consider making your web application interactive – for example, a map where users can draw the area of interest, or an option to enter latitude and longitude.
+                  - listitem [ref=f6e192]: Consider using accessible color ramps.
+                  - listitem [ref=f6e193]: Your tool could depict a burning calendar
+                  - listitem [ref=f6e194]:
+                    - text: "Your tool could focus on a few key indices and figures and present them through data visualizations, such as:"
+                    - list [ref=f6e195]:
+                      - listitem [ref=f6e196]: Historical comparisons, including anomalies against multi-year averages
+                      - listitem [ref=f6e197]: Number of fires detected and reported
+                - paragraph [ref=f6e198]: For data and resources related to this challenge, refer to the Resources tab at the top of the page. More resources may be added before the hackathon begins.
+                - paragraph
+                - paragraph [ref=f6e199]: "Photo credit: The National Commission on Space Activities of Argentina (CONAE)"
+      - generic [ref=f6e84]:
+        - paragraph [ref=f6e92]:
+          - text: NASA Space Apps is funded by NASA's
+          - link "Science Mission Directorate" [ref=f6e93] [cursor=pointer]:
+            - /url: https://science.nasa.gov/
+          - text: through a contract with
+          - link "Booz Allen Hamilton" [ref=f6e94] [cursor=pointer]:
+            - /url: https://www.boozallen.com/
+          - text: ","
+          - link "Mindgrub" [ref=f6e95] [cursor=pointer]:
+            - /url: https://www.mindgrub.com/
+          - text: ", and"
+          - link "SecondMuse" [ref=f6e96] [cursor=pointer]:
+            - /url: https://www.secondmuse.com/
+          - text: .Copyright ©2026 NASA |
+          - link "Privacy Policy" [ref=f6e97] [cursor=pointer]:
+            - /url: https://www.nasa.gov/about/highlights/HP_Privacy.html
+          - text: "|"
+          - link "Legal" [ref=f6e98] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/legal/
+          - text: "|"
+          - link "Contact" [ref=f6e99] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/contact-us/
+          - text: "|"
+          - link "Resources" [ref=f6e100] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/resources/
+        - generic [ref=f6e102]:
+          - 'heading "Connect with #SpaceApps" [level=2] [ref=f6e103]'
+          - list [ref=f6e104]:
+            - listitem [ref=f6e105]:
+              - link [ref=f6e106] [cursor=pointer]:
+                - /url: https://www.facebook.com/spaceappschallenge
+            - listitem [ref=f6e109]:
+              - link [ref=f6e110] [cursor=pointer]:
+                - /url: https://www.twitter.com/spaceapps
+            - listitem [ref=f6e113]:
+              - link [ref=f6e114] [cursor=pointer]:
+                - /url: https://www.instagram.com/nasa_spaceapps
+            - listitem [ref=f6e117]:
+              - link [ref=f6e118] [cursor=pointer]:
+                - /url: https://www.youtube.com/nasaspaceappschallenge
+  - alert [ref=f6e121]
+```
+### Events
+- New console entries: .playwright-cli\console-2026-11-14T14-57-18-228Z.log#L4

@@ -1,0 +1,50 @@
+{
+  "FireLens_Butte_Offline.html": {
+    "bytes": 1529982,
+    "sha256": "8e1aae61716ed381f18f85caf9113945b827b8a68b3935650f65ebbcf15c2008"
+  },
+  "FireLens_Butte_Source_2026-11-14.zip": {
+    "bytes": 5806153,
+    "sha256": "7bb354fee84daacf127730f9f31ced40af6cc02207e57848b9f3de817da88a4e"
+  },
+  "FireLens_Butte_Static_Site.zip": {
+    "bytes": 496821,
+    "sha256": "7cc189838829c8e5e22039e6075f1918af7f28ec595c48e5d20c8cda512afc20"
+  },
+  "site/.gitattributes": {
+    "bytes": 125,
+    "sha256": "cc5569403b253a8e7f72de4d8c16054cd36abbc68065e21678e5ed5ace1b42d6"
+  },
+  "site/favicon.png": {
+    "bytes": 2410,
+    "sha256": "e83dfb12d209c2da1390e424398f81e745992339073f7e6ef38ae8b5aea1b522"
+  },
+  "site/index.html": {
+    "bytes": 1214,
+    "sha256": "2b487398d1b209a433b039c50790051f4311a3592e1b6eaaba7e8424e6eba5b9"
+  },
+  "site/assets/index-Bk1xKUw8.js": {
+    "bytes": 1184881,
+    "sha256": "b0725604b7941321fcd4ac74986a09e6272b1a3a7fa2d5ac50643f7365fcedd0"
+  },
+  "site/assets/index-keUuMVBw.css": {
+    "bytes": 343951,
+    "sha256": "7a10133296cba3f4cba4a31e23648233a6b377113ff35cb52ecaed29284e93f9"
+  },
+  "site/licenses/Inter-OFL.txt": {
+    "bytes": 4477,
+    "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+  },
+  "site/licenses/Lucide-ISC.txt": {
+    "bytes": 3208,
+    "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+  },
+  "site/licenses/React-MIT.txt": {
+    "bytes": 1088,
+    "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  },
+  "site/licenses/ReactDOM-MIT.txt": {
+    "bytes": 1088,
+    "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  }
+}

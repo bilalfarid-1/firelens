@@ -1,0 +1,29 @@
+{
+  "recorded_utc": "2026-11-14T15:03:36.532888+00:00",
+  "sources": [
+    {
+      "url": "https://www.spaceappschallenge.org/resources/project-submission-guide/",
+      "evidence_file": "Project_Submission_Guide_snapshot.yml",
+      "sha256": "65688ef7415ad3ef9611e2a5214ee04f70e290de5130b861c07374b9b902b7af",
+      "method": "Actual Windows Edge Playwright CLI snapshot; read-only browsing"
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/challenges/modis-and-viirs-hot-spots/",
+      "evidence_file": "official-challenge-details-snapshot.log",
+      "sha256": "9c8130103420eb1ac7596dd72a5c36d6d6f4ce87de20081d19779936d095b139",
+      "method": "Actual Windows Edge Playwright CLI snapshot; read-only browsing"
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/challenges/modis-and-viirs-hot-spots/?tab=resources",
+      "evidence_file": "official-resources-snapshot.log",
+      "sha256": "27e5dc3e6cd57827c6daa5ab064d5bd2459f6762ffc46188427e8ff0b46df5fa",
+      "method": "Actual Windows Edge Playwright CLI snapshot; read-only browsing"
+    },
+    {
+      "url": "https://www.spaceappschallenge.org/2026/local-events/multan/?tab=schedule",
+      "evidence_file": "multan-schedule-snapshot.log",
+      "sha256": "3dce69cf548a69dda04546b1172076b02d93e60f77f6b4f704d56247f722078f",
+      "method": "Actual Windows Edge Playwright CLI snapshot; read-only browsing"
+    }
+  ]
+}

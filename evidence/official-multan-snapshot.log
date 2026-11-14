@@ -1,0 +1,189 @@
+{"argv": ["npx.cmd", "--yes", "--package", "@playwright/cli", "playwright-cli", "-s=requirements", "snapshot"], "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026", "started_utc": "2026-11-14T15:01:02.045088+00:00"}
+### Page
+- Page URL: https://www.spaceappschallenge.org/2026/local-events/multan/
+- Page Title: NASA Space Apps Challenge
+- Console: 0 errors, 1 warnings
+### Snapshot
+```yaml
+- generic [active] [ref=f9e1]:
+  - main [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - generic [ref=f9e5]:
+        - generic [ref=f9e8]:
+          - button "The NASA Space Apps Challenge is happening now! 🎉" [ref=f9e10]
+          - paragraph [ref=f9e14]:
+            - text: Have a question? Join us on
+            - link "Space Apps Connect" [ref=f9e15] [cursor=pointer]:
+              - /url: https://github.com/nasa/spaceapps
+            - text: .
+        - generic [ref=f9e20]:
+          - link [ref=f9e23] [cursor=pointer]:
+            - /url: /
+            - img "Space Apps Logo 2026 color" [ref=f9e24]
+          - navigation [ref=f9e26]:
+            - list [ref=f9e27]:
+              - listitem [ref=f9e28]:
+                - link "About Us" [ref=f9e29] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=f9e32]:
+                - link "Awards" [ref=f9e33] [cursor=pointer]:
+                  - /url: /awards/
+              - listitem [ref=f9e36]:
+                - button "Explore the Hackathon" [ref=f9e37] [cursor=pointer]
+              - listitem [ref=f9e40]:
+                - list [ref=f9e41]:
+                  - listitem [ref=f9e42]:
+                    - button "Login" [ref=f9e43] [cursor=pointer]
+                  - generic [ref=f9e44]: or
+                  - listitem [ref=f9e45]:
+                    - button "Sign Up" [ref=f9e46] [cursor=pointer]
+      - generic [ref=f9e49]:
+        - list [ref=f9e52]:
+          - listitem [ref=f9e53]
+          - listitem [ref=f9e56]:
+            - link "Home" [ref=f9e57] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f9e58]:
+            - link "2026 NASA Space Apps Challenge" [ref=f9e59] [cursor=pointer]:
+              - /url: /2026/
+          - listitem [ref=f9e60]:
+            - link "2026 Local Events" [ref=f9e61] [cursor=pointer]:
+              - /url: /2026/local-events/
+          - listitem [ref=f9e62]:
+            - generic [ref=f9e63]: Multan
+        - generic [ref=f9e68]:
+          - heading "Pakistan" [level=2] [ref=f9e69]
+          - heading "Multan" [level=1] [ref=f9e70]
+          - button "Sign Up For This Local Event" [ref=f9e127] [cursor=pointer]
+        - generic [ref=f9e132]:
+          - tablist [ref=f9e133]:
+            - tab "Details" [selected] [ref=f9e134] [cursor=pointer]
+            - tab "Local Event Schedule" [ref=f9e135] [cursor=pointer]
+            - tab "Teams" [ref=f9e136] [cursor=pointer]
+          - tabpanel "Details" [ref=f9e137]:
+            - generic [ref=f9e139]:
+              - heading "User-Generated Content" [level=2] [ref=f9e140]
+              - paragraph [ref=f9e144]:
+                - text: This page contains content originally written, designed, or submitted by a Space Apps participant or Local Lead and may not have been reviewed by a NASA team member prior to publication. If you believe this content violates the Space Apps
+                - link "Terms & Conditions" [ref=f9e145] [cursor=pointer]:
+                  - /url: https://www.spaceappschallenge.org/legal/
+                - text: ", please contact info@spaceappschallenge.org."
+            - generic [ref=f9e147]:
+              - generic [ref=f9e149]:
+                - generic [ref=f9e150]:
+                  - generic "Virtual" [ref=f9e151]
+                  - generic "In-Person" [ref=f9e155]
+                  - generic "Accepting Participants" [ref=f9e159]
+                - generic [ref=f9e163]:
+                  - paragraph [ref=f9e164]: NASA Space Apps Challenge 2026 – Multan, Pakistan 🚀🌍
+                  - paragraph [ref=f9e165]: Welcome to the NASA Space Apps Challenge 2026 – Multan, where students, developers, engineers, designers, researchers, entrepreneurs, and space enthusiasts come together to turn ideas into innovative solutions for real-world challenges using NASA’s open data and resources.
+                  - heading "🌎 Why Join NASA Space Apps Multan?" [level=2] [ref=f9e166]
+                  - paragraph [ref=f9e167]: NASA Space Apps is more than a hackathon—it is an opportunity to learn, collaborate, create, and solve problems that matter.
+                  - paragraph [ref=f9e168]: "Whether you are an experienced developer or joining your first hackathon, you are welcome to participate. You can bring skills in:"
+                  - list [ref=f9e169]:
+                    - listitem [ref=f9e170]: 💻 Software Development & AI
+                    - listitem [ref=f9e171]: 🛰️ Space & Earth Science
+                    - listitem [ref=f9e172]: 🌱 Climate & Sustainability
+                    - listitem [ref=f9e173]: ⚡ Engineering & Energy
+                    - listitem [ref=f9e174]: 📊 Data Science & Analytics
+                    - listitem [ref=f9e175]: 🎨 UI/UX & Graphic Design
+                    - listitem [ref=f9e176]: 🔬 Research & Scientific Innovation
+                    - listitem [ref=f9e177]: 🚀 Entrepreneurship & Project Management
+                  - paragraph [ref=f9e178]: You don't need to be an expert in every field. Find a team, bring your skills, learn from others, and build something meaningful.
+                  - heading "🏆 What You Can Expect" [level=2] [ref=f9e179]
+                  - paragraph [ref=f9e180]: "By participating in NASA Space Apps Multan, you will have the opportunity to:"
+                  - list [ref=f9e181]:
+                    - listitem [ref=f9e182]: Work on real-world challenges inspired by NASA and space science.
+                    - listitem [ref=f9e183]: Collaborate with talented participants from different backgrounds.
+                    - listitem [ref=f9e184]: Develop innovative technology-based solutions.
+                    - listitem [ref=f9e185]: Learn new tools, technologies, and problem-solving approaches.
+                    - listitem [ref=f9e186]: Connect with students, professionals, mentors, and innovators.
+                    - listitem [ref=f9e187]: Showcase your project to a wider global community.
+                    - listitem [ref=f9e188]: Compete for recognition through the NASA Space Apps global award process.
+                  - heading "🤝 Who Can Participate?" [level=2] [ref=f9e189]
+                  - paragraph [ref=f9e190]: Everyone is welcome!
+                  - paragraph [ref=f9e191]: Students, professionals, researchers, developers, engineers, designers, entrepreneurs, educators, and anyone passionate about solving problems through creativity and technology can participate.
+                  - paragraph [ref=f9e192]: No specific academic background is required. Your curiosity, creativity, and willingness to collaborate matter most.
+                  - heading "📍 Multan Local Event" [level=2] [ref=f9e193]
+                  - paragraph [ref=f9e194]: The Multan Local Event will bring together participants from Multan and across Pakistan, with opportunities for both in-person and virtual participation.
+                  - paragraph [ref=f9e195]: "📍 Location: Multan, Pakistan🌐 Participation: Virtual & In-Person🕐 Timezone: Pakistan Standard Time (GMT+5)"
+                  - paragraph [ref=f9e196]: Whether you join us physically in Multan or participate virtually, you will be part of the same global NASA Space Apps community.
+                  - heading "🚀 Build. Collaborate. Innovate." [level=2] [ref=f9e197]
+                  - paragraph [ref=f9e198]: NASA Space Apps is your chance to transform an idea into a working solution, meet people who share your passion, and become part of one of the world's largest global hackathon communities.
+                  - paragraph [ref=f9e199]: Bring your ideas. Bring your skills. Bring your curiosity.
+                  - paragraph [ref=f9e200]: Let's use space, science, technology, and creativity to solve challenges on Earth and beyond. 🌍🛰️
+                  - heading "📢 Stay Connected" [level=3] [ref=f9e201]
+                  - paragraph [ref=f9e202]: For announcements, updates, networking, and event coordination, join our official communication channels through the links provided on this page.
+                  - paragraph [ref=f9e203]: We look forward to welcoming you to NASA Space Apps Challenge 2026 – Multan!
+                  - paragraph [ref=f9e204]: "#SpaceApps #NASA #SpaceAppsMultan #NASAChallenge #Hackathon #Multan #Pakistan #Innovation #Technology #Space #Climate #AI"
+              - generic [ref=f9e205]:
+                - generic [ref=f9e207]:
+                  - heading "Local Lead" [level=2] [ref=f9e208]
+                  - generic [ref=f9e209]:
+                    - img "avatar.08:26:13.449346" [ref=f9e211]
+                    - generic [ref=f9e212]:
+                      - heading "Muhammad Umer Farooq" [level=3] [ref=f9e213]
+                      - paragraph [ref=f9e214]: umerfarooq
+                      - paragraph [ref=f9e215]: Pakistan
+                      - link "umer310000@gmail.com" [ref=f9e216] [cursor=pointer]:
+                        - /url: mailto:umer310000@gmail.com
+                - generic [ref=f9e220]:
+                  - heading "Important Links" [level=2] [ref=f9e221]
+                  - list [ref=f9e222]:
+                    - listitem [ref=f9e223]:
+                      - link "WhatsApp" [ref=f9e224] [cursor=pointer]:
+                        - /url: https://chat.whatsapp.com/Emwy2ebhWMWCjvwuqPuVID?s=cl&p=a&ilr=0
+                    - listitem [ref=f9e227]:
+                      - link "LinkedIn" [ref=f9e228] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/muhammad-umer-farooq1/
+                - generic [ref=f9e232]:
+                  - heading "Venue Details" [level=2] [ref=f9e233]
+                  - list [ref=f9e234]:
+                    - listitem [ref=f9e235]:
+                      - heading "Multan Pakistan" [level=3] [ref=f9e236]
+                      - paragraph [ref=f9e237]: Multan, Pakistan
+      - generic [ref=f9e79]:
+        - paragraph [ref=f9e87]:
+          - text: NASA Space Apps is funded by NASA's
+          - link "Science Mission Directorate" [ref=f9e88] [cursor=pointer]:
+            - /url: https://science.nasa.gov/
+          - text: through a contract with
+          - link "Booz Allen Hamilton" [ref=f9e89] [cursor=pointer]:
+            - /url: https://www.boozallen.com/
+          - text: ","
+          - link "Mindgrub" [ref=f9e93] [cursor=pointer]:
+            - /url: https://www.mindgrub.com/
+          - text: ", and"
+          - link "SecondMuse" [ref=f9e97] [cursor=pointer]:
+            - /url: https://www.secondmuse.com/
+          - text: .Copyright ©2026 NASA |
+          - link "Privacy Policy" [ref=f9e101] [cursor=pointer]:
+            - /url: https://www.nasa.gov/about/highlights/HP_Privacy.html
+          - text: "|"
+          - link "Legal" [ref=f9e102] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/legal/
+          - text: "|"
+          - link "Contact" [ref=f9e103] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/contact-us/
+          - text: "|"
+          - link "Resources" [ref=f9e104] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/resources/
+        - generic [ref=f9e106]:
+          - 'heading "Connect with #SpaceApps" [level=2] [ref=f9e107]'
+          - list [ref=f9e108]:
+            - listitem [ref=f9e109]:
+              - link [ref=f9e110] [cursor=pointer]:
+                - /url: https://www.facebook.com/spaceappschallenge
+            - listitem [ref=f9e113]:
+              - link [ref=f9e114] [cursor=pointer]:
+                - /url: https://www.twitter.com/spaceapps
+            - listitem [ref=f9e117]:
+              - link [ref=f9e118] [cursor=pointer]:
+                - /url: https://www.instagram.com/nasa_spaceapps
+            - listitem [ref=f9e121]:
+              - link [ref=f9e122] [cursor=pointer]:
+                - /url: https://www.youtube.com/nasaspaceappschallenge
+  - alert [ref=f9e125]
+```
+### Events
+- New console entries: .playwright-cli\console-2026-11-14T14-59-57-607Z.log#L1-L3

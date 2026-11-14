@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "npm.cmd",
+    "run",
+    "build"
+  ],
+  "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026\\firelens-working\\frontend",
+  "started_utc": "2026-11-14T15:01:39.171987+00:00",
+  "exit_code": 0,
+  "finished_utc": "2026-11-14T15:01:43.584164+00:00"
+}

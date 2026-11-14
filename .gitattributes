@@ -1,0 +1,3 @@
+# Preserve audited source files and distribution artifacts byte-for-byte.
+# Line-ending normalization would invalidate the supplied CSV SHA-256 manifests.
+* -text

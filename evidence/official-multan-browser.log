@@ -1,0 +1,10 @@
+{"argv": ["npx.cmd", "--yes", "--package", "@playwright/cli", "playwright-cli", "-s=requirements", "goto", "https://www.spaceappschallenge.org/2026/local-events/multan/"], "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026", "started_utc": "2026-11-14T14:59:53.928989+00:00"}
+### Ran Playwright code
+```js
+await page.goto('https://www.spaceappschallenge.org/2026/local-events/multan/');
+```
+### Page
+- Page URL: https://www.spaceappschallenge.org/2026/local-events/multan/
+- Page Title: NASA Space Apps Challenge
+### Snapshot
+- [Snapshot](.playwright-cli\page-2026-11-14T14-59-59-467Z.yml)

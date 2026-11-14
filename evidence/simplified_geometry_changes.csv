@@ -1,0 +1,4 @@
+sensor,source_row_one_based,source_csv,row_sha256,latitude,longitude,acq_date,acq_time,exact_inside,supplied_inside,simplified_inside
+VIIRS_SNPP,8976,fire_archive_SV-C2_848031.csv,a4f9b06651fd25da9cddbebb60a97953ab358982853c3c22c21eb340070afc7d,39.30422,-121.73871,2014-04-10,2103,False,False,True
+VIIRS_SNPP,12015,fire_archive_SV-C2_848031.csv,0911b36dd5212a5d9839204f4ed497eeb0b1f4716bb1e588c69c1ccbdb66f78e,39.41077,-121.35593,2017-10-09,1015,True,True,False
+VIIRS_SNPP,19187,fire_archive_SV-C2_848031.csv,c42e377a2efdbce637ef89d09014690eb0f745bca02d6a4c85025c32197d4beb,39.52958,-121.85891,2020-04-03,2130,False,False,True

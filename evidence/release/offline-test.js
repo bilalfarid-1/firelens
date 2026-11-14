@@ -1,0 +1,41 @@
+async page => {
+ const checks=[]; const errors=[]; const requests=[];
+ page.on('pageerror',e=>errors.push(String(e)));
+ page.on('request',r=>requests.push(r.url()));
+ const check=(b,n)=>{if(!b)throw Error(n);checks.push(n)};
+ await page.reload();await page.setViewportSize({width:1440,height:1000});
+ await page.waitForSelector('[data-detection]');
+ check((await page.locator('.main-value').innerText()).includes('1,220'),'November2018 indicator');
+ check(await page.locator('[data-detection]').count()>100,'real populated map');
+ await page.getByRole('button',{name:'MODIS',exact:true}).click();
+ check((await page.locator('.map-preview-label').innerText()).includes('735 cell-days'),'MODIS map sum735');
+ const svgDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export map SVG',exact:true}).click();await (await svgDownload).saveAs('audit/release-browser/offline-map.svg');
+ const chartDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export chart SVG',exact:true}).click();await (await chartDownload).saveAs('audit/release-browser/offline-history.svg');check((await page.locator('main').innerText()).includes('same-month 2013–2023 VIIRS median: 33'),'selected month median comparison');
+ await page.getByRole('button',{name:'Zoom in',exact:true}).click();check(await page.locator('.county-svg g[transform]').getAttribute('transform')!=='translate(400 218) scale(1) translate(-400 -218)','map zoom');await page.getByRole('button',{name:'Reset map extent',exact:true}).click();
+ await page.getByRole('button',{name:'Expand map',exact:true}).click();check(await page.locator('.map-expanded').count()===1,'map expand');await page.keyboard.press('Escape');check(await page.locator('.map-expanded').count()===0,'map escape closes');
+ await page.getByRole('button',{name:'About this map',exact:true}).click();check(await page.locator('.map-details tbody tr').count()===460,'accessible cell table');await page.getByRole('button',{name:'About this map',exact:true}).click();
+ await page.screenshot({path:'audit/release-browser/offline-desktop.png',fullPage:true});
+ const select=async(y,m)=>{await page.getByLabel('Year',{exact:true}).selectOption(String(y));await page.getByLabel('Month',{exact:true}).selectOption(String(m-1))};
+ await select(2024,7);check((await page.locator('.sensor-comparison').innerText()).includes('322'),'July MODIS');check((await page.locator('.main-value').innerText()).includes('58'),'July observed58');check(await page.locator('.warning-context').count()===1,'July coverage warning');
+ await page.screenshot({path:'audit/release-browser/offline-july.png',fullPage:true});
+ await select(2008,11);check(await page.getByRole('button',{name:'VIIRS S-NPP',exact:true}).isDisabled(),'early VIIRS unavailable');check(await page.locator('.summary-card').getByText(/Heuristic residual band/).count()===1,'modeled residual band');check((await page.locator('.sensor-comparison').innerText()).includes('Unavailable'),'unavailable is not zero');
+ await select(2012,1);check((await page.locator('.view-stack').innerText()).includes('January 2012 is still estimated'),'January2012 transition');await select(2012,2);check(!await page.getByRole('button',{name:'VIIRS S-NPP',exact:true}).isDisabled(),'February2012 observed');
+ await select(2002,6);check((await page.locator('.view-stack').innerText()).includes('Early Terra-only coverage'),'June2002 caution');
+ await select(2017,1);check(await page.locator('[data-detection]').count()===0,'quiet-month empty map');check((await page.locator('.map-data-notice').innerText()).includes('No retained detections'),'quiet-month explanation');
+ await select(2000,11);check(await page.getByRole('button',{name:'Previous month',exact:true}).isDisabled(),'first month boundary');check(await page.locator('.month-tile:disabled').count()===10,'2000 unsupported months disabled');
+ await select(2025,12);check(await page.getByRole('button',{name:'Next month',exact:true}).isDisabled(),'last month boundary');
+ await page.getByRole('button',{name:'Sensor comparison',exact:true}).click();check(await page.locator('.table-scroll tbody tr').count()===302,'comparison302 rows');await page.getByRole('button',{name:/Inspect July 2024/}).click();check(await page.locator('.table-scroll tbody tr').count()===1,'comparison date filter');const comparisonDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export comparison SVG',exact:true}).click();await(await comparisonDownload).saveAs('audit/release-browser/offline-comparison.svg');
+ await page.getByRole('button',{name:'Method & validation',exact:true}).click();await page.getByRole('button',{name:'Model & evaluation'}).click();check(await page.locator('.validation-table tbody tr').count()===5,'five baseline methods');check((await page.locator('.validation-table').innerText()).includes('18.958'),'median baseline disclosure');await page.screenshot({path:'audit/release-browser/offline-validation.png',fullPage:true});
+ await page.getByRole('button',{name:'Downloads',exact:true}).click();await page.locator('#export-start').fill('2018-11');await page.locator('#export-end').fill('2018-12');const d=page.waitForEvent('download');await page.getByRole('button',{name:'Download monthly CSV',exact:true}).click();await (await d).saveAs('audit/release-browser/offline-custom.csv');
+ const f=page.waitForEvent('download');await page.locator('.download-list > div').first().getByRole('button').click();await (await f).saveAs('audit/release-browser/offline-full.csv');
+ for(let i=1;i<6;i++){const next=page.waitForEvent('download');await page.locator('.download-list > div').nth(i).getByRole('button').click();await (await next).saveAs('audit/release-browser/offline-download-'+i+'.csv')};check(await page.locator('.download-list > div').count()===6,'all six download actions');
+ await page.locator('#export-end').fill('2018-10');check(await page.getByRole('button',{name:'Download monthly CSV',exact:true}).isDisabled(),'invalid export disabled');check(await page.locator('#range-error').count()===1,'inline range error');
+ await page.getByRole('button',{name:'Explore',exact:true}).click();await select(2018,11);
+ if(await page.getByRole('button',{name:'Dismiss export notification',exact:true}).count())await page.getByRole('button',{name:'Dismiss export notification',exact:true}).click();
+ await page.getByRole('button',{name:'Previous month',exact:true}).focus();await page.keyboard.press('Enter');check((await page.locator('#summary-title').innerText()).includes('October 2018'),'keyboard date navigation');await select(2018,11);
+ for(const width of [360,390,768,1440]){await page.setViewportSize({width,height:900});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'no overflow '+width)}
+ await page.setViewportSize({width:390,height:844});await page.screenshot({path:'audit/release-browser/offline-mobile.png',fullPage:true});
+ await page.getByRole('button',{name:'Open navigation',exact:true}).click();check(await page.getByRole('dialog',{name:'Workspace navigation'}).count()===1,'mobile navigation dialog');await page.keyboard.press('Shift+Tab');check(await page.locator('.sidebar').evaluate(el=>el.contains(document.activeElement)),'drawer keyboard focus retained');await page.getByRole('button',{name:'Downloads',exact:true}).click();check(await page.locator('#export-start').isVisible(),'mobile navigation');
+ check(errors.length===0,'no JS exceptions');check(requests.every(u=>!/^https?:/.test(u)||u.startsWith('http://127.0.0.1')),'no external runtime requests');
+ return {checks,errors,requests};
+}

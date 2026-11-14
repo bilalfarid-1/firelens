@@ -1,0 +1,14 @@
+{"argv": ["npx.cmd", "--yes", "--package", "@playwright/cli", "playwright-cli", "-s=requirements", "open", "https://www.spaceappschallenge.org/resources/project-submission-guide/", "--browser", "msedge"], "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026", "started_utc": "2026-11-14T14:56:03.802171+00:00"}
+### Browser `requirements` opened with pid 15636.
+### Ran Playwright code
+```js
+await page.goto('https://www.spaceappschallenge.org/resources/project-submission-guide/');
+```
+### Page
+- Page URL: https://www.spaceappschallenge.org/resources/project-submission-guide/
+- Page Title: NASA Space Apps Challenge
+- Console: 0 errors, 1 warnings
+### Snapshot
+- [Snapshot](.playwright-cli\page-2026-11-14T14-56-14-710Z.yml)
+### Events
+- New console entries: .playwright-cli\console-2026-11-14T14-56-09-697Z.log#L1-L2

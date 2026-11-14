@@ -1,0 +1,165 @@
+{"argv": ["npx.cmd", "--yes", "--package", "@playwright/cli", "playwright-cli", "-s=requirements", "snapshot"], "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026", "started_utc": "2026-11-14T15:01:37.306637+00:00"}
+### Page
+- Page URL: https://www.spaceappschallenge.org/2026/local-events/multan/?tab=schedule
+- Page Title: NASA Space Apps Challenge
+- Console: 0 errors, 3 warnings
+### Snapshot
+```yaml
+- generic [ref=f9e1]:
+  - main [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - generic [ref=f9e5]:
+        - generic [ref=f9e8]:
+          - button "The NASA Space Apps Challenge is happening now! 🎉" [ref=f9e10]
+          - paragraph [ref=f9e14]:
+            - text: Have a question? Join us on
+            - link "Space Apps Connect" [ref=f9e15] [cursor=pointer]:
+              - /url: https://github.com/nasa/spaceapps
+            - text: .
+        - generic [ref=f9e20]:
+          - link [ref=f9e23] [cursor=pointer]:
+            - /url: /
+            - img "Space Apps Logo 2026 color" [ref=f9e24]
+          - navigation [ref=f9e26]:
+            - list [ref=f9e27]:
+              - listitem [ref=f9e28]:
+                - link "About Us" [ref=f9e29] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=f9e32]:
+                - link "Awards" [ref=f9e33] [cursor=pointer]:
+                  - /url: /awards/
+              - listitem [ref=f9e36]:
+                - button "Explore the Hackathon" [ref=f9e37] [cursor=pointer]
+              - listitem [ref=f9e40]:
+                - list [ref=f9e41]:
+                  - listitem [ref=f9e42]:
+                    - button "Login" [ref=f9e43] [cursor=pointer]
+                  - generic [ref=f9e44]: or
+                  - listitem [ref=f9e45]:
+                    - button "Sign Up" [ref=f9e46] [cursor=pointer]
+      - generic [ref=f9e49]:
+        - list [ref=f9e52]:
+          - listitem [ref=f9e53]
+          - listitem [ref=f9e56]:
+            - link "Home" [ref=f9e57] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f9e58]:
+            - link "2026 NASA Space Apps Challenge" [ref=f9e59] [cursor=pointer]:
+              - /url: /2026/
+          - listitem [ref=f9e60]:
+            - link "2026 Local Events" [ref=f9e61] [cursor=pointer]:
+              - /url: /2026/local-events/
+          - listitem [ref=f9e62]:
+            - generic [ref=f9e63]: Multan
+        - generic [ref=f9e68]:
+          - heading "Pakistan" [level=2] [ref=f9e69]
+          - heading "Multan" [level=1] [ref=f9e70]
+          - button "Sign Up For This Local Event" [ref=f9e127] [cursor=pointer]
+        - generic [ref=f9e132]:
+          - tablist [ref=f9e133]:
+            - tab "Details" [ref=f9e134] [cursor=pointer]
+            - tab "Local Event Schedule" [active] [selected] [ref=f9e135] [cursor=pointer]
+            - tab "Teams" [ref=f9e136] [cursor=pointer]
+          - tabpanel "Local Event Schedule" [ref=f9e238]:
+            - generic [ref=f9e240]:
+              - heading "User-Generated Content" [level=2] [ref=f9e241]
+              - paragraph [ref=f9e245]:
+                - text: This page contains content originally written, designed, or submitted by a Space Apps participant or Local Lead and may not have been reviewed by a NASA team member prior to publication. If you believe this content violates the Space Apps
+                - link "Terms & Conditions" [ref=f9e246] [cursor=pointer]:
+                  - /url: https://www.spaceappschallenge.org/legal/
+                - text: ", please contact info@spaceappschallenge.org."
+            - generic [ref=f9e248]:
+              - generic [ref=f9e250]:
+                - generic [ref=f9e251]:
+                  - generic "Virtual" [ref=f9e252]
+                  - generic "In-Person" [ref=f9e256]
+                  - generic "Accepting Participants" [ref=f9e260]
+                - generic [ref=f9e264]:
+                  - heading "Livestream Details" [level=2] [ref=f9e265]
+                  - generic [ref=f9e266]:
+                    - term [ref=f9e267]: "Livestream Url:"
+                    - definition [ref=f9e268]: Not Set
+                    - term [ref=f9e269]: "Livestream Start Time:"
+                    - definition [ref=f9e270]: 14 November 2026
+                    - term [ref=f9e271]: "Livestream End Time:"
+                    - definition [ref=f9e272]: 15 November 2026
+                - generic [ref=f9e274]:
+                  - heading "Schedule" [level=2] [ref=f9e275]
+                  - list [ref=f9e276]:
+                    - listitem [ref=f9e277]:
+                      - heading "Sunday, September 6" [level=3] [ref=f9e278]
+                      - list [ref=f9e279]:
+                        - listitem [ref=f9e280]:
+                          - text: 09:00 First Guidance Event on Google Meet
+                          - generic [ref=f9e281]: Join Event for Guidance, Ask Question about registration and etc
+              - generic [ref=f9e282]:
+                - generic [ref=f9e284]:
+                  - heading "Local Lead" [level=2] [ref=f9e285]
+                  - generic [ref=f9e286]:
+                    - img "avatar.08:26:13.449346" [ref=f9e288]
+                    - generic [ref=f9e289]:
+                      - heading "Muhammad Umer Farooq" [level=3] [ref=f9e290]
+                      - paragraph [ref=f9e291]: umerfarooq
+                      - paragraph [ref=f9e292]: Pakistan
+                      - link "umer310000@gmail.com" [ref=f9e293] [cursor=pointer]:
+                        - /url: mailto:umer310000@gmail.com
+                - generic [ref=f9e297]:
+                  - heading "Important Links" [level=2] [ref=f9e298]
+                  - list [ref=f9e299]:
+                    - listitem [ref=f9e300]:
+                      - link "WhatsApp" [ref=f9e301] [cursor=pointer]:
+                        - /url: https://chat.whatsapp.com/Emwy2ebhWMWCjvwuqPuVID?s=cl&p=a&ilr=0
+                    - listitem [ref=f9e304]:
+                      - link "LinkedIn" [ref=f9e305] [cursor=pointer]:
+                        - /url: https://www.linkedin.com/in/muhammad-umer-farooq1/
+                - generic [ref=f9e309]:
+                  - heading "Venue Details" [level=2] [ref=f9e310]
+                  - list [ref=f9e311]:
+                    - listitem [ref=f9e312]:
+                      - heading "Multan Pakistan" [level=3] [ref=f9e313]
+                      - paragraph [ref=f9e314]: Multan, Pakistan
+      - generic [ref=f9e79]:
+        - paragraph [ref=f9e87]:
+          - text: NASA Space Apps is funded by NASA's
+          - link "Science Mission Directorate" [ref=f9e88] [cursor=pointer]:
+            - /url: https://science.nasa.gov/
+          - text: through a contract with
+          - link "Booz Allen Hamilton" [ref=f9e89] [cursor=pointer]:
+            - /url: https://www.boozallen.com/
+          - text: ","
+          - link "Mindgrub" [ref=f9e93] [cursor=pointer]:
+            - /url: https://www.mindgrub.com/
+          - text: ", and"
+          - link "SecondMuse" [ref=f9e97] [cursor=pointer]:
+            - /url: https://www.secondmuse.com/
+          - text: .Copyright ©2026 NASA |
+          - link "Privacy Policy" [ref=f9e101] [cursor=pointer]:
+            - /url: https://www.nasa.gov/about/highlights/HP_Privacy.html
+          - text: "|"
+          - link "Legal" [ref=f9e102] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/legal/
+          - text: "|"
+          - link "Contact" [ref=f9e103] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/contact-us/
+          - text: "|"
+          - link "Resources" [ref=f9e104] [cursor=pointer]:
+            - /url: https://www.spaceappschallenge.org/resources/
+        - generic [ref=f9e106]:
+          - 'heading "Connect with #SpaceApps" [level=2] [ref=f9e107]'
+          - list [ref=f9e108]:
+            - listitem [ref=f9e109]:
+              - link [ref=f9e110] [cursor=pointer]:
+                - /url: https://www.facebook.com/spaceappschallenge
+            - listitem [ref=f9e113]:
+              - link [ref=f9e114] [cursor=pointer]:
+                - /url: https://www.twitter.com/spaceapps
+            - listitem [ref=f9e117]:
+              - link [ref=f9e118] [cursor=pointer]:
+                - /url: https://www.instagram.com/nasa_spaceapps
+            - listitem [ref=f9e121]:
+              - link [ref=f9e122] [cursor=pointer]:
+                - /url: https://www.youtube.com/nasaspaceappschallenge
+  - alert [ref=f9e125]
+```
+### Events
+- New console entries: .playwright-cli\console-2026-11-14T14-59-57-607Z.log#L4-L5

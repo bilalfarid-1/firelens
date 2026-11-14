@@ -1,0 +1,34 @@
+{
+  "boundary_mode": "approximate_official_polygon",
+  "approx_area_sqmi": 1677.81,
+  "summary": {
+    "MODIS": {
+      "bbox_rows": 19993,
+      "butte_rows": 7211,
+      "excluded_outside_county": 12782,
+      "invalid_rows": 0,
+      "first_date_in_archive": "2000-11-02",
+      "near_approximate_boundary_within_25m": 32,
+      "filtered_file": "MODIS_Butte_Raw_Detections.csv"
+    },
+    "VIIRS_SNPP": {
+      "bbox_rows": 51944,
+      "butte_rows": 16526,
+      "excluded_outside_county": 35418,
+      "invalid_rows": 0,
+      "first_date_in_archive": "2012-01-23",
+      "near_approximate_boundary_within_25m": 85,
+      "filtered_file": "VIIRS_SNPP_Butte_Raw_Detections.csv"
+    }
+  },
+  "files": [
+    "Butte_County_Boundary.geojson",
+    "Butte_County_Data_Quality_Report.md",
+    "Butte_County_Monthly_Raw_Detections.csv",
+    "Butte_County_Yearly_Raw_Detections.csv",
+    "MODIS_Butte_Raw_Detections.csv",
+    "VIIRS_SNPP_Butte_Raw_Detections.csv",
+    "full_resolution_edge_verification.json",
+    "processing_manifest.json"
+  ]
+}

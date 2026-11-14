@@ -1,0 +1,4 @@
+### Ran Playwright code
+```js
+await (async page => { await page.route('https://**/*',r=>r.abort()); await page.route('http://**/*',r=>r.abort()); })(page);
+```

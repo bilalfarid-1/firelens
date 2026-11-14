@@ -1,0 +1,43 @@
+{
+  "source_archives_sha256": {
+    "DL_FIRE_M-C61_848030.zip": "dcd09d67c0b9a2d95b1be7c8fbd97e2dbd1cd28a5240857c6ecc60d89fbc55f9",
+    "DL_FIRE_SV-C2_848031.zip": "0e855b5059966c61ae11cd712bbbfc6409ae4913cf18259cab4ec429b4826eb8"
+  },
+  "boundary_source": "https://services3.arcgis.com/uknczv4rpevve42E/arcgis/rest/services/California_County_Boundaries_and_Identifiers_Blue_Version_view/FeatureServer/1/query?where=CENSUS_GEOID+%3D+%2706007%27&outFields=%2A&returnGeometry=true&outSR=4326&f=geojson",
+  "boundary_mode": "approximate_official_polygon",
+  "full_resolution_edge_audit": "117 near-border rows audited; 3 exact-polygon corrections applied",
+  "geometry_area_sqmi_approx": 1677.809,
+  "boundary_processing": "Douglas-Peucker ~0.0001 degree; lat/lon rounded to 5 decimals; 25m near-boundary check",
+  "polygon_valid": true,
+  "counts": {
+    "MODIS": {
+      "bbox_rows": 19993,
+      "butte_rows": 7211,
+      "excluded_outside_county": 12782,
+      "invalid_rows": 0,
+      "first_date_in_archive": "2000-11-02",
+      "near_approximate_boundary_within_25m": 32,
+      "filtered_file": "MODIS_Butte_Raw_Detections.csv"
+    },
+    "VIIRS_SNPP": {
+      "bbox_rows": 51944,
+      "butte_rows": 16526,
+      "excluded_outside_county": 35418,
+      "invalid_rows": 0,
+      "first_date_in_archive": "2012-01-23",
+      "near_approximate_boundary_within_25m": 85,
+      "filtered_file": "VIIRS_SNPP_Butte_Raw_Detections.csv"
+    }
+  },
+  "types_inside_county": {
+    "MODIS": {
+      "0": 7105,
+      "2": 106
+    },
+    "VIIRS_SNPP": {
+      "0": 16450,
+      "3": 76
+    }
+  },
+  "interpretation": "Raw FIRMS hotspot detections, not unique fires, not harmonized."
+}

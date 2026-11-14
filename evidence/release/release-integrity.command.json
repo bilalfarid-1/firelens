@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "python",
+    "audit\\release_integrity.py"
+  ],
+  "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026",
+  "started_utc": "2026-11-14T14:53:05.452181+00:00",
+  "exit_code": 0,
+  "finished_utc": "2026-11-14T14:53:05.855304+00:00"
+}

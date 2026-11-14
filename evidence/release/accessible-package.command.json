@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "python",
+    "firelens-working\\pipeline\\package_site.py"
+  ],
+  "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026",
+  "started_utc": "2026-11-14T14:53:52.308403+00:00",
+  "exit_code": 0,
+  "finished_utc": "2026-11-14T14:53:53.368462+00:00"
+}

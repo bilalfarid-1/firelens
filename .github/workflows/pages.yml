@@ -1,0 +1,35 @@
+name: Publish FireLens to GitHub Pages (manual)
+
+# Uploading source does not publish the website. Run this only after approving deployment.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out reviewed release
+        uses: actions/checkout@v6
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload tested static files
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: release/site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026\\audit\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\bilal\\Desktop\\NASA-Space-Apps-2026\\firelens-working",
+  "started_utc": "2026-11-14T14:49:32.379310+00:00",
+  "exit_code": 0,
+  "finished_utc": "2026-11-14T14:49:37.008870+00:00"
+}

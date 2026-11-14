@@ -1,0 +1,59 @@
+{
+  "checked_at_utc": "2026-11-14T14:55:42.488955+00:00",
+  "original_files_checked": 65,
+  "original_changes": [],
+  "protected_working_files_checked": 10,
+  "protected_working_changes": [],
+  "selected_palette_contrast": [
+    {
+      "name": "primary text",
+      "foreground": "#18232D",
+      "background": "#FFFFFF",
+      "ratio": 15.94,
+      "normal_text_AA": true
+    },
+    {
+      "name": "secondary text",
+      "foreground": "#536273",
+      "background": "#FFFFFF",
+      "ratio": 6.25,
+      "normal_text_AA": true
+    },
+    {
+      "name": "primary button",
+      "foreground": "#FFFFFF",
+      "background": "#234E65",
+      "ratio": 8.94,
+      "normal_text_AA": true
+    },
+    {
+      "name": "MODIS label",
+      "foreground": "#B95022",
+      "background": "#FFFFFF",
+      "ratio": 4.96,
+      "normal_text_AA": true
+    },
+    {
+      "name": "VIIRS label",
+      "foreground": "#2463A6",
+      "background": "#FFFFFF",
+      "ratio": 6.16,
+      "normal_text_AA": true
+    },
+    {
+      "name": "modeled label",
+      "foreground": "#7255A5",
+      "background": "#FFFFFF",
+      "ratio": 5.9,
+      "normal_text_AA": true
+    },
+    {
+      "name": "warning text",
+      "foreground": "#8A570D",
+      "background": "#FFF4DF",
+      "ratio": 5.58,
+      "normal_text_AA": true
+    }
+  ],
+  "limitation": "Selected token pairs only; not a complete rendered accessibility certification."
+}
