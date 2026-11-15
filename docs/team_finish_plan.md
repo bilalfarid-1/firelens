@@ -1,9 +1,9 @@
-> Current official-guide verification: read OFFICIAL_REQUIREMENTS.md, including SI/AI attribution, media rules, team eligibility and exact public form fields.
+# Team completion handoff
 
-# Three-person completion handoff
+Coordinator-reported team composition: five registered members, three reported active contributors. Verify the accepted roster and individual contributions before naming people or assigning credit. The workstreams below are pending tasks, not claims about who has performed them.
 
-A — Science: read current limitations and audit evidence, verify wording and provenance. Do not call detections unique wildfires or VIIRS ground truth.
-B — Demo: record the28-second storyboard from docs/demo_script.md; verify text and public viewing access once authorized.
-C — Submission owner: finalize team/member details, inspect actual portal requirements and Multan cutoff, obtain explicit publishing authorization, publish/verify public links and submit manually from the team account.
+- Scientific wording: review limitations, provenance and the lower-MAE median baselines; detections are not unique wildfires and VIIRS is not ground truth.
+- Demo review: fill verified identities and review the six-slide PDF; the optional 28-second video script is not a completed recording.
+- Owner actions: confirm actual Multan registration, accepted roster, controlling deadline, rights and licensing, development/idea chronology, and truthful legal declarations. See OWNER_ACTIONS.md.
 
-Local implementation and release artifacts are prepared by Codex. Public deployment, finished recording and portal submission remain team actions. Keep offline HTML for the demonstration.
+The source and draft PDF are public. Website deployment and NASA submission remain separate owner-controlled actions. No individual contribution assignments are made here.

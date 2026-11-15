@@ -45,8 +45,10 @@ No additional space-agency-partner dataset is claimed.
 - Design/prototype assistance: supplied Figma Make prototype; prior AQI Predictor interface informed navigation and numerical hierarchy. Prototype/material rights require owner confirmation.
 - See references.md and RIGHTS_INVENTORY.md. Original-code license is pending owner selection; no NASA or third-party material is claimed as team-authored.
 
+Team composition (coordinator-reported): five registered members, three reported active contributors. Names and individual contributions require confirmation.
+
 ## Owner checklist - complete before legal declarations
-- TODO: verified team name and all three accepted members; same registered Local Event; Multan virtual registration and eligibility confirmed in the private portal.
+- TODO: verified team name and all five registered members and their acceptance status; same registered Local Event; Multan virtual registration and eligibility confirmed in the private portal.
 - TODO: actual challenge-work start versus event kickoff, prior prototype history, and genuine idea origin. Commit/upload dates alone are insufficient.
 - TODO: confirm prototype/asset rights and approve an original-code license; MIT is recommended, not yet applied.
 - TODO: replace identity placeholders in editable demo source, regenerate/review the PDF, and confirm public links open anonymously.

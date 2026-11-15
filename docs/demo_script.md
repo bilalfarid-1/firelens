@@ -4,6 +4,8 @@ Primary prepared artifact: [six-slide PDF](demo/FireLens_Demo_6_Slides.pdf).
 Public PDF: https://raw.githubusercontent.com/bilalfarid-1/firelens/main/docs/demo/FireLens_Demo_6_Slides.pdf
 Editable source: demo/FireLens_Demo_6_Slides.html.
 
+Team composition is coordinator-reported: five registered members and three reported active contributors. No individual roles are assigned.
+
 CONTENT PENDING OWNER: replace team/member placeholders with verified identities and review rights, originality and disclosures before official use. Six slides include the title; the guide allows up to seven.
 
 ## Optional video storyboard - target 28 seconds, not recorded

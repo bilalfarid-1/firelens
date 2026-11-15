@@ -184,7 +184,7 @@ See the [release audit](audit/FINAL_RELEASE_AUDIT.md), [correction report](audit
 
 ## Team, credits and AI assistance
 
-We are a three-person team preparing FireLens for NASA Space Apps 2026. Verified identities and individual contributions remain for the team to confirm; we do not infer them from Git's configured author name.
+Our team has five registered members and three reported active contributors, as reported by our coordinator. We are preparing FireLens for NASA Space Apps 2026. Verified identities and individual contributions remain for the team to confirm; we do not infer them from Git's configured author name.
 
 ChatGPT/Codex substantially assisted processing and application code, design translation, source inspection, testing, exports, documentation, and demo preparation. We supplied a Figma Make-derived prototype and an AQI Predictor interface reference. Their use is documented; ownership and reuse rights still require confirmation. NASA's original observations were not AI-generated. The team remains responsible for final scientific claims, idea-origin declarations, review, and submission.
 

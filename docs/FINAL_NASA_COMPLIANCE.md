@@ -14,7 +14,7 @@ Challenge: https://www.spaceappschallenge.org/2026/challenges/modis-and-viirs-ho
 | AI use permitted; disclose where/how | PASS | CREDITS_AND_AI_ASSISTANCE.md; frontend/package.json; exports | Owner must accurately complete SI field | Owner |
 | SI must not originate solution idea | NOT TESTED | No independent idea-origin attestation | Confirm actual idea origin; do not invent human authorship | Owner |
 | No challenge work before event | NOT TESTED | audit/FINAL_RELEASE_AUDIT.md | Original MVP chronology unknown; Git upload date is insufficient | Owner |
-| Confirmed same-event team and eligibility | NOT TESTED | User identifies three-person Multan virtual team | Verify accepted roster, registration and other eligibility in portal | Owner |
+| Confirmed same-event team and eligibility | NOT TESTED | User reports five registered members, three active contributors; Multan virtual team | Verify accepted roster, registration and other eligibility in portal | Owner |
 | Event-local submission deadline | PARTIAL | evidence/corrections/rules.json | General Multan deadline 15 Nov 2026 23:59 PKT; private portal/local cutoff unverified | Owner |
 | Public final-project link | PASS | https://github.com/bilalfarid-1/firelens | Public repository; Pages intentionally not deployed | Engineer |
 | Demo <=30 seconds or <=7 slides | PARTIAL | demo_script.md | Six-page corrected PDF visually inspected; CONTENT PENDING OWNER for verified team identity; post-push link check recorded in audit/FINAL_CORRECTIONS_REPORT.md | Presenter |
