@@ -1,6 +1,6 @@
 # Team contributions - evidence-backed record
 
-Our coordinator reports five registered members and three active contributors. This is not an authenticated roster verification. Do not infer individual identities or unrelated work from Git configuration.
+Our coordinator reports five registered members and three active contributors. Exact team identities and public NASA roster/event evidence are now recorded in TEAM_IDENTITY.md; individual acceptance status remains unverified. Do not infer individual identities or unrelated work from Git configuration.
 
 | Contributor / tool | Recorded work | Evidence |
 |---|---|---|
@@ -13,4 +13,4 @@ Our coordinator reports five registered members and three active contributors. T
 
 Both original teammate commits are preserved as merge parents. This ledger distinguishes submitted code from maintainer verification and integration. It does not establish who originated the overall idea, when original challenge work began, or the tools used privately by a contributor. Confirm these points with the actual team before legal/SI declarations.
 
-Team-owned original source code and documentation use [MIT](../LICENSE); source datasets and third-party assets retain separate rights. Names, accepted registration and remaining contribution descriptions belong to the owner-confirmed roster; no private credentials should be committed.
+Team-owned original source code and documentation use [MIT](../LICENSE); source datasets and third-party assets retain separate rights. Exact roster names are recorded in TEAM_IDENTITY.md; accepted registration status and remaining contribution descriptions still require owner confirmation. No private credentials should be committed.

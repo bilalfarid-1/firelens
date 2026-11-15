@@ -4,13 +4,13 @@
 
 FireLens compares historical NASA FIRMS MODIS and VIIRS hotspot observations in **Butte County, California (GEOID 06007)** through a calendar, map, and downloadable evidence. We show sensor differences and label early estimates so visitors can inspect hotspot activity without mistaking it for a count of unique wildfires.
 
-**Explore the project:** [six-slide demo PDF — draft; team identities pending](https://raw.githubusercontent.com/bilalfarid-1/firelens/main/docs/demo/FireLens_Demo_6_Slides.pdf) · [source repository](https://github.com/bilalfarid-1/firelens) · [scientific method](docs/scientific_method.md) · [validation evidence](evidence/independent_results.json)
+**Explore the project:** [six-slide demo PDF — GeoNexus_M](https://raw.githubusercontent.com/bilalfarid-1/firelens/main/docs/demo/FireLens_Demo_6_Slides.pdf) · [source repository](https://github.com/bilalfarid-1/firelens) · [scientific method](docs/scientific_method.md) · [validation evidence](evidence/independent_results.json)
 
 ![FireLens historical hotspot explorer](evidence/final/browser/hosted-desktop.png)
 
 To try the application, [download the static release ZIP](https://github.com/bilalfarid-1/firelens/raw/refs/heads/main/release/FireLens_Butte_Static_Site.zip) and serve its contents, or clone the repository and open `release/FireLens_Butte_Offline.html` in your browser. No installation is needed for the offline version.
 
-> **Release status:** Tested release candidate under team review. Sensor Overlap Map was integrated alongside Historical Activity Insight on 15 November 2026; see the [latest integration report](audit/PR2_INTEGRATION.md) for current checks. The source and demo draft are public. Website deployment and NASA submission were not performed by this integration. The demo remains **CONTENT PENDING OWNER**. This project is not NASA-approved or an operational fire-warning service.
+> **Release status:** Tested release candidate under team review. Sensor Overlap Map was integrated alongside Historical Activity Insight on 15 November 2026; see the [latest integration report](audit/PR2_INTEGRATION.md) for current checks. The source and demo draft are public. Website deployment and NASA submission were not performed by this integration. The six-slide demo identifies GeoNexus_M using the exact NASA roster names; acceptance, originality and separate rights remain owner-confirmed matters. This project is not NASA-approved or an operational fire-warning service.
 
 ## The problem and our approach
 
@@ -190,7 +190,7 @@ The Historical Activity Insight integration is documented separately in [the int
 
 ## Team, credits and AI assistance
 
-Our team has five registered members and three reported active contributors, as reported by our coordinator. We are preparing FireLens for NASA Space Apps 2026. Team identities and contributions beyond the PRs credited below remain for team confirmation; we do not infer them from Git's configured author name.
+Our team has five registered members and three reported active contributors, as reported by our coordinator. We are preparing FireLens for NASA Space Apps 2026. Our exact five-member NASA roster is recorded in [Team identity](docs/TEAM_IDENTITY.md). Individual acceptance status, GitHub-to-NASA identity mappings and contributions beyond the PRs credited below remain for confirmation; we do not infer them from Git's configured author name.
 
 ChatGPT/Codex substantially assisted processing and application code, design translation, source inspection, testing, exports, documentation, and demo preparation. We supplied a Figma Make-derived prototype and an AQI Predictor interface reference. Their use is documented; ownership and reuse rights still require confirmation. NASA's original observations were not AI-generated. The team remains responsible for final scientific claims, idea-origin declarations, review, and submission.
 
@@ -209,10 +209,10 @@ The local application, scientific products, exports, and source release are avai
 1. Confirm team identity, accepted roster, registered event, and eligibility in the actual NASA portal.
 2. Review the genuine idea/development chronology and make truthful originality and SI declarations.
 3. Confirm remaining prototype, asset, and source rights; the MIT license for team-owned original code is approved.
-4. Fill the demo's identity placeholders and approve its final content.
+4. Review the finalized six-slide demo; its team identity placeholders are filled.
 5. Verify the controlling deadline, complete the NASA form, and explicitly authorize **Submit for Judging**; saving a draft is insufficient.
 
-GitHub Pages is optional. A [manual deployment workflow](.github/workflows/pages.yml) is prepared, but website publication requires separate authorization and public verification. We provide no unverified live-app URL here.
+GitHub Pages is optional. A [manual deployment workflow](.github/workflows/pages.yml) is prepared, but the existing [live site](https://bilalfarid-1.github.io/firelens/) serves an older deployment. Follow [the final deployment handoff](docs/FINAL_DEPLOYMENT_HANDOFF.md) to manually republish and verify the tested release.
 
 Current handoff: [owner checklist](docs/OWNER_ACTIONS.md), [submission draft](docs/SUBMISSION_READY.md), [compliance matrix](docs/FINAL_NASA_COMPLIANCE.md), and [hosting instructions](docs/GITHUB_HOSTING.md). These are project records, not a guarantee of eligibility or judging approval.
 

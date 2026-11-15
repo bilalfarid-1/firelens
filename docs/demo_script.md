@@ -6,7 +6,7 @@ Editable source: demo/FireLens_Demo_6_Slides.html.
 
 Team composition is coordinator-reported: five registered members and three reported active contributors. No individual roles are assigned.
 
-CONTENT PENDING OWNER: replace team/member placeholders with verified identities and review rights, originality and disclosures before official use. Six slides include the title; the guide allows up to seven.
+The six-slide PDF now identifies GeoNexus_M and the five exact NASA roster names; see TEAM_IDENTITY.md. Identity placeholders are removed. Individual event acceptance, originality chronology and separate asset rights remain pending in OWNER_ACTIONS.md; the demo does not attest those matters. Six slides include the title; the guide allows up to seven.
 
 ## Optional video storyboard - target 28 seconds, not recorded
 
@@ -17,3 +17,7 @@ CONTENT PENDING OWNER: replace team/member placeholders with verified identities
 23-28s: "Explore 302 months, inspect validation and download the evidence." End on verified team/source/assistance credits.
 
 Use an actual screen recording, readable labels and truthful assistance credits. No video was generated or uploaded. Do not call this script a completed video.
+
+## Manual website refresh
+
+The live URL is https://bilalfarid-1.github.io/firelens/ . Its last verified deployment was b972c9d; use the existing manual Pages workflow on main to publish the tested combined release. No deployment is triggered by editing this demo.

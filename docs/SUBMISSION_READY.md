@@ -1,4 +1,4 @@
-# NASA project form draft - CONTENT PENDING OWNER
+# GeoNexus_M - NASA project form copy
 
 ## Project Name
 FireLens Butte - Historical Satellite Hotspot Explorer
@@ -9,12 +9,12 @@ FireLens compares historical NASA FIRMS MODIS and VIIRS S-NPP hotspot activity i
 ## Project Demo Link
 https://raw.githubusercontent.com/bilalfarid-1/firelens/main/docs/demo/FireLens_Demo_6_Slides.pdf
 
-Six-slide PDF, including the title slide. CONTENT PENDING OWNER: verify team identity and approve content before using this as the official demo. The optional 28-second video storyboard in demo_script.md is not a completed video.
+Six-slide PDF, including the title slide, with GeoNexus_M and the five exact NASA roster names. Scientific and SI disclosures are retained. The optional 28-second video storyboard in demo_script.md is not a completed video.
 
 ## Final Project Link
 https://github.com/bilalfarid-1/firelens
 
-The source repository is public. The optional GitHub Pages website is NOT DEPLOYED. The NASA Project submission is NOT COMPLETED.
+The source repository is public. Website: https://bilalfarid-1.github.io/firelens/ (HTTP200, but last verified deployment b972c9d is older than the latest tested release; manually republish main before using it as the final app link). No NASA submission has been performed in this workflow.
 
 ## Detailed Description
 FireLens addresses "Harmonization of MODIS and VIIRS Hot Spots" through a retrospective web application for one fixed area: Butte County, California (GEOID 06007). Its 302-month calendar covers November 2000 to December 2025. Users select dates, inspect observed spatial activity, compare sensor measurements and same-month historical medians, inspect validation, and download CSV data or SVG figures. A self-contained offline application supports use without external runtime services.
@@ -49,13 +49,17 @@ No additional space-agency-partner dataset is claimed.
 - Design/prototype assistance: supplied Figma Make prototype; prior AQI Predictor interface informed navigation and numerical hierarchy. Prototype/material rights require owner confirmation.
 - See references.md and RIGHTS_INVENTORY.md. Team-owned original code and associated documentation use the approved root MIT License, Copyright (c) 2026 FireLens Butte contributors. NASA data, California geometry and third-party assets retain separate rights; unresolved permissions remain in RIGHTS_INVENTORY.md.
 
-Team composition (coordinator-reported): five registered members, three reported active contributors. Identities and remaining individual contributions require confirmation. Verified GitHub contributions are documented in TEAM_CONTRIBUTIONS.md.
+Team composition (coordinator-reported): five registered members, three reported active contributors. The five exact displayed identities and NASA roster roles are recorded in TEAM_IDENTITY.md; remaining individual contributions and event acceptance still require confirmation. Verified GitHub contributions are documented in TEAM_CONTRIBUTIONS.md.
 
 ## Owner checklist - complete before legal declarations
-- TODO: verified team name and all five registered members and their acceptance status; same registered Local Event; Multan virtual registration and eligibility confirmed in the private portal.
+- DONE: GeoNexus_M and all five exact roster names confirmed on the public NASA team page. TODO: check each member's actual acceptance status and eligibility in the authenticated portal; membership alone is insufficient.
 - TODO: actual challenge-work start versus event kickoff, prior prototype history, and genuine idea origin. Commit/upload dates alone are insufficient.
 - DONE: MIT approved and applied to team-owned original code/documentation. TODO: confirm remaining prototype, geographic-data and third-party asset rights.
-- TODO: replace identity placeholders in editable demo source, regenerate/review the PDF, and confirm public links open anonymously.
+- DONE: demo identity placeholders replaced and the six-page PDF prepared with exact roster names. Verify the public PDF after the final source push, and manually republish the tested main release before selecting the live app link.
 - TODO: verify the portal's controlling deadline and any earlier Multan judging cutoff. Published general deadline: Sunday 15 November 2026, 23:59 Local Event time; for confirmed Multan, 23:59 PKT (UTC+5). Do not apply Islamabad's deadline.
 - TODO: review every required portal field, English content, permitted likenesses, references and truthful SI/originality declarations.
 - NASA has NOT been submitted. Save Progress is not submission. Only the authorized owner should select Submit for Judging and retain successful confirmation after explicit approval.
+
+## Verified team identity
+
+Team: GeoNexus_M. Team Owner: Muhammad Zargham Khan (@zargham_khan). Other roster members: Muhammad Sachal Khalid (@sachal990); Muhammad Bilal Farid (@thebilalfarid); muhammad Saif (@fias); Muhammad Bilal Zafar Khan (@mbzk). Preserve this capitalization. Membership/event association is confirmed; individual acceptance status and unrelated contributions are not inferred.
