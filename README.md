@@ -10,7 +10,7 @@ FireLens compares historical NASA FIRMS MODIS and VIIRS hotspot observations in 
 
 To try the application, [download the static release ZIP](https://github.com/bilalfarid-1/firelens/raw/refs/heads/main/release/FireLens_Butte_Static_Site.zip) and serve its contents, or clone the repository and open `release/FireLens_Butte_Offline.html` in your browser. No installation is needed for the offline version.
 
-> **Release status:** Tested release candidate under team review. At the last verified release on 14 November 2026, the source and demo draft were public, GitHub Pages was not deployed, and no NASA submission had been performed. The demo remains **CONTENT PENDING OWNER**. This project is not NASA-approved or an operational fire-warning service.
+> **Release status:** Tested release candidate under team review. Historical Activity Insight was integrated on 15 November 2026; see the [integration report](audit/PR1_INTEGRATION.md) for current checks. The source and demo draft are public. Website deployment and NASA submission were not performed by this integration. The demo remains **CONTENT PENDING OWNER**. This project is not NASA-approved or an operational fire-warning service.
 
 ## The problem and our approach
 
@@ -27,6 +27,7 @@ For earlier history, we use an exploratory MODIS-to-VIIRS statistical crosswalk.
 - **Historical calendar:** Select months from November 2000 through December 2025 and inspect observed or estimated values.
 - **County activity map:** Switch between observed sensor aggregations, zoom, reset or expand the map, and inspect a cell table.
 - **Sensor comparisons:** Compare monthly measurements, history charts, and historical seasonal medians.
+- **Historical activity insight:** Compare an observed month with other same-calendar-month VIIRS observations in 2013–2023, excluding the selected year. See the comparison median/maximum and an explicitly exploratory elevated-activity category; coverage warnings remain visible.
 - **Method and validation:** Inspect model evaluation, simpler baselines, provenance, and coverage warnings.
 - **Downloads:** Export monthly ranges, full data products, and SVG maps or charts.
 - **Offline application:** Use the bundled HTML with local data, fonts, and styles, without a live API or external map service.
@@ -168,7 +169,7 @@ firelens/
 
 ## Recorded testing and verification
 
-The following results were recorded during the 14 November 2026 release work. **They were not rerun for this README-only update.** They describe the verified application carried into commit `421ec75`, not any later changes. When the team changes the application or release, update the release status and evidence links after running the affected checks; a newer README date does not extend these results.
+The following historical results were recorded during the 14 November 2026 release work. They were not rerun for the earlier README-only update. They describe the verified application carried into commit `421ec75`, not any later changes. When the team changes the application or release, update the release status and evidence links after running the affected checks; a newer README date does not extend these results.
 
 | Verification | Recorded result | Evidence |
 |---|---|---|
@@ -182,11 +183,15 @@ Release checks also compared exported CSV rows with canonical products, parsed S
 
 See the [release audit](audit/FINAL_RELEASE_AUDIT.md), [correction report](audit/FINAL_CORRECTIONS_REPORT.md), and [protected hashes](evidence/corrections/protected_before.json).
 
+The Historical Activity Insight integration is documented separately in [the integration report](audit/PR1_INTEGRATION.md), with its new test and release results. Its reference window excludes the selected year; the existing Seasonal context panel retains the full fixed-period baseline. Neither comparison is a forecast or significance test.
+
 ## Team, credits and AI assistance
 
 Our team has five registered members and three reported active contributors, as reported by our coordinator. We are preparing FireLens for NASA Space Apps 2026. Verified identities and individual contributions remain for the team to confirm; we do not infer them from Git's configured author name.
 
 ChatGPT/Codex substantially assisted processing and application code, design translation, source inspection, testing, exports, documentation, and demo preparation. We supplied a Figma Make-derived prototype and an AQI Predictor interface reference. Their use is documented; ownership and reuse rights still require confirmation. NASA's original observations were not AI-generated. The team remains responsible for final scientific claims, idea-origin declarations, review, and submission.
+
+[MuhammadSaif700](https://github.com/MuhammadSaif700) contributed Historical Activity Insight through [PR #1](https://github.com/bilalfarid-1/firelens/pull/1); the original commit is retained. See the [feature notes](docs/HISTORICAL_ACTIVITY_FEATURE.md) for its comparison rules and limits.
 
 We credit NASA FIRMS for observations, California's official county source for geometry, and the authors of React/ReactDOM, Lucide, Inter, and the scientific/build dependencies. See [credits and AI assistance](docs/CREDITS_AND_AI_ASSISTANCE.md) and the [dependency inventory](evidence/final/npm_dependency_inventory.json).
 

@@ -1,0 +1,179 @@
+### Browser `pr1-regression` opened with pid 12892.
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:8040/site/');
+```
+### Page
+- Page URL: http://127.0.0.1:8040/site/
+- Page Title: FireLens Butte — Historical hotspot explorer
+### Snapshot
+- [Snapshot](.playwright-cli\page-2026-11-15T13-50-37-413Z.yml)
+
+### Result
+{"checks":["November2018 indicator","real populated map","MODIS map sum735","selected month median comparison","map zoom","map expand","map escape closes","accessible cell table","July MODIS","July observed58","July coverage warning","early VIIRS unavailable","modeled residual band","unavailable is not zero","January2012 transition","February2012 observed","June2002 caution","quiet-month empty map","quiet-month explanation","first month boundary","2000 unsupported months disabled","last month boundary","comparison302 rows","comparison date filter","five baseline methods","median baseline disclosure","all six download actions","invalid export disabled","inline range error","keyboard date navigation","no overflow 360","no overflow 390","no overflow 768","no overflow 1440","mobile navigation dialog","drawer keyboard focus retained","mobile navigation","no JS exceptions","no external runtime requests"],"errors":[],"requests":["http://127.0.0.1:8040/site/","http://127.0.0.1:8040/site/assets/index-CRzyhWcO.js","http://127.0.0.1:8040/site/assets/index-BWP6s9lW.css"]}
+### Ran Playwright code
+```js
+await (async page => {
+ const checks=[]; const errors=[]; const requests=[];
+ page.on('pageerror',e=>errors.push(String(e)));
+ page.on('request',r=>requests.push(r.url()));
+ const check=(b,n)=>{if(!b)throw Error(n);checks.push(n)};
+ await page.reload();await page.setViewportSize({width:1440,height:1000});
+ await page.waitForSelector('[data-detection]');
+ check((await page.locator('.main-value').innerText()).includes('1,220'),'November2018 indicator');
+ check(await page.locator('[data-detection]').count()>100,'real populated map');
+ await page.getByRole('button',{name:'MODIS',exact:true}).click();
+ check((await page.locator('.map-preview-label').innerText()).includes('735 cell-days'),'MODIS map sum735');
+ const svgDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export map SVG',exact:true}).click();await (await svgDownload).saveAs('audit/pr-1-integration/regression-browser/hosted-map.svg');
+ const chartDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export chart SVG',exact:true}).click();await (await chartDownload).saveAs('audit/pr-1-integration/regression-browser/hosted-history.svg');check((await page.locator('main').innerText()).includes('same-month 2013–2023 VIIRS median: 33'),'selected month median comparison');
+ await page.getByRole('button',{name:'Zoom in',exact:true}).click();check(await page.locator('.county-svg g[transform]').getAttribute('transform')!=='translate(400 218) scale(1) translate(-400 -218)','map zoom');await page.getByRole('button',{name:'Reset map extent',exact:true}).click();
+ await page.getByRole('button',{name:'Expand map',exact:true}).click();check(await page.locator('.map-expanded').count()===1,'map expand');await page.keyboard.press('Escape');check(await page.locator('.map-expanded').count()===0,'map escape closes');
+ await page.getByRole('button',{name:'About this map',exact:true}).click();check(await page.locator('.map-details tbody tr').count()===460,'accessible cell table');await page.getByRole('button',{name:'About this map',exact:true}).click();
+ await page.screenshot({path:'audit/pr-1-integration/regression-browser/hosted-desktop.png',fullPage:true});
+ const select=async(y,m)=>{await page.getByLabel('Year',{exact:true}).selectOption(String(y));await page.getByLabel('Month',{exact:true}).selectOption(String(m-1))};
+ await select(2024,7);check((await page.locator('.sensor-comparison').innerText()).includes('322'),'July MODIS');check((await page.locator('.main-value').innerText()).includes('58'),'July observed58');check(await page.locator('.warning-context').count()===1,'July coverage warning');
+ await page.screenshot({path:'audit/pr-1-integration/regression-browser/hosted-july.png',fullPage:true});
+ await select(2008,11);check(await page.getByRole('button',{name:'VIIRS S-NPP',exact:true}).isDisabled(),'early VIIRS unavailable');check(await page.locator('.summary-card').getByText(/Heuristic residual band/).count()===1,'modeled residual band');check((await page.locator('.sensor-comparison').innerText()).includes('Unavailable'),'unavailable is not zero');
+ await select(2012,1);check((await page.locator('.view-stack').innerText()).includes('January 2012 is still estimated'),'January2012 transition');await select(2012,2);check(!await page.getByRole('button',{name:'VIIRS S-NPP',exact:true}).isDisabled(),'February2012 observed');
+ await select(2002,6);check((await page.locator('.view-stack').innerText()).includes('Early Terra-only coverage'),'June2002 caution');
+ await select(2017,1);check(await page.locator('[data-detection]').count()===0,'quiet-month empty map');check((await page.locator('.map-data-notice').innerText()).includes('No retained detections'),'quiet-month explanation');
+ await select(2000,11);check(await page.getByRole('button',{name:'Previous month',exact:true}).isDisabled(),'first month boundary');check(await page.locator('.month-tile:disabled').count()===10,'2000 unsupported months disabled');
+ await select(2025,12);check(await page.getByRole('button',{name:'Next month',exact:true}).isDisabled(),'last month boundary');
+ await page.getByRole('button',{name:'Sensor comparison',exact:true}).click();check(await page.locator('.table-scroll tbody tr').count()===302,'comparison302 rows');await page.getByRole('button',{name:/Inspect July 2024/}).click();check(await page.locator('.table-scroll tbody tr').count()===1,'comparison date filter');const comparisonDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export comparison SVG',exact:true}).click();await(await comparisonDownload).saveAs('audit/pr-1-integration/regression-browser/hosted-comparison.svg');
+ await page.getByRole('button',{name:'Method & validation',exact:true}).click();await page.getByRole('button',{name:'Model & evaluation'}).click();check(await page.locator('.validation-table tbody tr').count()===5,'five baseline methods');check((await page.locator('.validation-table').innerText()).includes('18.958'),'median baseline disclosure');await page.screenshot({path:'audit/pr-1-integration/regression-browser/hosted-validation.png',fullPage:true});
+ await page.getByRole('button',{name:'Downloads',exact:true}).click();await page.locator('#export-start').fill('2018-11');await page.locator('#export-end').fill('2018-12');const d=page.waitForEvent('download');await page.getByRole('button',{name:'Download monthly CSV',exact:true}).click();await (await d).saveAs('audit/pr-1-integration/regression-browser/hosted-custom.csv');
+ const f=page.waitForEvent('download');await page.locator('.download-list > div').first().getByRole('button').click();await (await f).saveAs('audit/pr-1-integration/regression-browser/hosted-full.csv');
+ for(let i=1;i<6;i++){const next=page.waitForEvent('download');await page.locator('.download-list > div').nth(i).getByRole('button').click();await (await next).saveAs('audit/pr-1-integration/regression-browser/hosted-download-'+i+'.csv')};check(await page.locator('.download-list > div').count()===6,'all six download actions');
+ await page.locator('#export-end').fill('2018-10');check(await page.getByRole('button',{name:'Download monthly CSV',exact:true}).isDisabled(),'invalid export disabled');check(await page.locator('#range-error').count()===1,'inline range error');
+ await page.getByRole('button',{name:'Explore',exact:true}).click();await select(2018,11);
+ if(await page.getByRole('button',{name:'Dismiss export notification',exact:true}).count())await page.getByRole('button',{name:'Dismiss export notification',exact:true}).click();
+ await page.getByRole('button',{name:'Previous month',exact:true}).focus();await page.keyboard.press('Enter');check((await page.locator('#summary-title').innerText()).includes('October 2018'),'keyboard date navigation');await select(2018,11);
+ for(const width of [360,390,768,1440]){await page.setViewportSize({width,height:900});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'no overflow '+width)}
+ await page.setViewportSize({width:390,height:844});await page.screenshot({path:'audit/pr-1-integration/regression-browser/hosted-mobile.png',fullPage:true});
+ await page.getByRole('button',{name:'Open navigation',exact:true}).click();check(await page.getByRole('dialog',{name:'Workspace navigation'}).count()===1,'mobile navigation dialog');await page.keyboard.press('Shift+Tab');check(await page.locator('.sidebar').evaluate(el=>el.contains(document.activeElement)),'drawer keyboard focus retained');await page.getByRole('button',{name:'Downloads',exact:true}).click();check(await page.locator('#export-start').isVisible(),'mobile navigation');
+ check(errors.length===0,'no JS exceptions');check(requests.every(u=>!/^https?:/.test(u)||u.startsWith('http://127.0.0.1')),'no external runtime requests');
+ return {checks,errors,requests};
+})(page);
+```
+### Open tabs
+- 0: (current) [FireLens Butte — Historical hotspot explorer](http://127.0.0.1:8040/site/)
+- 1: [Downloads](edge://downloads-hub/)
+### Page
+- Page URL: http://127.0.0.1:8040/site/
+- Page Title: FireLens Butte — Historical hotspot explorer
+### Events
+- Downloading file FireLens_map_2018-11_modis.svg ...
+- Downloaded file FireLens_map_2018-11_modis.svg to ".playwright-cli\FireLens-map-2018-11-modis-4.svg"
+- Downloading file FireLens_historical_indicator.svg ...
+- Downloaded file FireLens_historical_indicator.svg to ".playwright-cli\FireLens-historical-indicator-4.svg"
+- Downloading file FireLens_comparison_2024-07_2024-07.svg ...
+- Downloaded file FireLens_comparison_2024-07_2024-07.svg to ".playwright-cli\FireLens-comparison-2024-07-2024-07-4.svg"
+- Downloading file FireLens_Butte_2018-11_to_2018-12.csv ...
+- Downloaded file FireLens_Butte_2018-11_to_2018-12.csv to ".playwright-cli\FireLens-Butte-2018-11-to-2018-12-13.csv"
+- Downloading file Butte_Harmonized_Monthly.csv ...
+- Downloaded file Butte_Harmonized_Monthly.csv to ".playwright-cli\Butte-Harmonized-Monthly-16.csv"
+- Downloading file Butte_Harmonized_Yearly.csv ...
+- Downloaded file Butte_Harmonized_Yearly.csv to ".playwright-cli\Butte-Harmonized-Yearly-8.csv"
+- Downloading file Validation_Heldout_2024_2025.csv ...
+- Downloaded file Validation_Heldout_2024_2025.csv to ".playwright-cli\Validation-Heldout-2024-2025-8.csv"
+- Downloading file Method_Comparison.csv ...
+- Downloaded file Method_Comparison.csv to ".playwright-cli\Method-Comparison-8.csv"
+- Downloading file Butte_Grid_Month_Cell_Days.csv ...
+- Downloaded file Butte_Grid_Month_Cell_Days.csv to ".playwright-cli\Butte-Grid-Month-Cell-Days-8.csv"
+- Downloading file Sensitivity_Grid_And_Confidence.csv ...
+- Downloaded file Sensitivity_Grid_And_Confidence.csv to ".playwright-cli\Sensitivity-Grid-And-Confidence-8.csv"
+
+### Browser `pr1-regression` opened with pid 18952.
+### Ran Playwright code
+```js
+await page.goto('file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html');
+```
+### Page
+- Page URL: file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html
+- Page Title: FireLens Butte — Historical hotspot explorer
+### Snapshot
+- [Snapshot](.playwright-cli\page-2026-11-15T13-51-04-924Z.yml)
+
+### Ran Playwright code
+```js
+await (async page => { await page.route('https://**/*',r=>r.abort()); await page.route('http://**/*',r=>r.abort()); })(page);
+```
+
+### Result
+{"checks":["November2018 indicator","real populated map","MODIS map sum735","selected month median comparison","map zoom","map expand","map escape closes","accessible cell table","July MODIS","July observed58","July coverage warning","early VIIRS unavailable","modeled residual band","unavailable is not zero","January2012 transition","February2012 observed","June2002 caution","quiet-month empty map","quiet-month explanation","first month boundary","2000 unsupported months disabled","last month boundary","comparison302 rows","comparison date filter","five baseline methods","median baseline disclosure","all six download actions","invalid export disabled","inline range error","keyboard date navigation","no overflow 360","no overflow 390","no overflow 768","no overflow 1440","mobile navigation dialog","drawer keyboard focus retained","mobile navigation","no JS exceptions","no external runtime requests"],"errors":[],"requests":["file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html"]}
+### Ran Playwright code
+```js
+await (async page => {
+ const checks=[]; const errors=[]; const requests=[];
+ page.on('pageerror',e=>errors.push(String(e)));
+ page.on('request',r=>requests.push(r.url()));
+ const check=(b,n)=>{if(!b)throw Error(n);checks.push(n)};
+ await page.reload();await page.setViewportSize({width:1440,height:1000});
+ await page.waitForSelector('[data-detection]');
+ check((await page.locator('.main-value').innerText()).includes('1,220'),'November2018 indicator');
+ check(await page.locator('[data-detection]').count()>100,'real populated map');
+ await page.getByRole('button',{name:'MODIS',exact:true}).click();
+ check((await page.locator('.map-preview-label').innerText()).includes('735 cell-days'),'MODIS map sum735');
+ const svgDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export map SVG',exact:true}).click();await (await svgDownload).saveAs('audit/pr-1-integration/regression-browser/offline-map.svg');
+ const chartDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export chart SVG',exact:true}).click();await (await chartDownload).saveAs('audit/pr-1-integration/regression-browser/offline-history.svg');check((await page.locator('main').innerText()).includes('same-month 2013–2023 VIIRS median: 33'),'selected month median comparison');
+ await page.getByRole('button',{name:'Zoom in',exact:true}).click();check(await page.locator('.county-svg g[transform]').getAttribute('transform')!=='translate(400 218) scale(1) translate(-400 -218)','map zoom');await page.getByRole('button',{name:'Reset map extent',exact:true}).click();
+ await page.getByRole('button',{name:'Expand map',exact:true}).click();check(await page.locator('.map-expanded').count()===1,'map expand');await page.keyboard.press('Escape');check(await page.locator('.map-expanded').count()===0,'map escape closes');
+ await page.getByRole('button',{name:'About this map',exact:true}).click();check(await page.locator('.map-details tbody tr').count()===460,'accessible cell table');await page.getByRole('button',{name:'About this map',exact:true}).click();
+ await page.screenshot({path:'audit/pr-1-integration/regression-browser/offline-desktop.png',fullPage:true});
+ const select=async(y,m)=>{await page.getByLabel('Year',{exact:true}).selectOption(String(y));await page.getByLabel('Month',{exact:true}).selectOption(String(m-1))};
+ await select(2024,7);check((await page.locator('.sensor-comparison').innerText()).includes('322'),'July MODIS');check((await page.locator('.main-value').innerText()).includes('58'),'July observed58');check(await page.locator('.warning-context').count()===1,'July coverage warning');
+ await page.screenshot({path:'audit/pr-1-integration/regression-browser/offline-july.png',fullPage:true});
+ await select(2008,11);check(await page.getByRole('button',{name:'VIIRS S-NPP',exact:true}).isDisabled(),'early VIIRS unavailable');check(await page.locator('.summary-card').getByText(/Heuristic residual band/).count()===1,'modeled residual band');check((await page.locator('.sensor-comparison').innerText()).includes('Unavailable'),'unavailable is not zero');
+ await select(2012,1);check((await page.locator('.view-stack').innerText()).includes('January 2012 is still estimated'),'January2012 transition');await select(2012,2);check(!await page.getByRole('button',{name:'VIIRS S-NPP',exact:true}).isDisabled(),'February2012 observed');
+ await select(2002,6);check((await page.locator('.view-stack').innerText()).includes('Early Terra-only coverage'),'June2002 caution');
+ await select(2017,1);check(await page.locator('[data-detection]').count()===0,'quiet-month empty map');check((await page.locator('.map-data-notice').innerText()).includes('No retained detections'),'quiet-month explanation');
+ await select(2000,11);check(await page.getByRole('button',{name:'Previous month',exact:true}).isDisabled(),'first month boundary');check(await page.locator('.month-tile:disabled').count()===10,'2000 unsupported months disabled');
+ await select(2025,12);check(await page.getByRole('button',{name:'Next month',exact:true}).isDisabled(),'last month boundary');
+ await page.getByRole('button',{name:'Sensor comparison',exact:true}).click();check(await page.locator('.table-scroll tbody tr').count()===302,'comparison302 rows');await page.getByRole('button',{name:/Inspect July 2024/}).click();check(await page.locator('.table-scroll tbody tr').count()===1,'comparison date filter');const comparisonDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Export comparison SVG',exact:true}).click();await(await comparisonDownload).saveAs('audit/pr-1-integration/regression-browser/offline-comparison.svg');
+ await page.getByRole('button',{name:'Method & validation',exact:true}).click();await page.getByRole('button',{name:'Model & evaluation'}).click();check(await page.locator('.validation-table tbody tr').count()===5,'five baseline methods');check((await page.locator('.validation-table').innerText()).includes('18.958'),'median baseline disclosure');await page.screenshot({path:'audit/pr-1-integration/regression-browser/offline-validation.png',fullPage:true});
+ await page.getByRole('button',{name:'Downloads',exact:true}).click();await page.locator('#export-start').fill('2018-11');await page.locator('#export-end').fill('2018-12');const d=page.waitForEvent('download');await page.getByRole('button',{name:'Download monthly CSV',exact:true}).click();await (await d).saveAs('audit/pr-1-integration/regression-browser/offline-custom.csv');
+ const f=page.waitForEvent('download');await page.locator('.download-list > div').first().getByRole('button').click();await (await f).saveAs('audit/pr-1-integration/regression-browser/offline-full.csv');
+ for(let i=1;i<6;i++){const next=page.waitForEvent('download');await page.locator('.download-list > div').nth(i).getByRole('button').click();await (await next).saveAs('audit/pr-1-integration/regression-browser/offline-download-'+i+'.csv')};check(await page.locator('.download-list > div').count()===6,'all six download actions');
+ await page.locator('#export-end').fill('2018-10');check(await page.getByRole('button',{name:'Download monthly CSV',exact:true}).isDisabled(),'invalid export disabled');check(await page.locator('#range-error').count()===1,'inline range error');
+ await page.getByRole('button',{name:'Explore',exact:true}).click();await select(2018,11);
+ if(await page.getByRole('button',{name:'Dismiss export notification',exact:true}).count())await page.getByRole('button',{name:'Dismiss export notification',exact:true}).click();
+ await page.getByRole('button',{name:'Previous month',exact:true}).focus();await page.keyboard.press('Enter');check((await page.locator('#summary-title').innerText()).includes('October 2018'),'keyboard date navigation');await select(2018,11);
+ for(const width of [360,390,768,1440]){await page.setViewportSize({width,height:900});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'no overflow '+width)}
+ await page.setViewportSize({width:390,height:844});await page.screenshot({path:'audit/pr-1-integration/regression-browser/offline-mobile.png',fullPage:true});
+ await page.getByRole('button',{name:'Open navigation',exact:true}).click();check(await page.getByRole('dialog',{name:'Workspace navigation'}).count()===1,'mobile navigation dialog');await page.keyboard.press('Shift+Tab');check(await page.locator('.sidebar').evaluate(el=>el.contains(document.activeElement)),'drawer keyboard focus retained');await page.getByRole('button',{name:'Downloads',exact:true}).click();check(await page.locator('#export-start').isVisible(),'mobile navigation');
+ check(errors.length===0,'no JS exceptions');check(requests.every(u=>!/^https?:/.test(u)||u.startsWith('http://127.0.0.1')),'no external runtime requests');
+ return {checks,errors,requests};
+})(page);
+```
+### Open tabs
+- 0: (current) [FireLens Butte — Historical hotspot explorer](file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html)
+- 1: [Downloads](edge://downloads-hub/)
+### Page
+- Page URL: file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html
+- Page Title: FireLens Butte — Historical hotspot explorer
+### Events
+- Downloading file FireLens_map_2018-11_modis.svg ...
+- Downloaded file FireLens_map_2018-11_modis.svg to ".playwright-cli\FireLens-map-2018-11-modis-5.svg"
+- Downloading file FireLens_historical_indicator.svg ...
+- Downloaded file FireLens_historical_indicator.svg to ".playwright-cli\FireLens-historical-indicator-5.svg"
+- Downloading file FireLens_comparison_2024-07_2024-07.svg ...
+- Downloaded file FireLens_comparison_2024-07_2024-07.svg to ".playwright-cli\FireLens-comparison-2024-07-2024-07-5.svg"
+- Downloading file FireLens_Butte_2018-11_to_2018-12.csv ...
+- Downloaded file FireLens_Butte_2018-11_to_2018-12.csv to ".playwright-cli\FireLens-Butte-2018-11-to-2018-12-14.csv"
+- Downloading file Butte_Harmonized_Monthly.csv ...
+- Downloaded file Butte_Harmonized_Monthly.csv to ".playwright-cli\Butte-Harmonized-Monthly-17.csv"
+- Downloading file Butte_Harmonized_Yearly.csv ...
+- Downloaded file Butte_Harmonized_Yearly.csv to ".playwright-cli\Butte-Harmonized-Yearly-9.csv"
+- Downloading file Validation_Heldout_2024_2025.csv ...
+- Downloaded file Validation_Heldout_2024_2025.csv to ".playwright-cli\Validation-Heldout-2024-2025-9.csv"
+- Downloading file Method_Comparison.csv ...
+- Downloaded file Method_Comparison.csv to ".playwright-cli\Method-Comparison-9.csv"
+- Downloading file Butte_Grid_Month_Cell_Days.csv ...
+- Downloaded file Butte_Grid_Month_Cell_Days.csv to ".playwright-cli\Butte-Grid-Month-Cell-Days-9.csv"
+- Downloading file Sensitivity_Grid_And_Confidence.csv ...
+- Downloaded file Sensitivity_Grid_And_Confidence.csv to ".playwright-cli\Sensitivity-Grid-And-Confidence-9.csv"
+
+Browser 'pr1-regression' closed
+
+
+PASS: browser interactions and all downloaded scientific CSV rows match canonical products.

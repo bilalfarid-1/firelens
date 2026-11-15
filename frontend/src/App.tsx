@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import CountyMap from "./components/CountyMap";
 import SeasonalContext from "./components/SeasonalContext";
+import HistoricalActivityInsight from "./components/HistoricalActivityInsight";
 
 import { HistoryChart, ComparisonChart } from "./components/DataCharts";
 import {
@@ -1313,6 +1314,7 @@ export default function App() {
                     />
                     <MonthSummary date={date} record={record} onMethod={() => setView("method")} />
                   </div>
+                  <HistoricalActivityInsight records={records} date={date} onSelect={changeDate} />
                   <YearCalendar date={date} records={records} onChange={changeDate} />
                   <HistoryChart records={records} onSelect={changeDate} />
                   <SeasonalContext records={records} onSelect={changeDate} date={date} />

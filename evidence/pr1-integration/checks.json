@@ -1,0 +1,26 @@
+[
+  {
+    "check": "npm-ci",
+    "exit_code": 0
+  },
+  {
+    "check": "frontend-tests",
+    "exit_code": 0
+  },
+  {
+    "check": "typecheck",
+    "exit_code": 0
+  },
+  {
+    "check": "build",
+    "exit_code": 0
+  },
+  {
+    "check": "python-tests",
+    "exit_code": 0
+  },
+  {
+    "check": "package",
+    "exit_code": 0
+  }
+]

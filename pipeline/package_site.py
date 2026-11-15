@@ -10,11 +10,17 @@ current={p.relative_to(dist) for p in dist.rglob('*') if p.is_file()}
 for p in target.rglob('*'):
     if p.is_file() and p.relative_to(target) not in current:p.unlink()
 shutil.copytree(dist,target,dirs_exist_ok=True)
+# Carry the approved original-code notice into both distributed app formats.
+source_license=ROOT/'LICENSE'
+if source_license.is_file():
+    shutil.copy2(source_license,target/'LICENSE')
 # The original three-record prototype data must never be shipped as a release dataset.
 for n in ['observations.json','boundaries.geojson']:
     p=target/'data'/n
     if p.exists():p.unlink()
 html=(dist/'index.html').read_text(encoding='utf-8')
+if source_license.is_file():
+    html='<!-- FireLens team-owned original code and documentation; separate data/asset rights apply.\n'+source_license.read_text(encoding='utf-8')+'-->\n'+html
 def script(m):
     p=dist/m.group(1).removeprefix('./'); code=p.read_text(encoding='utf-8')
     assert not re.search(r'\bimport\s*\(',code),'Dynamic chunks require explicit bundling'

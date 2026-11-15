@@ -2986,3 +2986,119 @@ th .series-square {
     padding-bottom: 16px;
   }
 }
+
+/* Descriptive historical activity insight: not an alert or risk classification. */
+.activity-card .card-heading > svg {
+  color: #596b78;
+}
+.activity-content {
+  padding: 1px 21px 17px;
+}
+.activity-topline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  justify-content: space-between;
+  margin: 3px 0 13px;
+}
+.activity-topline h3 {
+  font-size: 15px;
+}
+.activity-state {
+  border-radius: 999px;
+  border: 1px solid #dfe6eb;
+  background: #f4f7f9;
+  color: #526272;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.activity-state-markedly_elevated {
+  border-color: #edcdb7;
+  color: #8a3e1d;
+  background: #fdf2e9;
+}
+.activity-state-above_comparison_max {
+  border-color: #e4d7b5;
+  color: #746022;
+  background: #faf7e9;
+}
+.activity-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 11px;
+}
+.activity-stat-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px;
+  border: 1px solid #e4eaf0;
+  background: #f8fafb;
+  border-radius: 6px;
+}
+.activity-stat-grid span,
+.activity-stat-grid small {
+  color: #586b79;
+  font-size: 12px;
+}
+.activity-stat-grid strong {
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 650;
+  color: #234e65;
+}
+.activity-explanation {
+  font-size: 13px;
+  color: #344e5e;
+  margin-top: 14px;
+}
+.activity-method-note,
+.activity-quality-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+  color: #596b78;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.activity-method-note svg,
+.activity-quality-warning svg { flex: 0 0 auto; margin-top: 2px; }
+.activity-quality-warning { color: #824522; }
+.activity-unavailable {
+  padding: 0 21px 18px;
+  color: #596b78;
+  font-size: 12px;
+}
+.activity-examples {
+  border-top: 1px solid #e5ebee;
+  padding: 13px 21px 17px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  align-items: center;
+}
+.activity-examples > span { color: #596b78; font-size: 12px; }
+.activity-examples > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.activity-example {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border: 1px solid #d9e4eb;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #28586e;
+  background: #f8fbfd;
+}
+.activity-example:hover,
+.activity-example[aria-pressed="true"] {
+  background: #eaf2f7;
+  border-color: #a8c1d1;
+}
+@media (max-width: 600px) {
+  .activity-stat-grid { grid-template-columns: 1fr; }
+  .activity-stat-grid > div { padding: 10px 12px; }
+}

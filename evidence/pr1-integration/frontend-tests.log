@@ -1,0 +1,25 @@
+{"argv": ["npm.cmd", "test"], "cwd": "<workspace>\\firelens-github\\frontend", "utc": "2026-11-15T13:48:34.856643+00:00"}
+
+> firelens-butte@1.0.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+✔ November 2018 accurately excludes 2018 from its November baseline (87.639ms)
+✔ September 2020 correctly finds its observed VIIRS comparison (0.8956ms)
+✔ 2024 uses 11 comparison years and never labels an outage as verified low activity (0.8704ms)
+✔ estimated years and the limited 2012 VIIRS coverage period are ineligible (0.4608ms)
+✔ does not substitute missing or estimated values into a comparison baseline (2.3515ms)
+✔ zero median never creates an infinite ratio or a false 3x claim (1.0246ms)
+✔ notable months list draws observed values only, ordered by magnitude (24.4438ms)
+✔ candidate itself is never allowed into its own comparison period (1.072ms)
+✔ complete 302-month calendar has correct unavailable/estimated transition (32.6669ms)
+✔ all map totals match independently audited monthly cell-days (122.6518ms)
+✔ all six original CSV downloads match the product files byte-for-byte after newline normalization (65.8709ms)
+✔ stress months retain observed references and exploratory estimates (0.7624ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 981.2433

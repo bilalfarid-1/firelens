@@ -4,6 +4,10 @@ ChatGPT/Codex assisted source inspection, processing/application code, translati
 
 React: MIT; Lucide: ISC; Inter: SIL Open Font License. Bundled notices: frontend/public/licenses, copied to release/site/licenses. NASA FIRMS and California geometry sources: references.md. Existing third-party permissions remain applicable. No NASA logo or endorsement is claimed.
 
-Team-owned original-code license is pending explicit owner selection. No new root license has been imposed, and third-party/data material has not been relicensed. Prototype asset ownership and the team's originality declaration require owner confirmation. Code assistance is disclosed in package metadata, generated provenance, the interface and exported SVGs. No synthetic voice or video was produced in this cleanup.
+Team-owned original source code and associated documentation use the owner-authorized root MIT License. Third-party/data material has not been relicensed. Prototype asset ownership and the team's originality declaration require owner confirmation. Code assistance is disclosed in package metadata, generated provenance, the interface and exported SVGs. No synthetic voice or video was produced in this cleanup.
 
-Current rights inventory: [RIGHTS_INVENTORY.md](RIGHTS_INVENTORY.md). Original-code MIT license is recommended, not applied. Human attestations are consolidated in [OWNER_ACTIONS.md](OWNER_ACTIONS.md). Demo layout/text is AI-assisted; images are actual application screenshots.
+Current rights inventory: [RIGHTS_INVENTORY.md](RIGHTS_INVENTORY.md). Original-code MIT licensing is approved and applied; separate asset/data permissions remain unresolved. Human attestations are consolidated in [OWNER_ACTIONS.md](OWNER_ACTIONS.md). Demo layout/text is AI-assisted; images are actual application screenshots.
+
+## Historical activity contribution
+
+GitHub account [MuhammadSaif700](https://github.com/MuhammadSaif700) contributed the Historical Activity Insight feature, styling, explanatory documentation, and eight additional tests in [PR #1](https://github.com/bilalfarid-1/firelens/pull/1), commit `3c124d3`. The original commit remains in the merge history. Codex independently reviewed the calculations and software, corrected the testing-status documentation, and integrated the rebuilt release under owner authorization. This attribution records the contributed files; it does not assert a verified real-world identity, independent human validation of every scientific claim, or the authorship of unrelated project work.

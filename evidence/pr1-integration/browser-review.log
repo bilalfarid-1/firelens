@@ -1,0 +1,36 @@
+### Result
+{"hosted":{"checks":["new insight visible","Nov observed1220","Nov median28","Nov maximum67","target year excluded","heuristic and fire-count caveats","existing fixed-period median33 remains","notable-month navigation","Sep median29","July observed58","July descriptive category","July outage warning prominent","2012 excluded","early estimates not observations","quiet month remains observed","no overflow 360","no overflow 390","no overflow 768","no overflow 1440","existing evaluation preserved","mobile downloads navigation","no JS exceptions","no external runtime requests"],"errors":[]},"offline":{"checks":["new insight visible","Nov observed1220","Nov median28","Nov maximum67","target year excluded","heuristic and fire-count caveats","existing fixed-period median33 remains","notable-month navigation","Sep median29","July observed58","July descriptive category","July outage warning prominent","2012 excluded","early estimates not observations","quiet month remains observed","no overflow 360","no overflow 390","no overflow 768","no overflow 1440","existing evaluation preserved","mobile downloads navigation","no JS exceptions","no external runtime requests"],"errors":[]}}
+### Ran Playwright code
+```js
+await (async page => {
+ const all={};
+ for(const [mode,url] of [['hosted','http://127.0.0.1:8040/site/'],['offline','file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html']]){
+ const checks=[],errors=[],requests=[];const errorHandler=e=>errors.push(String(e));const requestHandler=r=>requests.push(r.url());page.on('pageerror',errorHandler);page.on('request',requestHandler);
+ const check=(b,n)=>{if(!b)throw Error(mode+': '+n);checks.push(n)};
+ if(mode==='offline')await page.route(/^https?:/,r=>r.abort());
+ await page.goto(url);await page.setViewportSize({width:1440,height:1000});const card=page.locator('.activity-card');await card.waitFor();
+ const select=async(y,m)=>{await page.getByLabel('Year',{exact:true}).selectOption(String(y));await page.getByLabel('Month',{exact:true}).selectOption(String(m-1))};
+ check(await card.isVisible(),'new insight visible');const nov=await card.innerText();check(nov.includes('1,220'),'Nov observed1220');check(nov.includes('28'),'Nov median28');check(nov.includes('67'),'Nov maximum67');check(nov.includes('10 other comparison years'),'target year excluded');check(nov.includes('exploratory')&&nov.includes('Not a count of fires'),'heuristic and fire-count caveats');check((await page.locator('.chart-footnote').allTextContents()).join(' ').includes('median: 33'),'existing fixed-period median33 remains');await card.screenshot({path:'audit/pr-1-integration/'+mode+'-nov.png'});
+ await card.getByRole('button',{name:/Sep 2020/}).click();check((await card.innerText()).includes('886'),'notable-month navigation');check((await card.innerText()).includes('29'),'Sep median29');
+ await select(2024,7);check((await card.innerText()).includes('58'),'July observed58');check((await card.locator('.activity-state').innerText()).includes('Within comparison range'),'July descriptive category');check(await card.locator('.activity-quality-warning').isVisible(),'July outage warning prominent');await card.screenshot({path:'audit/pr-1-integration/'+mode+'-july.png'});
+ await select(2012,2);check(await card.locator('.activity-unavailable').isVisible(),'2012 excluded');await select(2008,11);check((await card.innerText()).includes('Estimated early-year values are never used'),'early estimates not observations');
+ await select(2017,1);check((await card.innerText()).includes('Observed VIIRS'),'quiet month remains observed');
+ for(const width of [360,390,768,1440]){await page.setViewportSize({width,height:900});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'no overflow '+width)}
+ await page.setViewportSize({width:390,height:844});await select(2024,7);await card.screenshot({path:'audit/pr-1-integration/'+mode+'-mobile.png'});await page.getByRole('button',{name:'Open navigation',exact:true}).click();await page.getByRole('button',{name:'Method & validation',exact:true}).click();await page.getByRole('button',{name:'Model & evaluation'}).click();check((await page.locator('.validation-table').innerText()).includes('18.958'),'existing evaluation preserved');
+ await page.getByRole('button',{name:'Open navigation',exact:true}).click();await page.getByRole('button',{name:'Downloads',exact:true}).click();const download=page.waitForEvent('download');await page.locator('.download-list > div').first().getByRole('button').click();await(await download).saveAs('audit/pr-1-integration/'+mode+'-download.csv');check(await page.locator('#export-start').isVisible(),'mobile downloads navigation');check(errors.length===0,'no JS exceptions');check(requests.every(u=>!/^https?:/.test(u)||u.startsWith('http://127.0.0.1:8040')),'no external runtime requests');
+ page.off('pageerror',errorHandler);page.off('request',requestHandler);all[mode]={checks,errors};
+ }
+ return all;
+})(page);
+```
+### Open tabs
+- 0: (current) [FireLens Butte — Historical hotspot explorer](file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html)
+- 1: [Downloads](edge://downloads-hub/)
+### Page
+- Page URL: file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html
+- Page Title: FireLens Butte — Historical hotspot explorer
+### Events
+- Downloading file Butte_Harmonized_Monthly.csv ...
+- Downloaded file Butte_Harmonized_Monthly.csv to ".playwright-cli\Butte-Harmonized-Monthly-14.csv"
+- Downloading file Butte_Harmonized_Monthly.csv ...
+- Downloaded file Butte_Harmonized_Monthly.csv to ".playwright-cli\Butte-Harmonized-Monthly-15.csv"
