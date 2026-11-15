@@ -190,7 +190,7 @@ The Historical Activity Insight integration is documented separately in [the int
 
 ## Team, credits and AI assistance
 
-Our team has five registered members and three reported active contributors, as reported by our coordinator. We are preparing FireLens for NASA Space Apps 2026. Verified identities and individual contributions remain for the team to confirm; we do not infer them from Git's configured author name.
+Our team has five registered members and three reported active contributors, as reported by our coordinator. We are preparing FireLens for NASA Space Apps 2026. Team identities and contributions beyond the PRs credited below remain for team confirmation; we do not infer them from Git's configured author name.
 
 ChatGPT/Codex substantially assisted processing and application code, design translation, source inspection, testing, exports, documentation, and demo preparation. We supplied a Figma Make-derived prototype and an AQI Predictor interface reference. Their use is documented; ownership and reuse rights still require confirmation. NASA's original observations were not AI-generated. The team remains responsible for final scientific claims, idea-origin declarations, review, and submission.
 
@@ -199,6 +199,8 @@ ChatGPT/Codex substantially assisted processing and application code, design tra
 [MuhammadSaif700](https://github.com/MuhammadSaif700) contributed Historical Activity Insight through [PR #1](https://github.com/bilalfarid-1/firelens/pull/1); the original commit is retained. See the [feature notes](docs/HISTORICAL_ACTIVITY_FEATURE.md) for its comparison rules and limits.
 
 We credit NASA FIRMS for observations, California's official county source for geometry, and the authors of React/ReactDOM, Lucide, Inter, and the scientific/build dependencies. See [credits and AI assistance](docs/CREDITS_AND_AI_ASSISTANCE.md) and the [dependency inventory](evidence/final/npm_dependency_inventory.json).
+
+For the evidence-backed contribution record and remaining attribution questions, see [Team contributions](docs/TEAM_CONTRIBUTIONS.md).
 
 ## Project status and next steps
 

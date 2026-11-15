@@ -15,3 +15,5 @@ GitHub account [MuhammadSaif700](https://github.com/MuhammadSaif700) contributed
 ## Sensor overlap contribution
 
 GitHub account [MuhammadSaif700](https://github.com/MuhammadSaif700) contributed Sensor Overlap Map, cell details/CSV export, styling, documentation and six original overlap tests through [PR #2](https://github.com/bilalfarid-1/firelens/pull/2), commit `d83c640`. Its original authorship is retained in the merge history. Codex resolved the shared stylesheet conflict with PR #1, hardened invalid/missing VIIRS availability handling with an additional regression test, and verified the combined application and release. No individual real-world identity or unrelated contribution is assigned.
+
+The concise evidence-backed team ledger is [TEAM_CONTRIBUTIONS.md](TEAM_CONTRIBUTIONS.md). This distinguishes verified PR contributions from remaining owner-confirmed identities and roles.
