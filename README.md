@@ -196,7 +196,7 @@ The local application, scientific products, exports, and source release are avai
 
 1. Confirm team identity, accepted roster, registered event, and eligibility in the actual NASA portal.
 2. Review the genuine idea/development chronology and make truthful originality and SI declarations.
-3. Approve original-code licensing and confirm prototype, asset, and source rights.
+3. Confirm remaining prototype, asset, and source rights; the MIT license for team-owned original code is approved.
 4. Fill the demo's identity placeholders and approve its final content.
 5. Verify the controlling deadline, complete the NASA form, and explicitly authorize **Submit for Judging**; saving a draft is insufficient.
 
@@ -204,9 +204,13 @@ GitHub Pages is optional. A [manual deployment workflow](.github/workflows/pages
 
 Current handoff: [owner checklist](docs/OWNER_ACTIONS.md), [submission draft](docs/SUBMISSION_READY.md), [compliance matrix](docs/FINAL_NASA_COMPLIANCE.md), and [hosting instructions](docs/GITHUB_HOSTING.md). These are project records, not a guarantee of eligibility or judging approval.
 
-## License and references
+## License
 
-**An original-code license has not yet been approved or applied.** Do not assume this repository is MIT-licensed. MIT is a recommendation pending team approval; NASA data, California geometry, and third-party material retain their applicable terms. See the [rights inventory](docs/RIGHTS_INVENTORY.md). Existing React/ReactDOM MIT, Lucide ISC, and Inter SIL OFL notices are preserved in [frontend/public/licenses](frontend/public/licenses/).
+Our team-owned original source code and associated documentation are licensed under the [MIT License](LICENSE), with the notice `Copyright (c) 2026 FireLens Butte contributors`.
+
+This license does not claim ownership of or relicense NASA FIRMS datasets, California geographic data, third-party dependencies, fonts, icons, or prototype/other assets. Their applicable terms and existing [third-party notices](frontend/public/licenses/) remain separate. Prototype and other unresolved reuse permissions are recorded in the [rights inventory](docs/RIGHTS_INVENTORY.md).
+
+## References
 
 - [Official NASA challenge](https://www.spaceappschallenge.org/2026/challenges/modis-and-viirs-hot-spots/)
 - [NASA Earthdata FIRMS](https://www.earthdata.nasa.gov/data/tools/firms)
