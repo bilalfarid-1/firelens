@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Compass,
   Expand,
@@ -10,7 +10,19 @@ import {
   RotateCcw,
   X,
 } from "lucide-react";
-import { bundle, exportFigure, type Sensor } from "../lib/data";
+import { bundle, downloadFile, exportFigure, type Sensor } from "../lib/data";
+import {
+  buildSensorOverlap,
+  canCompareObservedMonth,
+  sensorOverlapCsv,
+  type SensorOverlapCategory,
+} from "../lib/sensorOverlap";
+
+const overlapColors: Record<SensorOverlapCategory, string> = {
+  both: "#7746a0",
+  modis_only: "#b95022",
+  viirs_only: "#2463a6",
+};
 
 type Feature = {
   properties: { GEOID: string; NAME: string };
@@ -71,6 +83,16 @@ export default function CountyMap({
   const [zoom, setZoom] = useState(1);
   const [expanded, setExpanded] = useState(false);
   const [details, setDetails] = useState(false);
+  const [overlapMode, setOverlapMode] = useState(false);
+  const record = bundle.records.find((row) => row.date === date);
+  const overlapAvailable = !estimated && canCompareObservedMonth(record);
+  const showOverlap = overlapMode && overlapAvailable;
+  // The data is immutable; recalculate only when the selected month changes.
+  const comparison = useMemo(() => buildSensorOverlap(bundle.grid, date), [date]);
+
+  useEffect(() => {
+    if (!overlapAvailable) setOverlapMode(false);
+  }, [overlapAvailable]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -94,10 +116,11 @@ export default function CountyMap({
     return () => window.removeEventListener("keydown", close);
   }, [expanded]);
 
-  const active = bundle.grid.filter(
-    (p) => p[0] === date && Number(p[sensor === "modis" ? 5 : 6]) > 0,
+  const active = comparison.cells.filter((p) =>
+    showOverlap || (sensor === "modis" ? p.modisDays > 0 : p.viirsDays > 0),
   );
-  const days = (p: (string | number)[]) => Number(p[sensor === "modis" ? 5 : 6]);
+  const days = (p: (typeof active)[number]) =>
+    sensor === "modis" ? p.modisDays : p.viirsDays;
   const total = active.reduce((n, p) => n + days(p), 0);
   const cities = [
     { name: "Chico", lng: -121.8375, lat: 39.7285 },
@@ -116,16 +139,27 @@ export default function CountyMap({
           <Layers2 size={17} />
           <h2>County activity map</h2>
         </div>
-        <div className="segmented" aria-label="Map sensor">
+        <div className="segmented" aria-label="Map display mode">
           <button
-            aria-pressed={sensor === "viirs"}
+            aria-pressed={!showOverlap && sensor === "viirs"}
             disabled={estimated}
-            onClick={() => setSensor("viirs")}
+            onClick={() => { setOverlapMode(false); setSensor("viirs"); }}
           >
             VIIRS S-NPP
           </button>
-          <button aria-pressed={sensor === "modis"} onClick={() => setSensor("modis")}>
+          <button
+            aria-pressed={!showOverlap && sensor === "modis"}
+            onClick={() => { setOverlapMode(false); setSensor("modis"); }}
+          >
             MODIS
+          </button>
+          <button
+            aria-pressed={showOverlap}
+            disabled={!overlapAvailable}
+            title={!overlapAvailable ? "Observed VIIRS required for overlap comparisons" : undefined}
+            onClick={() => setOverlapMode(true)}
+          >
+            Overlap
           </button>
         </div>
       </div>
@@ -151,7 +185,9 @@ export default function CountyMap({
             id="county-detections-figure"
             viewBox="0 0 800 436"
             role="img"
-            aria-label={`${date}: ${active.length} occupied ${sensor} cells; ${total} cell-days. Cell data available in map details.`}
+            aria-label={showOverlap
+              ? `${date}: ${comparison.counts.both} shared cells, ${comparison.counts.modis_only} MODIS-only cells, ${comparison.counts.viirs_only} VIIRS-only cells. Same month, not necessarily same UTC day.`
+              : `${date}: ${active.length} occupied ${sensor} cells; ${total} cell-days. Cell data available in map details.`}
           >
             <defs>
               <pattern id="map-grid" width="28" height="28" patternUnits="userSpaceOnUse">
@@ -199,21 +235,24 @@ export default function CountyMap({
                   </g>
                 ))}
               {active.map((p) => {
-                const [x, y] = project(Number(p[3]), Number(p[4]));
+                const [x, y] = project(p.longitude, p.latitude);
                 return (
                   <circle
-                    key={`${p[1]}:${p[2]}`}
+                    key={`${p.gridX}:${p.gridY}`}
                     data-detection="true"
+                    data-overlap-category={showOverlap ? p.category : undefined}
                     cx={x}
                     cy={y}
-                    r={Math.min(9, 2 + Math.sqrt(days(p)) * 1.2)}
-                    fill={sensor === "modis" ? "#B95022" : "#2463A6"}
-                    fillOpacity=".68"
+                    r={Math.min(9, 2 + Math.sqrt(showOverlap ? Math.max(p.modisDays, p.viirsDays) : days(p)) * 1.2)}
+                    fill={showOverlap ? overlapColors[p.category] : sensor === "modis" ? "#B95022" : "#2463A6"}
+                    fillOpacity=".73"
                     stroke="white"
                     strokeWidth=".6"
                   >
                     <title>
-                      {sensor}: {days(p)} UTC days · approximate center {p[3]}, {p[4]}
+                      {showOverlap
+                        ? `${p.category.replace(/_/g, " ")}: MODIS ${p.modisDays}, VIIRS ${p.viirsDays} UTC cell-days · approximate center ${p.longitude}, ${p.latitude}`
+                        : `${sensor}: ${days(p)} UTC days · approximate center ${p.longitude}, ${p.latitude}`}
                     </title>
                   </circle>
                 );
@@ -260,8 +299,10 @@ export default function CountyMap({
           <Compass size={27} strokeWidth={1.3} />
         </div>
         <div className="map-preview-label">
-          <span className={`status-dot ${sensor}`} />
-          {sensor === "viirs" ? "VIIRS S-NPP" : "MODIS"} · {active.length} cells · {total} cell-days
+          <span className={`status-dot ${showOverlap ? "overlap" : sensor}`} />
+          {showOverlap
+            ? `${comparison.counts.both} both · ${comparison.counts.modis_only} MODIS-only · ${comparison.counts.viirs_only} VIIRS-only`
+            : `${sensor === "viirs" ? "VIIRS S-NPP" : "MODIS"} · ${active.length} cells · ${total} cell-days`}
         </div>
         <button
           className="map-expand"
@@ -273,22 +314,41 @@ export default function CountyMap({
         </button>
         <div className="map-attribution">California official-derived display outline</div>
       </div>
+      {showOverlap && (
+        <div className="map-overlap-summary" aria-label="Monthly grid-cell overlap summary">
+          <div className="map-overlap-legend">
+            <span><i className="map-swatch" style={{ backgroundColor: overlapColors.both }} />Both sensors: <strong>{comparison.counts.both}</strong></span>
+            <span><i className="map-swatch" style={{ backgroundColor: overlapColors.modis_only }} />MODIS only: <strong>{comparison.counts.modis_only}</strong></span>
+            <span><i className="map-swatch" style={{ backgroundColor: overlapColors.viirs_only }} />VIIRS only: <strong>{comparison.counts.viirs_only}</strong></span>
+          </div>
+          <p>Shared 1-km cells occupied during the same UTC month; not necessarily the same day or fire event. Satellite coverage completeness is unknown.</p>
+        </div>
+      )}
       <div className="map-footer">
         <button
           className="text-link"
           onClick={() =>
-            exportFigure("county-detections-figure", `FireLens_map_${date}_${sensor}.svg`)
+            exportFigure("county-detections-figure", `FireLens_map_${date}_${showOverlap ? "overlap" : sensor}.svg`)
           }
         >
           Export map SVG
         </button>
+        {showOverlap && (
+          <button
+            className="text-link"
+            onClick={() => downloadFile(sensorOverlapCsv(comparison), `FireLens_overlap_${date}.csv`)}
+          >
+            Export overlap CSV
+          </button>
+        )}
         <div className="map-data-notice">
           <Info size={14} />
           <span>
-            {estimated ? "VIIRS unavailable before February 2012. " : ""}
-            {active.length
-              ? "Bubble size: recorded UTC days per 1-km cell."
-              : "No retained detections; complete observation coverage is not established."}
+            {showOverlap
+              ? "Bubble size: greater of the two observed monthly cell-day counts."
+              : `${estimated ? "VIIRS unavailable before February 2012. " : ""}${active.length
+                  ? "Bubble size: recorded UTC days per 1-km cell."
+                  : "No retained detections; complete observation coverage is not established."}`}
           </span>
         </div>
         <button className="text-link" onClick={() => setDetails(!details)} aria-expanded={details}>
@@ -300,7 +360,7 @@ export default function CountyMap({
           <div className="table-scroll" tabIndex={0} role="region" aria-label="Map cell data">
             <table>
               <caption>
-                {date} · {sensor} observed occupied cells
+                {date} · {showOverlap ? "observed sensor overlap" : `${sensor} observed occupied cells`}
               </caption>
               <thead>
                 <tr>
@@ -308,17 +368,29 @@ export default function CountyMap({
                   <th>Grid y</th>
                   <th>Longitude</th>
                   <th>Latitude</th>
-                  <th>UTC days</th>
+                  {showOverlap ? (
+                    <>
+                      <th>MODIS UTC days</th>
+                      <th>VIIRS UTC days</th>
+                      <th>Category</th>
+                    </>
+                  ) : <th>UTC days</th>}
                 </tr>
               </thead>
               <tbody>
                 {active.map((p) => (
-                  <tr key={`${p[1]}:${p[2]}`}>
-                    <td>{p[1]}</td>
-                    <td>{p[2]}</td>
-                    <td>{p[3]}</td>
-                    <td>{p[4]}</td>
-                    <td>{days(p)}</td>
+                  <tr key={`${p.gridX}:${p.gridY}`}>
+                    <td>{p.gridX}</td>
+                    <td>{p.gridY}</td>
+                    <td>{p.longitude}</td>
+                    <td>{p.latitude}</td>
+                    {showOverlap ? (
+                      <>
+                        <td>{p.modisDays}</td>
+                        <td>{p.viirsDays}</td>
+                        <td>{p.category.replace(/_/g, " ")}</td>
+                      </>
+                    ) : <td>{days(p)}</td>}
                   </tr>
                 ))}
               </tbody>
@@ -328,7 +400,9 @@ export default function CountyMap({
           <p>
             Simplified official California outline. Full-resolution county membership independently
             matches all source rows. City dots are geographic references. Markers are cell centers,
-            not fire footprints. No modeled spatial locations are generated.
+            not fire footprints. No modeled spatial locations are generated. In overlap mode,
+            "both" means both sensors recorded activity in a grid cell during the selected
+            month; it does not mean they detected the same fire or observed it simultaneously.
           </p>
         </div>
       )}
