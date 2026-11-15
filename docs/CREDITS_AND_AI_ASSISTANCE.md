@@ -11,3 +11,7 @@ Current rights inventory: [RIGHTS_INVENTORY.md](RIGHTS_INVENTORY.md). Original-c
 ## Historical activity contribution
 
 GitHub account [MuhammadSaif700](https://github.com/MuhammadSaif700) contributed the Historical Activity Insight feature, styling, explanatory documentation, and eight additional tests in [PR #1](https://github.com/bilalfarid-1/firelens/pull/1), commit `3c124d3`. The original commit remains in the merge history. Codex independently reviewed the calculations and software, corrected the testing-status documentation, and integrated the rebuilt release under owner authorization. This attribution records the contributed files; it does not assert a verified real-world identity, independent human validation of every scientific claim, or the authorship of unrelated project work.
+
+## Sensor overlap contribution
+
+GitHub account [MuhammadSaif700](https://github.com/MuhammadSaif700) contributed Sensor Overlap Map, cell details/CSV export, styling, documentation and six original overlap tests through [PR #2](https://github.com/bilalfarid-1/firelens/pull/2), commit `d83c640`. Its original authorship is retained in the merge history. Codex resolved the shared stylesheet conflict with PR #1, hardened invalid/missing VIIRS availability handling with an additional regression test, and verified the combined application and release. No individual real-world identity or unrelated contribution is assigned.

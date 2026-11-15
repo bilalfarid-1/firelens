@@ -1,0 +1,11 @@
+### Result
+{"svg":1}
+### Ran Playwright code
+```js
+await (async page => {await page.goto('file:///<workspace>/audit/pr-2-integration/offline-overlap.svg');await page.setViewportSize({width:1100,height:800});await page.screenshot({path:'audit/pr-2-integration/export-preview.png'});return {svg:await page.locator('svg').count()};})(page);
+```
+### Open tabs
+- 0: (current) [](file:///<workspace>/audit/pr-2-integration/offline-overlap.svg)
+- 1: [Downloads](edge://downloads-hub/)
+### Page
+- Page URL: file:///<workspace>/audit/pr-2-integration/offline-overlap.svg

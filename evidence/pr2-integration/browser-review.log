@@ -1,0 +1,43 @@
+### Result
+{"hosted":{"checks":["observed overlap available","overlap selected","Nov414both","Nov46MODISonly","Nov236VIIRSonly","co-detection caveat","coverage caveat","grid-cell counts labeled","historical insight retained","overlap CSV downloaded","overlap SVG downloaded","accessible table696cells","table categories","overlap zoom and reset","overlap expand","overlap escape","September categories","July categories","July outage warning retained","quiet month empty","empty export downloaded","partial2012 disabled","unavailable clears comparison","early estimates disabled","does not silently restore overlap","single MODIS preserved","single VIIRS preserved","no overflow 320","no overflow 360","no overflow 390","no overflow 768","no overflow 1440","mobile overlap control visible","no JS exceptions","no external runtime requests"],"errors":[]},"offline":{"checks":["observed overlap available","overlap selected","Nov414both","Nov46MODISonly","Nov236VIIRSonly","co-detection caveat","coverage caveat","grid-cell counts labeled","historical insight retained","overlap CSV downloaded","overlap SVG downloaded","accessible table696cells","table categories","overlap zoom and reset","overlap expand","overlap escape","September categories","July categories","July outage warning retained","quiet month empty","empty export downloaded","partial2012 disabled","unavailable clears comparison","early estimates disabled","does not silently restore overlap","single MODIS preserved","single VIIRS preserved","no overflow 320","no overflow 360","no overflow 390","no overflow 768","no overflow 1440","mobile overlap control visible","no JS exceptions","no external runtime requests"],"errors":[]}}
+### Ran Playwright code
+```js
+await (async page => {
+ const all={};
+ for(const [mode,url] of [['hosted','http://127.0.0.1:8040/site/'],['offline','file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html']]){
+ const checks=[],errors=[],requests=[];const eh=e=>errors.push(String(e)),rh=r=>requests.push(r.url());page.on('pageerror',eh);page.on('request',rh);const check=(b,n)=>{if(!b)throw Error(mode+': '+n);checks.push(n)};
+ if(mode==='offline')await page.route(/^https?:/,r=>r.abort());await page.goto(url);await page.setViewportSize({width:1440,height:1000});await page.waitForSelector('[data-detection]');
+ const button=()=>page.getByRole('button',{name:'Overlap',exact:true});const select=async(y,m)=>{await page.getByLabel('Year',{exact:true}).selectOption(String(y));await page.getByLabel('Month',{exact:true}).selectOption(String(m-1))};
+ check(await button().isEnabled(),'observed overlap available');await button().click();check(await button().getAttribute('aria-pressed')==='true','overlap selected');
+ const count=async(cat)=>page.locator('[data-overlap-category='+cat+']').count();check(await count('both')===414,'Nov414both');check(await count('modis_only')===46,'Nov46MODISonly');check(await count('viirs_only')===236,'Nov236VIIRSonly');
+ const summary=await page.locator('.map-overlap-summary').innerText();check(summary.includes('not necessarily the same day or fire event'),'co-detection caveat');check(summary.includes('coverage completeness is unknown'),'coverage caveat');check((await page.locator('.map-preview-label').innerText()).includes('414 both'),'grid-cell counts labeled');check((await page.locator('.activity-card').innerText()).includes('28'),'historical insight retained');
+ const csv=page.waitForEvent('download');await page.getByRole('button',{name:'Export overlap CSV',exact:true}).click();await(await csv).saveAs('audit/pr-2-integration/'+mode+'-overlap.csv');checks.push('overlap CSV downloaded');const svg=page.waitForEvent('download');await page.getByRole('button',{name:'Export map SVG',exact:true}).click();await(await svg).saveAs('audit/pr-2-integration/'+mode+'-overlap.svg');checks.push('overlap SVG downloaded');
+ await page.getByRole('button',{name:'About this map',exact:true}).click();check(await page.locator('.map-details tbody tr').count()===696,'accessible table696cells');check((await page.locator('.map-details thead').innerText()).includes('Category'),'table categories');await page.getByRole('button',{name:'About this map',exact:true}).click();
+ await page.getByRole('button',{name:'Zoom in',exact:true}).click();await page.getByRole('button',{name:'Reset map extent',exact:true}).click();checks.push('overlap zoom and reset');await page.getByRole('button',{name:'Expand map',exact:true}).click();check(await page.locator('.map-expanded').count()===1,'overlap expand');await page.keyboard.press('Escape');check(await page.locator('.map-expanded').count()===0,'overlap escape');await page.locator('.map-card').screenshot({path:'audit/pr-2-integration/'+mode+'-nov.png'});
+ await select(2020,9);check(await count('both')===320&&await count('modis_only')===129&&await count('viirs_only')===176,'September categories');await select(2024,7);check(await count('both')===16&&await count('modis_only')===251&&await count('viirs_only')===22,'July categories');check(await page.locator('.warning-context').isVisible(),'July outage warning retained');await page.locator('.map-card').screenshot({path:'audit/pr-2-integration/'+mode+'-july.png'});
+ await select(2017,1);check(await page.locator('[data-overlap-category]').count()===0,'quiet month empty');const empty=page.waitForEvent('download');await page.getByRole('button',{name:'Export overlap CSV',exact:true}).click();await(await empty).saveAs('audit/pr-2-integration/'+mode+'-empty.csv');checks.push('empty export downloaded');
+ await select(2012,1);check(await button().isDisabled(),'partial2012 disabled');check(await page.locator('.map-overlap-summary').count()===0,'unavailable clears comparison');await select(2008,11);check(await button().isDisabled(),'early estimates disabled');await select(2018,11);check(await button().getAttribute('aria-pressed')==='false','does not silently restore overlap');await page.getByRole('button',{name:'MODIS',exact:true}).click();check((await page.locator('.map-preview-label').innerText()).includes('460 cells')&&(await page.locator('.map-preview-label').innerText()).includes('735 cell-days'),'single MODIS preserved');await page.getByRole('button',{name:'VIIRS S-NPP',exact:true}).click();check((await page.locator('.map-preview-label').innerText()).includes('650 cells'),'single VIIRS preserved');await button().click();
+ for(const width of [320,360,390,768,1440]){await page.setViewportSize({width,height:900});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'no overflow '+width)}await page.setViewportSize({width:390,height:844});await page.locator('.map-card').screenshot({path:'audit/pr-2-integration/'+mode+'-mobile.png'});check(await button().isVisible(),'mobile overlap control visible');check(errors.length===0,'no JS exceptions');check(requests.every(u=>!/^https?:/.test(u)||u.startsWith('http://127.0.0.1:8040')),'no external runtime requests');page.off('pageerror',eh);page.off('request',rh);all[mode]={checks,errors};
+ }
+ return all;
+})(page);
+```
+### Open tabs
+- 0: (current) [FireLens Butte — Historical hotspot explorer](file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html)
+- 1: [Downloads](edge://downloads-hub/)
+### Page
+- Page URL: file:///<workspace>/firelens-github/release/FireLens_Butte_Offline.html
+- Page Title: FireLens Butte — Historical hotspot explorer
+### Events
+- Downloading file FireLens_overlap_2018-11.csv ...
+- Downloaded file FireLens_overlap_2018-11.csv to ".playwright-cli\FireLens-overlap-2018-11-2.csv"
+- Downloading file FireLens_map_2018-11_overlap.svg ...
+- Downloaded file FireLens_map_2018-11_overlap.svg to ".playwright-cli\FireLens-map-2018-11-overlap-2.svg"
+- Downloading file FireLens_overlap_2017-01.csv ...
+- Downloaded file FireLens_overlap_2017-01.csv to ".playwright-cli\FireLens-overlap-2017-01-2.csv"
+- Downloading file FireLens_overlap_2018-11.csv ...
+- Downloaded file FireLens_overlap_2018-11.csv to ".playwright-cli\FireLens-overlap-2018-11-3.csv"
+- Downloading file FireLens_map_2018-11_overlap.svg ...
+- Downloaded file FireLens_map_2018-11_overlap.svg to ".playwright-cli\FireLens-map-2018-11-overlap-3.svg"
+- Downloading file FireLens_overlap_2017-01.csv ...
+- Downloaded file FireLens_overlap_2017-01.csv to ".playwright-cli\FireLens-overlap-2017-01-3.csv"

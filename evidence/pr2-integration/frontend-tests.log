@@ -1,0 +1,32 @@
+{"argv": ["npm.cmd", "test"], "cwd": "<workspace>\\firelens-github\\frontend", "utc": "2026-11-15T14:05:35.254343+00:00"}
+
+> firelens-butte@1.0.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+✔ November 2018 accurately excludes 2018 from its November baseline (35.1511ms)
+✔ September 2020 correctly finds its observed VIIRS comparison (1.9046ms)
+✔ 2024 uses 11 comparison years and never labels an outage as verified low activity (1.6675ms)
+✔ estimated years and the limited 2012 VIIRS coverage period are ineligible (1.1223ms)
+✔ does not substitute missing or estimated values into a comparison baseline (4.4053ms)
+✔ zero median never creates an infinite ratio or a false 3x claim (1.6938ms)
+✔ notable months list draws observed values only, ordered by magnitude (25.2518ms)
+✔ candidate itself is never allowed into its own comparison period (1.8624ms)
+✔ complete 302-month calendar has correct unavailable/estimated transition (9.9069ms)
+✔ all map totals match independently audited monthly cell-days (65.3986ms)
+✔ all six original CSV downloads match the product files byte-for-byte after newline normalization (16.856ms)
+✔ stress months retain observed references and exploratory estimates (1.6322ms)
+✔ November 2018 overlap is based on shared cells, not matching fire events (18.2262ms)
+✔ September 2020 and July 2024 cells preserve their observed sensor values (8.3141ms)
+✔ observed availability is required; missing VIIRS does not become an only-MODIS comparison (1.2463ms)
+✔ all months preserve audited grid totals and mutually exclusive cell membership (143.526ms)
+✔ empty months yield empty comparison, never a fabricated overlap (1.4765ms)
+✔ exported CSV is deterministic, includes observed values and category labels (7.3532ms)
+✔ missing, non-finite, negative and pre-reference values cannot enable overlap (0.6839ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 731.6405

@@ -1,0 +1,10 @@
+### Browser `pr2-review` opened with pid 17828.
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:8040/site/');
+```
+### Page
+- Page URL: http://127.0.0.1:8040/site/
+- Page Title: FireLens Butte — Historical hotspot explorer
+### Snapshot
+- [Snapshot](.playwright-cli\page-2026-11-15T14-06-46-681Z.yml)

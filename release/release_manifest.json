@@ -1,15 +1,15 @@
 {
   "FireLens_Butte_Offline.html": {
-    "bytes": 1538166,
-    "sha256": "3fe19c91e2fe810a2f6cc2f7ed694973766557be2353f22c66875df9551661eb"
+    "bytes": 1543186,
+    "sha256": "28e0002af6f657165d270cd349669a33019d4e8089b6e67034cea2a5f0e1b364"
   },
   "FireLens_Butte_Source_2026-11-14.zip": {
-    "bytes": 11398039,
-    "sha256": "2b291b25c14fd46a787faf993df3860892684f783e9078de0a2765da2e4b3d8e"
+    "bytes": 11792653,
+    "sha256": "274bbf00f876cb8111358d11e87338ef7a89f0c43bc800977f673e20b0da435a"
   },
   "FireLens_Butte_Static_Site.zip": {
-    "bytes": 499256,
-    "sha256": "a0adffdee4c75b82ac031aadad61feec66c9d071b18e5021086bfb3c8e60c0d7"
+    "bytes": 500656,
+    "sha256": "8e5fbc0e59f8734a9d6b13f0dbd457325948b05319796ef600a05a63cd297e50"
   },
   "site/.gitattributes": {
     "bytes": 125,
@@ -21,19 +21,19 @@
   },
   "site/index.html": {
     "bytes": 1214,
-    "sha256": "14b0b35aba5b656680248abe65d6b1740b1110ebbcc8225bca495d141b6faa48"
+    "sha256": "b5d127a3ade8121e6505ced28cb5e594b08a791e3995d425d2e9e0565138c398"
   },
   "site/LICENSE": {
     "bytes": 1105,
     "sha256": "36a0a20cde3fc183f14d43286dd756521c9753924334f7e0f4b6682d54d20884"
   },
-  "site/assets/index-BWP6s9lW.css": {
-    "bytes": 345950,
-    "sha256": "1943c2af7de0e9f5fa08856192b144f4656030d86e48814775ee5170c1d2cb83"
+  "site/assets/index-BE3nu07C.js": {
+    "bytes": 1194055,
+    "sha256": "01a8aeffc2114496a2f6404d41a84e8351eadf215b14dcd5adccb65a9933d83e"
   },
-  "site/assets/index-CRzyhWcO.js": {
-    "bytes": 1189863,
-    "sha256": "0a9b9e19bdac5fd675bb060d5d964254541155a4a1126968bc331b273fd75bfd"
+  "site/assets/index-GxrJlXmO.css": {
+    "bytes": 346776,
+    "sha256": "8a7132c77eeae47021d290f59d9281d9f9911ba6f93c1331867c7a375c3c8b53"
   },
   "site/licenses/Inter-OFL.txt": {
     "bytes": 4477,

@@ -1,0 +1,8 @@
+{"argv": ["npm.cmd", "ci"], "cwd": "<workspace>\\firelens-github\\frontend", "utc": "2026-11-15T14:00:54.689369+00:00"}
+
+added 46 packages, and audited 53 packages in 40s
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities

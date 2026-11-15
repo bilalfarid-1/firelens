@@ -1,0 +1,4 @@
+{"argv": ["npm.cmd", "run", "typecheck"], "cwd": "<workspace>\\firelens-github\\frontend", "utc": "2026-11-15T14:05:37.810133+00:00"}
+
+> firelens-butte@1.0.0 typecheck
+> tsc --noEmit

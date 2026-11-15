@@ -1,0 +1,20 @@
+{"argv": ["npm.cmd", "run", "build"], "cwd": "<workspace>\\firelens-github\\frontend", "utc": "2026-11-15T14:05:49.428499+00:00"}
+
+> firelens-butte@1.0.0 build
+> vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 2093 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     1.21 kB │ gzip:   0.68 kB
+dist/assets/index-GxrJlXmO.css    346.77 kB │ gzip: 234.40 kB
+dist/assets/index-BE3nu07C.js   1,194.05 kB │ gzip: 260.67 kB
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.43s

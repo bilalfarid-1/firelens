@@ -1,0 +1,12 @@
+{
+  "DL_FIRE_M-C61_848030.zip": "dcd09d67c0b9a2d95b1be7c8fbd97e2dbd1cd28a5240857c6ecc60d89fbc55f9",
+  "DL_FIRE_SV-C2_848031.zip": "0e855b5059966c61ae11cd712bbbfc6409ae4913cf18259cab4ec429b4826eb8",
+  "results/Butte_County_Boundary.geojson": "a6b5f6a69bc8f010bb387afc7df41d779ee181cbe4a56da28c66c0ee29ea32cf",
+  "results/Butte_County_Data_Quality_Report.md": "7c2f09c75d5dce6a7238662e78df7042916e927fe8d2fb4d55b9485bea8a4ea2",
+  "results/Butte_County_Monthly_Raw_Detections.csv": "ac741202b03515590a7578865d3874b871cf41c5c2c883ccbb85eb696acff2a1",
+  "results/Butte_County_Yearly_Raw_Detections.csv": "e708f1d4bae650a1d9142e795b241ca64724a0e1fd208fef96202212b5a5c01c",
+  "results/MODIS_Butte_Raw_Detections.csv": "4869a6f9635d93af62055b42f19fed5ed60aa68490751075afdf9a0686486c2f",
+  "results/VIIRS_SNPP_Butte_Raw_Detections.csv": "4ac56112e0560062d4058427c75eddb9d7550ed282b35ed8fd2f7ad0a94e95f3",
+  "results/full_resolution_edge_verification.json": "559ee4b4792ffefcfcf0233e86c094628795542f157d44563f5f4eecda70228d",
+  "results/processing_manifest.json": "55a064cc5c2b68a53603ef755022bdab0d9237b55c093bf560b99d038518f3d7"
+}

@@ -100,7 +100,11 @@ export function downloadFile(contents: string, filename: string, mime = "text/cs
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-export function exportFigure(id: string, filename: string) {
+export function exportFigure(
+  id: string,
+  filename: string,
+  context?: { unit?: string; notes?: string[] },
+) {
   const original = document.getElementById(id);
   if (!original) throw Error("Figure is unavailable");
   const figure = original.cloneNode(true) as SVGSVGElement;
@@ -109,7 +113,8 @@ export function exportFigure(id: string, filename: string) {
   figure.style.fontFamily = "Arial,sans-serif";
   const box = figure.viewBox.baseVal;
   const height = box.height;
-  figure.setAttribute("viewBox", `${box.x} ${box.y} ${box.width} ${height + 45}`);
+  const notes = context?.notes ?? [];
+  figure.setAttribute("viewBox", `${box.x} ${box.y} ${box.width} ${height + 45 + notes.length * 18}`);
   const caption = document.createElementNS("http://www.w3.org/2000/svg", "text");
   caption.setAttribute("x", "12");
   caption.setAttribute("y", String(height + 25));
@@ -118,13 +123,23 @@ export function exportFigure(id: string, filename: string) {
   caption.textContent =
     "FireLens · AI-assisted code/visualization · NASA FIRMS detections · not unique wildfires";
   figure.appendChild(caption);
+  notes.forEach((note, index) => {
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    line.setAttribute("x", "12");
+    line.setAttribute("y", String(height + 43 + index * 18));
+    line.setAttribute("font-size", "11");
+    line.setAttribute("fill", "#18232D");
+    line.textContent = note;
+    figure.appendChild(line);
+  });
   const metadata = document.createElementNS("http://www.w3.org/2000/svg", "metadata");
   metadata.textContent = JSON.stringify({
     ai_assistance:
       "Code and visualization implementation assisted by AI; original NASA observations unchanged.",
     description: original.getAttribute("aria-label"),
     source: "NASA FIRMS",
-    unit: "1-km cell-days / UTC month",
+    unit: context?.unit ?? "1-km cell-days / UTC month",
+    notes: context?.notes,
   });
   figure.appendChild(metadata);
   downloadFile(
